@@ -42,11 +42,12 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
     Endif
     
     If Syms.count Then
-      For j As Integer = 0 To Syms.Count - 1
+      For j As Integer = 0 To Syms.max
         
         Select Case Highlight.Types[j]
           
           Case Highlight.Operator
+            If j + 1 > Highlight.Types.max Then Continue
             If Syms[j] = "." Then
               .VarSyms.Add(Syms[j + 1], Syms[j + 1])
               j += 1
@@ -56,6 +57,7 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
             Select Case Upper(Syms[j])
               
               Case "USE"
+                 If j + 1 > Highlight.Types.max Then Continue
                  If Highlight.Types[j + 1] = Highlight.Symbol Then
                    .ModuleSyms.Add(Syms[j + 1], Syms[j + 1])
                    Inc j
@@ -69,6 +71,7 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
                  Wend
                     
               Case "DIM"
+                 If j + 1 > Highlight.Types.max Then Continue
                  If Highlight.Types[j + 1] = Highlight.Symbol Then
                    .VarSyms.Add(Syms[j + 1], Syms[j + 1])
                    Inc j
@@ -90,18 +93,23 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
                    Endif
                 
               Case "CLASS"
-                 If Highlight.Types[j + 1] = Highlight.Symbol Or If Highlight.Types[j + 1] = Highlight.DataType Then
-                   .ClassSyms.Add(Syms[j + 1], Syms[j + 1])
-                   Inc j
-                 Endif
+                If j + 1 > Highlight.Types.max Then Continue
+                If Highlight.Types.count < j + 1 Then
+                    If Highlight.Types[j + 1] = Highlight.Symbol Or If Highlight.Types[j + 1] = Highlight.DataType Then
+                      .ClassSyms.Add(Syms[j + 1], Syms[j + 1])
+                      Inc j
+                    Endif
+                Endif
                  
               Case "SUB", "FUNCTION", "PROCEDURE"
+                If j + 1 > Highlight.Types.max Then Continue
                 If Highlight.Types[j + 1] = Highlight.Symbol Then
                    .ProcSyms.Add(Syms[j + 1], Syms[j + 1])
                    Inc j
                 Endif
                 
               Case "STATIC", "PUBLIC", "PRIVATE"
+                If j + 1 > Highlight.Types.max Then Continue
                 If Highlight.Types[j + 1] = Highlight.Symbol Then
                    .VarSyms.Add(Syms[j + 1], Syms[j + 1])
                    Inc j
@@ -115,10 +123,12 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
               
               Select Case Upper(Syms[j])
                 Case "INCLUDE"
+                     If j + 1 > syms.max Then Continue
                      If .DebuggerFlag = True Then Print ("Builder ->") & "Include file " & Syms[j + 1]
                      Inc j
                      
                 Case Else 
+                  If j + 1 > syms.max Then Continue
                   If (j + 1) < Syms.length Then 
                      If (Syms[j + 1] = "AS" Or Upper(Syms[j]) = "INCLUDE") Then
                          .VarSyms.Add(Syms[j], Syms[j])
