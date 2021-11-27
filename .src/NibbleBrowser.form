@@ -35,11 +35,13 @@
       Text = ("Insert Selected To Editor")
     }
   }
-  { NibbleLibList FileChooser
+  { !NibbleLibList FileChooser
     MoveScaled(1,1,56,70)
+    #Public = True
+    ToolTip = ("Select the file to be Included")
     Expand = True
-    ShowDirectory = True
     ShowDetailed = True
+    ReadOnly = True
   }
   { !NibbleSource TextEditor
     MoveScaled(59,1,47,70)

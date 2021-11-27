@@ -89,18 +89,19 @@
     }
   }
   { SciptNibblesMenu Menu
-    Text = ("Script Nibbles")
+    Text = ("Gambas Script Resources")
+    Visible = False
     { NibbleBrowseMenu Menu
-      Text = ("Browse Local Nibbles")
+      Text = ("Local Resource Lib")
     }
     { EXPlayGround Menu
-      Text = ("Browse Examples From Playground")
+      Text = ("Gambas One Playground")
     }
     { OnlineLib Menu
-      Text = ("Browse Online Nibbles")
+      Text = ("Gambas Script Online Resource")
     }
     { NibbleLocateMenu Menu
-      Text = ("Set Local Nibble Location")
+      Text = ("Set Local Resource Lib Location")
     }
   }
   { ShellMenu Menu
@@ -180,57 +181,68 @@
         Background = Color.TooltipBackground
         { ToolButton6 ToolButton
           Move(0,0,91,28)
+          ToolTip = ("Create a new non graphic script")
           Text = ("New")
           Picture = Picture["icon:/32/file"]
         }
         { ToolButton10 ToolButton
           Move(91,0,84,28)
+          ToolTip = ("Open an existing script")
           Text = ("Open")
           Picture = Picture["icon:/32/open"]
         }
         { ToolButton7 ToolButton
           Move(175,0,77,28)
+          ToolTip = ("Save the script")
           Text = ("Save")
           Picture = Picture["icon:/32/save"]
         }
         { ToolButton8 ToolButton
           Move(252,0,91,28)
+          ToolTip = ("Save the script to a new location")
           Text = ("Save As")
           Picture = Picture["icon:/32/save-as"]
         }
         { ToolButton11 ToolButton
           Move(343,0,105,28)
+          ToolTip = ("Print the script")
           Text = ("Print")
           Picture = Picture["icon:/32/print"]
         }
         { ToolButton3 ToolButton
-          Move(448,0,154,28)
+          Move(448,0,140,28)
+          ToolTip = ("Gambas One Playground examples")
           Text = ("PlayGround")
           Picture = Picture["icon:/32/directory"]
         }
         { ToolButton4 ToolButton
-          Move(595,0,84,30)
-          Text = ("Nibbles")
+          Move(588,0,77,28)
+          ToolTip = ("Local script library")
+          Text = ("Lib")
           Picture = Picture["icon:/32/directory"]
         }
         { ToolButton5 ToolButton
           Move(679,0,77,28)
-          Text = ("Nibbles")
+          ToolTip = ("Online Gambas Script Library")
+          Text = ("Lib")
           Picture = Picture["icon:/32/network"]
         }
         { ToolButton1 ToolButton
-          Move(756,0,77,28)
+          Move(763,0,77,28)
           Background = Color.White
+          ToolTip = ("Execute the script")
           Text = ("Go")
           Picture = Picture["icon:/32/play"]
         }
         { ToolButton2 ToolButton
           Move(833,0,91,28)
+          ToolTip = ("Stop a running script")
           Text = ("Stop")
           Picture = Picture["icon:/32/stop"]
         }
         { ToolButton9 ToolButton
-          Move(917,0,105,28)
+          Move(924,0,105,28)
+          ToolTip = ("Set the environmental options")
           Text = ("Options")
           Picture = Picture["icon:/32/options"]
         }

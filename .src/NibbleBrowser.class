@@ -11,8 +11,11 @@ End
 
 
 Public Sub Form_Open()
-
-   NibbleLibList.dir = NibbleLibraryLocation
+   If Not Exist(NibbleLibraryLocation) Then 
+     Shell "mkdir -p " & NibbleLibraryLocation
+   Endif
+   
+   NibbleLibList.root = NibbleLibraryLocation
    
    Me.Top = Settings["nibble/Window/Top", Me.Top]
    Me.Left = Settings["nibble/Window/Left", Me.Left]
