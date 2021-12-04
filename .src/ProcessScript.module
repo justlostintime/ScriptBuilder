@@ -1,10 +1,15 @@
 ' Gambas module file
 
-Public TypeToText As String[] = ["BackGround", "Normal", "KeyWord", "Function", "Operator", "Symbol", "Number", "String", "Comment", "BreakPoint", "CurrentLine", "DataType", "", "HighLight", "", "", "", "PreProcessor", "Escape", "Label", "Constant", "Alternate", "Custom1", "", "", "", "", "", "", "", ""]
+Public DataTypes As String[] = ["Binary", "Boolean", "Byte", "Short", "Integer", "Long", "Single", "Float", "Date", "String", 
+  "LongDate", "Pointer", "Variant", "Function", "Class", "NULL", "Object", "Not Array", "", 
+  "", "", "", "", ""]
+
+
 
 Public Sub _Call(ByRef Block As TextEditor) As Boolean
   With Fmain
   Dim Syms As String[]
+  Dim Types As Integer[]
   Dim i As Integer
   Dim j As Integer
   Dim sLine As String
@@ -30,13 +35,14 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
     Endif
     
     Syms = Highlight.Analyze(sLine)
+    Types = Highlight.types
     
     If .debuggerFlag = True Then  ' display the parsed line and types
         Dim si As Integer = 0 
         Print ("Builder ->");; ("Max Symbols") & " = "; Syms.max
-        For Each ss As String In syms
-          Print ("Builder ->"); Trim(ss) & Space(If(Len(Trim(ss)) < 30, 30 - Len(Trim(ss)), 1)); TypeToText[Highlight.Types[si]]; "("; Highlight.Types[si]; ")"
-          Inc si
+        For si = 0 To syms.max
+          Dim ss As String = Trim(syms[si])
+          Print ("Builder ->"); ss & Space(If(Len(ss) < 30, 30 - Len(ss), 1)); Highlight.styles[Types[si]]; "("; Types[si]; ")"
         Next
         
     Endif
@@ -53,7 +59,7 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
               j += 1
             Endif
             
-          Case Highlight.Keyword
+          Case Highlight.Keyword, Highlight.Function
             Select Case Upper(Syms[j])
               
               Case "USE"
@@ -154,7 +160,7 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
   
   If ShaBang = False Then 
     Block.Goto(0, 0)
-    Block.Insert("#!/usr/bin/gbs3\n")
+    Block.Insert("#!/usr/bin/env gbs3\n")
   Endif
   
   If .DebuggerFlag = True Then 

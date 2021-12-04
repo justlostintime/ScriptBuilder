@@ -16,10 +16,10 @@ Static HelpBrowserShow As HelpBrowser
 Static ScriptBrowser As HelpBrowser
 
 Public ShellCommandProcessor As String = "/bin/bash"
-Static ScriptStub As String = "#!/usr/bin/gbs3\n\' Gambas Script File Created " & Now & "\n\n'Place Code Here\n\nQUIT 0\ncatch\nPrint error.text&\"\\n\" & error.where"
-Static ScriptGraphicStub As String = "#!/usr/bin/gbs3\n\' Gambas Script File Created " & Now & "\nUSE \"gb.gui\"\n\n'Place Code Here\n\nQUIT 0\ncatch\nmessage(error.text&\"\\n\" & error.where )"
+Static ScriptStub As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\n\n'Place Code Here\n\nQUIT 0\ncatch\nPrint error.text&\"\\n\" & error.where"
+Static ScriptGraphicStub As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\nUSE \"gb.gui\"\n\n'Place Code Here\n\nQUIT 0\ncatch\nmessage(error.text&\"\\n\" & error.where )"
 'Static ScriptSudoStub As String = "#!/usr/bin/gbs3\n\' Gambas Script File Created " & Now & "\nUSE \"gb.gui\"\n\n'Place Code Here\n\nQUIT 0\ncatch\nmessage(error.text&\"\\n\" & error.where )"
-Static ScriptExampleStub As String = "#!/usr/bin/gbs3\n\' Gambas Script File Created " & Now & "\n "
+Static ScriptExampleStub As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\n "
 Public CodeRepository As String
 Public RepositoryUser As String
 Public RepositoryPassword As String
@@ -115,7 +115,7 @@ If ProcessScript(tWorkSpace) Then 'ProgramWorkSpace) Then ' verify we can actual
       Endif
     Endif
   Else
-    programtext = Replace$(Replace$(tWorkSpace.text, "\n", ":"), "#!/usr/bin/gbs3:", "", gb.IgnoreCase)
+    programtext = Replace$(Replace$(tWorkSpace.text, "\n", ":"), "#!/usr/bin/env gbs3:", "", gb.IgnoreCase)
     If Debugit Then
         ProgramCommand = "gbs3 -v -g -e " & "'" & programtext & "'"
     Else
@@ -275,8 +275,8 @@ End
 
 Public Sub VerifyHeader() As Integer
   Dim sLine As String = Trim(ProgramWorkSpace[0].text)
-  If Not (sLine Like "#!/.*") Then 
-    Return Message.question(("This file will not be executable\n#!/usr/bin/gbs3 - is required to make this file executable\nADD?"), ("Yes"), ("No"), "Cancel")
+  If Left(sLine, 2) <> "#!" Then 
+    Return Message.question(("This file will not be executable\n#!/usr/bin/env gbs3 - is required to make this file executable\nADD?"), ("Yes"), ("No"), "Cancel")
   Endif
 End
 
@@ -298,7 +298,7 @@ Public Sub Saveas(ByRef sCurrentFile As String, tProgramWorkSpace As TextEditor)
  Select Case VerifyHeader()
    Case 1
      tProgramWorkSpace.Goto(0, 0)
-     tProgramWorkSpace.Insert("#!/usr/bin/gbs3\n")
+     tProgramWorkSpace.Insert("#!/usr/bin/env gbs3\n")
    Case 3
      Return
  End Select

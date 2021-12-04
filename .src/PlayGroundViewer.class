@@ -141,7 +141,7 @@ Public Sub pgcopytoedit_Click()
       MyParent.Show()
       Endif
   MyParent.ProgramWorkSpace.Clear()
-  MyParent.ProgramWorkSpace.insert("#!/usr/bin/gbs3\n" & ("'Example By Charlie Ogier") & "\n" & ProgEdit.text)
+  MyParent.ProgramWorkSpace.insert("#!/usr/bin/env gbs3\n" & ("'Example By Charlie Ogier") & "\n" & ProgEdit.text)
 
 End
 
