@@ -28,151 +28,164 @@ Public CurrentFile As String = ""
 Public SourceDirectory As String = User.home &/ "bin"
 
 Static Public Sub _init()
-  
+
   'System.language = "fr_FR.utf8"
   'System.language = "ja_JP.utf8"
   'System.language = "it_IT.utf8"
   'System.language = "de_DE.utf8"
-  
+
 End
 
 
 Public Sub read_Settings()
+
   Me.top = Settings["window/top", Me.Top]
   Me.Left = Settings["Window/Left", Me.Left]
   Me.Height = Settings["Window/Height", Me.Height]
   Me.Width = Settings["Window/Width", Me.Width]
+
 End
 
 Public Sub write_settings()
+
   Settings["Window/Top"] = Me.Top
   Settings["Window/Left"] = Me.Left
   Settings["Window/Height"] = Me.Height
   Settings["Window/Width"] = Me.Width
+
 End
 
 Public Sub WriteTitle(win As Variant, TheText As String, thedebug As Boolean)
+
   Dim boolprt As String
+
   If thedebug Then boolprt = "  DEBUG(On)" Else boolprt = "  DEBUG(Off)"
   win.text = "Gambas - " & TheText & boolprt
+
 End
 
 Public Sub UpdateDebugTitle(win As Variant, dflag As Boolean)
+
   Dim boolprt, findpart As String
-  If dflag Then 
+
+  If dflag Then
     boolprt = ("DEBUG(On)")
     findpart = ("DEBUG(Off)")
-  Else 
+  Else
     boolprt = ("DEBUG(Off)")
     findpart = ("DEBUG(On)")
   Endif
-  
+
   win.text = Replace(win.text, findpart, boolprt)
-  
+
 End
 
 Public Sub WriteTo(data As String, FileName As String)
-  
+
   ProgramWorkSpace.text = data
   ProgramWorkSpace.Enabled = True
   CurrentFile = FileName
-  
+
 End
 
 Public Sub ExecuteScript(ByRef sCurrentfile As String, tProgramWorkSpace As TextEditor, FromFile As Boolean, DebugIt As Boolean)
-  
-Dim aEnv As String[] = ["TERM=xterm"]
- 
-Dim programtext, ProgramCommand, argsRun, oldcurrentfile, boolprt As String
-Dim tWorkSpace As TextEditor = New Texteditor(Me)
-OutputText = New OutputArea
 
-If debuggerFlag Then boolprt = ("On") Else boolprt = ("Off") 
-WriteTitle(OutputText, ("Result Page ") & scurrentfile & " -- " & ProgramCounter, DebuggerFlag)
+  Dim aEnv As String[] = ["TERM=xterm"]
 
-ProgramCounter += 1
+  Dim programtext, ProgramCommand, argsRun, oldcurrentfile, boolprt As String
+  Dim tWorkSpace As TextEditor = New Texteditor(Me)
 
-OutputText.Show()
+  OutputText = New OutputArea
 
-If Debugit Then
-  oldcurrentfile = scurrentfile
-  sCurrentFile = Temp("xx")
-  tWorkSpace.text = Replace(tProgramWorkSpace.text, "''DEBUG", "DEBUG", gb.IgnoreCase)
-Else
-  tWorkSpace.text = tProgramWorkSpace.text
-Endif
+  If debuggerFlag Then boolprt = ("On") Else boolprt = ("Off")
+  WriteTitle(OutputText, ("Result Page ") & scurrentfile & " -- " & ProgramCounter, DebuggerFlag)
 
-If ProcessScript(tWorkSpace) Then 'ProgramWorkSpace) Then ' verify we can actually run this script
-  If FromFile Then
-    If SaveFile(ByRef sCurrentFile, tWorkSpace) Then
-      ProgramCommand = sCurrentFile 
-      If Exist(scurrentfile) Then
+  ProgramCounter += 1
+
+  OutputText.Show()
+
+  If Debugit Then
+    oldcurrentfile = scurrentfile
+    sCurrentFile = Temp("xx")
+    tWorkSpace.text = Replace(tProgramWorkSpace.text, "''DEBUG", "DEBUG", gb.IgnoreCase)
+  Else
+    tWorkSpace.text = tProgramWorkSpace.text
+  Endif
+
+  If ProcessScript(tWorkSpace) Then 'ProgramWorkSpace) Then ' verify we can actually run this script
+    If FromFile Then
+      If SaveFile(ByRef sCurrentFile, tWorkSpace) Then
+        ProgramCommand = sCurrentFile
+        If Exist(scurrentfile) Then
           argsRun = Trim(cmdlineargs.text)
           If argsRun.len > 0 Then '
-             ProgramCommand = "\"" & ProgramCommand & "\" " & argsRun
+            ProgramCommand = "\"" & ProgramCommand & "\" " & argsRun
           Endif
           ActiveProg = OutputText.RunIt(ProgramCommand, aEnv)
+        Endif
       Endif
-    Endif
-  Else
-    programtext = Replace$(Replace$(tWorkSpace.text, "\n", ":"), "#!/usr/bin/env gbs3:", "", gb.IgnoreCase)
-    If Debugit Then
-        ProgramCommand = "gbs3 -v -g -e " & "'" & programtext & "'"
     Else
+      programtext = Replace$(Replace$(tWorkSpace.text, "\n", ":"), "#!/usr/bin/env gbs3:", "", gb.IgnoreCase)
+      If Debugit Then
+        ProgramCommand = "gbs3 -v -g -e " & "'" & programtext & "'"
+      Else
         ProgramCommand = "gbs3 -e " & "'" & programtext & "'"
-    End If
-    ActiveProg = OutputText.RunIt(ProgramCommand, aEnv)
-  Endif
-  
-Endif 
+      End If
+      ActiveProg = OutputText.RunIt(ProgramCommand, aEnv)
+    Endif
 
-If DebugIt Then
-  sCurrentFile = oldcurrentfile
-Endif
-' OutputText.WriteTo("\r\nEnding process\r\n")
+  Endif
+
+  If DebugIt Then
+    sCurrentFile = oldcurrentfile
+  Endif
+  ' OutputText.WriteTo("\r\nEnding process\r\n")
 
 Catch
   Message.Info(Error.Text & " at ExecuteScript")
   If DebugIt Then
-      sCurrentFile = oldcurrentfile
+    sCurrentFile = oldcurrentfile
   Endif
+
 End
 
 Public Sub GoMenu_Click()
-Dim ISTemp As Boolean = False
-If currentFile = "" Then
-  currentfile = Temp("scr")
-  ProgramWorkSpace.Save(currentfile)
-   Chmod currentfile To "rwxr-xr-x"
-  istemp = True
-Endif
 
-ExecuteScript(ByRef currentfile, ProgramWorkSpace, True, DebuggerFlag)
+  Dim ISTemp As Boolean = False
 
-If IsTemp Then 
+  If currentFile = "" Then
+    currentfile = Temp("scr")
+    ProgramWorkSpace.Save(currentfile)
+    Chmod currentfile To "rwxr-xr-x"
+    istemp = True
+  Endif
+
+  ExecuteScript(ByRef currentfile, ProgramWorkSpace, True, DebuggerFlag)
+
+  If IsTemp Then
     currentfile = ""
- Endif
+  Endif
 
-WriteTitle(Me, If(CurrentFile = "", " go-> ", File.Name(CurrentFile)), DebuggerFlag)
+  WriteTitle(Me, If(CurrentFile = "", " go-> ", File.Name(CurrentFile)), DebuggerFlag)
 
 Catch
-  
+
   Message.Info(Error.Text & " at gomenu_click()")
-  
-  
+
+
 End
 
 
 Public Sub GoSelected_Click()
 
- Dim SectionRun As TextEditor
- 
- SectionRun = New TextEditor(Me)
- ProgramWorkSpace.Copy()
- SectionRun.Paste()
- 
- ExecuteScript("Run Selection", SectionRun, False, DebuggerFlag)
- 
+  Dim SectionRun As TextEditor
+
+  SectionRun = New TextEditor(Me)
+  ProgramWorkSpace.Copy()
+  SectionRun.Paste()
+
+  ExecuteScript("Run Selection", SectionRun, False, DebuggerFlag)
+
 Catch
   Message.Info(Error.Text & " at goSelectedmenue_click()")
 
@@ -182,16 +195,16 @@ End
 
 
 Public Sub Answers_Read()
-  
- Try Read #Last, EResult, -253
- If Error Then Print "Read Error"
-OutputText.WriteTo(EResult)
- 
+
+  Try Read #Last, EResult, -253
+  If Error Then Print "Read Error"
+  OutputText.WriteTo(EResult)
+
 End
 
 Public Sub Answers_Error(err As String)
-  
-OutputText.WriteTo("\n>>>Error\n" & err)
+
+  OutputText.WriteTo("\n>>>Error\n" & err)
 
 End
 
@@ -206,7 +219,7 @@ Public Sub Debugoffmenu_Click()
 
   DebuggerFlag = False
   UpdateDebugTitle(Me, DebuggerFlag)
-  
+
 End
 
 Public Sub ExitMenu_Click()
@@ -222,22 +235,23 @@ Public Sub ClearAll_Click()
   ProgramWorkSpace.text = ""
   ProgramWorkSpace.Goto(1, 1)
   ProgramWorkSpace.Refresh()
-  
+
 End
 
 Public Sub OpenMenu_Click()
-Dim Newwin As Fmain
+
+  Dim Newwin As Fmain
 
   Dialog.Title = ("Choose a Script file")
   Dialog.Filter = ["*.gbs", ("Script Files"), "*", ("All Files")]
   Dialog.Path = SourceDirectory & "/"
   Dialog.key = "OpenScript"
-  
+
   If Dialog.OpenFile() Then
-   Return ' User pressed Cancel -
+    Return ' User pressed Cancel -
   Endif
-  
-  
+
+
   If CurrentFile <> "" Then
     Newwin = New Fmain
     Newwin.ProgramWorkSpace.load(Dialog.Path)
@@ -249,127 +263,137 @@ Dim Newwin As Fmain
     WriteTitle(Me, File.Name(Dialog.Path), DebuggerFlag)
     CurrentFile = Dialog.Path
   Endif
-  
+
   SourceDirectory = File.Dir(CurrentFile)
-  
-  Catch
-    Message.Info(Error.Text)
+
+Catch
+  Message.Info(Error.Text)
 
 End
 
 Public Sub SaveFile(ByRef sCurrentFile As String, tProgramWorkSpace As TextEditor) As Boolean
 
-If sCurrentFile = "" Then
+  If sCurrentFile = "" Then
     If Not Saveas(ByRef sCurrentFile, tProgramWorkSpace) Then Return False
-Else
+  Else
     tProgramWorkSpace.Save(sCurrentFile)
     Chmod sCurrentFile To "rwxr-xr-x"
-Endif
+  Endif
 
   Return True
-  
+
 Catch
   Message.Info(Error.Text & " at SaveFile()")
   Return False
+
 End
 
 Public Sub VerifyHeader() As Integer
+
   Dim sLine As String = Trim(ProgramWorkSpace[0].text)
-  If Left(sLine, 2) <> "#!" Then 
+
+  If Left(sLine, 2) <> "#!" Then
     Return Message.question(("This file will not be executable\n#!/usr/bin/env gbs3 - is required to make this file executable\nADD?"), ("Yes"), ("No"), "Cancel")
   Endif
+
 End
 
 Public Sub SaveMenu_Click()
 
   If SaveFile(ByRef CurrentFile, ProgramWorkSpace) Then
-     WriteTitle(Me, File.Name(CurrentFile), DebuggerFlag)
+    WriteTitle(Me, File.Name(CurrentFile), DebuggerFlag)
   Endif
-  
+
 End
 
 Public Sub Saveas(ByRef sCurrentFile As String, tProgramWorkSpace As TextEditor) As Boolean
-  
- Dialog.Title = ("Save as a Script file")
- Dialog.Filter = ["*.gbs", ("Script Files"), "*", ("All Files")]
- Dialog.path = SourceDirectory & "/"
- Dialog.key = "SaveScript"
- 
- Select Case VerifyHeader()
-   Case 1
-     tProgramWorkSpace.Goto(0, 0)
-     tProgramWorkSpace.Insert("#!/usr/bin/env gbs3\n")
-   Case 3
-     Return
- End Select
- 
+
+  Dialog.Title = ("Save as a Script file")
+  Dialog.Filter = ["*.gbs", ("Script Files"), "*", ("All Files")]
+  Dialog.path = SourceDirectory & "/"
+  Dialog.key = "SaveScript"
+
+  Select Case VerifyHeader()
+    Case 1
+      tProgramWorkSpace.Goto(0, 0)
+      tProgramWorkSpace.Insert("#!/usr/bin/env gbs3\n")
+    Case 3
+      Return
+  End Select
+
   If Not Dialog.SaveFile() Then
     tProgramWorkSpace.Save(Dialog.Path)
     Chmod Dialog.Path To "rwxr-xr-x"
     sCurrentFile = Dialog.Path
- Else
+  Else
     Return False
- Endif
- 
- Return True
- 
+  Endif
+
+  Return True
+
 Catch
-  
+
   Message.Info(Error.Text & " at Save As()")
   Return False
-  
+
 End
 
 Public Sub SaveasMenu_Click()
 
- If Saveas(ByRef CurrentFile, ProgramWorkSpace) Then
-   WriteTitle(Me, File.Name(CurrentFile), DebuggerFlag)
- Endif
- 
+  If Saveas(ByRef CurrentFile, ProgramWorkSpace) Then
+    WriteTitle(Me, File.Name(CurrentFile), DebuggerFlag)
+  Endif
+
 End
 
 Public Sub Form_Open()
-  
+
   If CurrentFile = "" Then
     WriteTitle(Me, System.FullVersion & " -" & application.Title & "(" & Application.Version & ")", DebuggerFlag)
   Endif
-  
+
   OptionsForm.LoadOptions()
-  
+
   Read_Settings()
 
   ProgramWorkSpace.SetFocus()
-  
+
   If Args.count > 1 Then
     Try ProgramWorkSpace.Load(Args[1])
-    If Error Then 
+    If Error Then
       Error ("File");; Args[1];; ("Unable to read:");; Error.Text
       Quit 1
     Endif
     WriteTitle(Me, Args[1], DebuggerFlag)
     CurrentFile = Args[1]
   Endif
-  
+
 End
 
 Public Sub Form_Close()
 
-Write_Settings()
+  Write_Settings()
 
-OptionsForm.SaveOptions()
+  OptionsForm.SaveOptions()
 
 End
 
 Public Sub newmoduletype_Click()
- newScript(ScriptStub)
+
+  newScript(ScriptStub)
+
 End
 
 Public Sub newgraphictype_Click()
+
   newScript(ScriptGraphicStub)
+
 End
+
 Public Sub newScript(ScriptRoot As String)
+
   Dim Newwin As Fmain
-  
+
   If CurrentFile = "" And ProgramWorkSpace.text = ""
     ProgramWorkSpace.text = ScriptRoot
     ProgramWorkSpace.Goto(1, 3)
@@ -384,21 +408,22 @@ Public Sub newScript(ScriptRoot As String)
     WriteTitle(Newwin, System.FullVersion & " -" & application.Title & "(" & Application.Version & ") New", DebuggerFlag)
     Newwin.show()
   Endif
-  
+
 End
 
 Public Sub OpenShell_Click()
+
   Dim aEnv As String[] = [""]
   Dim theshell As OutputArea
-  
+
   aEnv = ["TERM=xterm-256color"]
-  
+
   theshell = New OutputArea
   theshell.text = "User Shell  " & ShellCommandProcessor
   theShell.Show()
 
-  theshell.RunIt(ShellCommandProcessor, aEnv) 
-  
+  theshell.RunIt(ShellCommandProcessor, aEnv)
+
 End
 
 Public Sub CutMenu_Click()
@@ -427,6 +452,7 @@ End
 
 
 Public Sub helpbrowser_Click()
+
   If HelpBrowserShow = Null Then HelpBrowserShow = New HelpBrowser
   HelpbrowserShow.Show()
 
@@ -440,7 +466,7 @@ End
 
 Public Sub aboutmenu_Click()
 
- 
+
   Aboutform.Show()
 
 
@@ -450,26 +476,27 @@ End
 
 Public Sub CloseMenue_Click()
 
-ProgramWorkSpace.Clear()
-CurrentFile = ""
+  ProgramWorkSpace.Clear()
+  CurrentFile = ""
 
 End
 
 Public Sub ScriptingMenue_Click()
 
- If ScriptBrowser = Null Then ScriptBrowser = New HelpBrowser
+  If ScriptBrowser = Null Then ScriptBrowser = New HelpBrowser
   ScriptBrowser.helpwindow.URL = "http://gambaswiki.org/wiki/doc/scripting"
   ScriptBrowser.Show()
-  
+
 End
 
 Public Sub ScriptBuilderHelpMenu_Click()
- Dim markedfile As String
- Dim htmlfile As String 
- 
- markedfile = File.Load("ScriptBuilderHelp.markdown")
- htmlfile = Markdown.ToHTML(markedfile)
- ScriptBuilderHelp.ScriptBuilderHelpWindow.HTML = htmlfile
+
+  Dim markedfile As String
+  Dim htmlfile As String
+
+  markedfile = File.Load("ScriptBuilderHelp.markdown")
+  htmlfile = Markdown.ToHTML(markedfile)
+  ScriptBuilderHelp.ScriptBuilderHelpWindow.HTML = htmlfile
 
   ScriptBuilderHelp.Show()
 
@@ -480,54 +507,55 @@ Public Sub lidirMenu_Click()
 
   Dim Newwin As Fmain
   Dim cwd As String
-  
 
-    Newwin = New Fmain
-    cwd = File.Load("ldir")
-    Newwin.ProgramWorkSpace.text = cwd
-    WriteTitle(Newwin, File.Name("ldir"), DebuggerFlag)
-    Newwin.CurrentFile = ""
-    Newwin.show
- 
-  Catch
-    Message.Info(Error.Text & "at ldir sample load")
+
+  Newwin = New Fmain
+  cwd = File.Load("ldir")
+  Newwin.ProgramWorkSpace.text = cwd
+  WriteTitle(Newwin, File.Name("ldir"), DebuggerFlag)
+  Newwin.CurrentFile = ""
+  Newwin.show
+
+Catch
+  Message.Info(Error.Text & "at ldir sample load")
 
 
 End
 
 Public Sub mdirmenu_Click()
-Dim Newwin As Fmain
-Dim cwd As String
+
+  Dim Newwin As Fmain
+  Dim cwd As String
 
 
-    Newwin = New Fmain
-    cwd = File.Load("ldir")
-    Newwin.ProgramWorkSpace.text = cwd
-    WriteTitle(Newwin, File.Name("mdir"), DebuggerFlag)
-    Newwin.CurrentFile = ""
-    Newwin.show
-  Catch
-    Message.Info(Error.Text & "at mdir sample load")
-  
+  Newwin = New Fmain
+  cwd = File.Load("ldir")
+  Newwin.ProgramWorkSpace.text = cwd
+  WriteTitle(Newwin, File.Name("mdir"), DebuggerFlag)
+  Newwin.CurrentFile = ""
+  Newwin.show
+Catch
+  Message.Info(Error.Text & "at mdir sample load")
+
 
 End
 
 Public Sub DesktopFileHelp_Click()
 
-Dim Newwin As Fmain
-Dim cwd As String
+  Dim Newwin As Fmain
+  Dim cwd As String
 
 
-    Newwin = New Fmain
-    cwd = File.Load("Scriptbuilder.desktop")
-    Newwin.ProgramWorkSpace.text = cwd
-    WriteTitle(Newwin, File.Name("Scriptbuilder.desktop"), DebuggerFlag)
-    Newwin.CurrentFile = ""
-    Newwin.show
-    
-  Catch
-    Message.Info(Error.Text & " at DesktopFileHelp_click()")
-  
+  Newwin = New Fmain
+  cwd = File.Load("Scriptbuilder.desktop")
+  Newwin.ProgramWorkSpace.text = cwd
+  WriteTitle(Newwin, File.Name("Scriptbuilder.desktop"), DebuggerFlag)
+  Newwin.CurrentFile = ""
+  Newwin.show
+
+Catch
+  Message.Info(Error.Text & " at DesktopFileHelp_click()")
+
 
 End
 
@@ -550,32 +578,37 @@ Public Sub RunSection_Click()
 End
 
 Public Sub GoFromEdit_Click()
+
   GoMenu_Click()
+
 End
 
 
 Public Sub EXPlayGround_Click()
+
   PlayGroundViewer.SetParent(Me)
   PlayGroundViewer.Show()
+
 End
 
 Public Sub NewFromPlayView(prog As String)
+
   Dim Newwin As Fmain
-  
+
   If CurrentFile = "" And ProgramWorkSpace.text = ""
     ProgramWorkSpace.Refresh()
     CurrentFile = ""
     WriteTitle(Me, System.FullVersion & " -" & application.Title & "(" & Application.Version & ") reused ", DebuggerFlag)
     newwin = Me
-    
-    
+
+
   Else
-    
+
     Newwin = New Fmain
     Newwin.ProgramWorkSpace.Refresh()
     WriteTitle(Newwin, System.FullVersion & " -" & application.Title & "(" & Application.Version & ") New", DebuggerFlag)
     Newwin.show()
-    
+
   Endif
 
   PlayGroundViewer.SetParent(Me)
@@ -678,28 +711,32 @@ Public Sub SetPrint_Click()
   MyPrinter.Configure()
 
 End
+
 Public Sub PrintMenu_Click()
 
   If MyPrinter.Configure() Then Return
-  
+
   MyPrinter.Print()
 
 End
+
 Public Sub MyPrinter_Begin()
 
   MyPrinter.paper = Printer.letter
-  
+
   Dim PRINT_MARGIN As Float = Paint.Width / MyPrinter.PaperWidth * 10
   Dim hExtents As PaintExtents
- 
+
   Paint.Font = ProgramWorkSpace.Font
   hExtents = Paint.TextExtents(ProgramWorkSpace.text)
   MyPrinter.Count = Ceil(hExtents.Height / (Paint.Height - PRINT_MARGIN * 2))
+
 End
 
 Public Sub MyPrinter_Draw()
+
   Dim PRINT_MARGIN As Float = Paint.Width / MyPrinter.PaperWidth * 10
-    
+
   Debug "Printing page";; MyPrinter.Page
 
   Paint.Font = ProgramWorkSpace.Font
@@ -711,14 +748,14 @@ Public Sub MyPrinter_Draw()
   Paint.DrawText(ProgramWorkSpace.text, PRINT_MARGIN, PRINT_MARGIN - (MyPrinter.Page - 1) * (Paint.Height - PRINT_MARGIN * 2), Paint.Width - PRINT_MARGIN * 2, Paint.Height * MyPrinter.Count, Align.TopNormal)
   'Debug Paint.ResolutionY;; ":";; Paint.TextSize("toto").Height;; Paint.TextExtents("toto").Height;; "/";; Paint.RichTextSize(GetText(), Paint.Width - PRINT_MARGIN * 2).Height;; Paint.RichTextExtents(GetText(), Paint.Width - PRINT_MARGIN * 2).Height
   Paint.ResetClip
-  
-  
+
+
 End
 
 
 Public Sub ToolButton9_Click()
 
-   OptionMenu_Click()
+  OptionMenu_Click()
 
 End
 

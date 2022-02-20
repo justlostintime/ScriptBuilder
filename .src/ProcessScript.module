@@ -1,189 +1,191 @@
 ' Gambas module file
 
-Public DataTypes As String[] = ["Binary", "Boolean", "Byte", "Short", "Integer", "Long", "Single", "Float", "Date", "String", 
-  "LongDate", "Pointer", "Variant", "Function", "Class", "NULL", "Object", "Not Array", "", 
+Public DataTypes As String[] = ["Binary", "Boolean", "Byte", "Short", "Integer", "Long", "Single", "Float", "Date", "String",
+  "LongDate", "Pointer", "Variant", "Function", "Class", "NULL", "Object", "Not Array", "",
   "", "", "", "", ""]
 
 
 
 Public Sub _Call(ByRef Block As TextEditor) As Boolean
+
   With Fmain
-  Dim Syms As String[]
-  Dim Types As Integer[]
-  Dim i As Integer
-  Dim j As Integer
-  Dim sLine As String
-  Dim InClassDef As Boolean = True
-  
-  If (Block.Count = 1) And (Trim$(Block[i].text).len = 0) Then 
-    .OutputText.WriteTo("\r\n>>>" & ("No Program to run!"))
-    Return False
-  Endif
-  Dim ShaBang As Boolean = False
-  For i = 0 To Block.View.Max
-    
-    If Not Block[i].text Then Continue                  ' Skip if nothing there
-    sLine = Trim(Block[i].text)
-    If sLine = "" Then Continue                         ' skip blank lines
-    If sLine Like "'*" Then Continue                    ' Skip Comment lines
-    If sLine Like "#!*" Then 
+    Dim Syms As String[]
+    Dim Types As Integer[]
+    Dim i As Integer
+    Dim j As Integer
+    Dim sLine As String
+    Dim InClassDef As Boolean = True
+
+    If (Block.Count = 1) And (Trim$(Block[i].text).len = 0) Then
+      .OutputText.WriteTo("\r\n>>>" & ("No Program to run!"))
+      Return False
+    Endif
+    Dim ShaBang As Boolean = False
+    For i = 0 To Block.View.Max
+
+      If Not Block[i].text Then Continue                  ' Skip if nothing there
+      sLine = Trim(Block[i].text)
+      If sLine = "" Then Continue                         ' skip blank lines
+      If sLine Like "'*" Then Continue                    ' Skip Comment lines
+      If sLine Like "#!*" Then
         ShaBang = True
         Continue                   ' skip control headers
-    Endif
-    If .debuggerFlag = True Then 
+      Endif
+      If .debuggerFlag = True Then
         Print "\nBuilder -> "; sLine
-    Endif
-    
-    Syms = Highlight.Analyze(sLine)
-    Types = Highlight.types
-    
-    If .debuggerFlag = True Then  ' display the parsed line and types
-        Dim si As Integer = 0 
+      Endif
+
+      Syms = Highlight.Analyze(sLine)
+      Types = Highlight.types
+
+      If .debuggerFlag = True Then  ' display the parsed line and types
+        Dim si As Integer = 0
         Print ("Builder ->");; ("Max Symbols") & " = "; Syms.max
         For si = 0 To syms.max
           Dim ss As String = Trim(syms[si])
           Print ("Builder ->"); ss & Space(If(Len(ss) < 30, 30 - Len(ss), 1)); Highlight.styles[Types[si]]; "("; Types[si]; ")"
         Next
-        
-    Endif
-    
-    If Syms.count Then
-      For j As Integer = 0 To Syms.max
-        
-        Select Case Highlight.Types[j]
-          
-          Case Highlight.Operator
-            If j + 1 > Highlight.Types.max Then Continue
-            If Syms[j] = "." Then
-              .VarSyms.Add(Syms[j + 1], Syms[j + 1])
-              j += 1
-            Endif
-            
-          Case Highlight.Keyword, Highlight.Function
-            Select Case Upper(Syms[j])
-              
-              Case "USE"
-                 If j + 1 > Highlight.Types.max Then Continue
-                 If Highlight.Types[j + 1] = Highlight.Symbol Then
-                   .ModuleSyms.Add(Syms[j + 1], Syms[j + 1])
-                   Inc j
-                 Endif
-                 While j < Syms.count And Syms[j + 1] = ","
+
+      Endif
+
+      If Syms.count Then
+        For j As Integer = 0 To Syms.max
+
+          Select Case Highlight.Types[j]
+
+            Case Highlight.Operator
+              If j + 1 > Highlight.Types.max Then Continue
+              If Syms[j] = "." Then
+                .VarSyms.Add(Syms[j + 1], Syms[j + 1])
+                j += 1
+              Endif
+
+            Case Highlight.Keyword, Highlight.Function
+              Select Case Upper(Syms[j])
+
+                Case "USE"
+                  If j + 1 > Highlight.Types.max Then Continue
+                  If Highlight.Types[j + 1] = Highlight.Symbol Then
+                    .ModuleSyms.Add(Syms[j + 1], Syms[j + 1])
+                    Inc j
+                  Endif
+                  While j < Syms.count And Syms[j + 1] = ","
                     Inc j
                     If Highlight.Types[j + 1] = Highlight.Symbol Then
                       .ModuleSyms.Add(Syms[j + 1], Syms[j + 1])
                       Inc j
                     Endif
-                 Wend
-                    
-              Case "DIM"
-                 If j + 1 > Highlight.Types.max Then Continue
-                 If Highlight.Types[j + 1] = Highlight.Symbol Then
-                   .VarSyms.Add(Syms[j + 1], Syms[j + 1])
-                   Inc j
-                 Endif
-                 While j < Syms.count And Syms[j + 1] = ","
+                  Wend
+
+                Case "DIM"
+                  If j + 1 > Highlight.Types.max Then Continue
+                  If Highlight.Types[j + 1] = Highlight.Symbol Then
+                    .VarSyms.Add(Syms[j + 1], Syms[j + 1])
+                    Inc j
+                  Endif
+                  While j < Syms.count And Syms[j + 1] = ","
                     Inc j
                     If Highlight.Types[j + 1] = Highlight.Symbol Then
                       .VarSyms.Add(Syms[j + 1], Syms[j + 1])
                       Inc j
                     Endif
-                 Wend
-                
-              Case "FAST", "UNSAFE"
-                
-              Case "END"
-                   If inClassDef And If syms.count = 2 And If syms[j + 1] == "class" Then 
-                     Inc j
-                     inclassdef = False
-                   Endif
-                
-              Case "CLASS"
-                If j + 1 > Highlight.Types.max Then Continue
-                If Highlight.Types.count < j + 1 Then
+                  Wend
+
+                Case "FAST", "UNSAFE"
+
+                Case "END"
+                  If inClassDef And If syms.count = 2 And If syms[j + 1] == "class" Then
+                    Inc j
+                    inclassdef = False
+                  Endif
+
+                Case "CLASS"
+                  If j + 1 > Highlight.Types.max Then Continue
+                  If Highlight.Types.count < j + 1 Then
                     If Highlight.Types[j + 1] = Highlight.Symbol Or If Highlight.Types[j + 1] = Highlight.DataType Then
                       .ClassSyms.Add(Syms[j + 1], Syms[j + 1])
                       Inc j
                     Endif
-                Endif
-                 
-              Case "SUB", "FUNCTION", "PROCEDURE"
-                If j + 1 > Highlight.Types.max Then Continue
-                If Highlight.Types[j + 1] = Highlight.Symbol Then
-                   .ProcSyms.Add(Syms[j + 1], Syms[j + 1])
-                   Inc j
-                Endif
-                
-              Case "STATIC", "PUBLIC", "PRIVATE"
-                If j + 1 > Highlight.Types.max Then Continue
-                If Highlight.Types[j + 1] = Highlight.Symbol Then
-                   .VarSyms.Add(Syms[j + 1], Syms[j + 1])
-                   Inc j
-                Endif
-                   
-             End Select
-            
-          Case Highlight.Symbol
-            
-            If Not .VarSyms.Exist(Syms[j]) Then
-              
-              Select Case Upper(Syms[j])
-                Case "INCLUDE"
-                     If j + 1 > syms.max Then Continue
-                     If .DebuggerFlag = True Then Print ("Builder ->") & "Include file " & Syms[j + 1]
-                     Inc j
-                     
-                Case Else 
-                  If j + 1 > syms.max Then Continue
-                  If (j + 1) < Syms.length Then 
-                     If (Syms[j + 1] = "AS" Or Upper(Syms[j]) = "INCLUDE") Then
-                         .VarSyms.Add(Syms[j], Syms[j])
-                          j += 1
-                     Endif
-                  Else
-                    If .DebuggerFlag = True Then
-                       Print ("Builder ->") & ("Sym not found ") & Syms[j] 
-                       .OutputText.WriteTo("\r\n>>> " & ("warning Symbol origin") & " [" & Syms[j] & "] Line:" & Str$(i + 1) & "\n\r")
-                    Endif
-                    .VarSyms.Add(Syms[j], Syms[j])
-                    ' Return False
-                  End If
+                  Endif
+
+                Case "SUB", "FUNCTION", "PROCEDURE"
+                  If j + 1 > Highlight.Types.max Then Continue
+                  If Highlight.Types[j + 1] = Highlight.Symbol Then
+                    .ProcSyms.Add(Syms[j + 1], Syms[j + 1])
+                    Inc j
+                  Endif
+
+                Case "STATIC", "PUBLIC", "PRIVATE"
+                  If j + 1 > Highlight.Types.max Then Continue
+                  If Highlight.Types[j + 1] = Highlight.Symbol Then
+                    .VarSyms.Add(Syms[j + 1], Syms[j + 1])
+                    Inc j
+                  Endif
+
               End Select
-              
-            Endif
-        End Select
-        
-      Next
-      
+
+            Case Highlight.Symbol
+
+              If Not .VarSyms.Exist(Syms[j]) Then
+
+                Select Case Upper(Syms[j])
+                  Case "INCLUDE"
+                    If j + 1 > syms.max Then Continue
+                    If .DebuggerFlag = True Then Print ("Builder ->") & "Include file " & Syms[j + 1]
+                    Inc j
+
+                  Case Else
+                    If j + 1 > syms.max Then Continue
+                    If (j + 1) < Syms.length Then
+                      If (Syms[j + 1] = "AS" Or Upper(Syms[j]) = "INCLUDE") Then
+                        .VarSyms.Add(Syms[j], Syms[j])
+                        j += 1
+                      Endif
+                    Else
+                      If .DebuggerFlag = True Then
+                        Print ("Builder ->") & ("Sym not found ") & Syms[j]
+                        .OutputText.WriteTo("\r\n>>> " & ("warning Symbol origin") & " [" & Syms[j] & "] Line:" & Str$(i + 1) & "\n\r")
+                      Endif
+                      .VarSyms.Add(Syms[j], Syms[j])
+                      ' Return False
+                    End If
+                End Select
+
+              Endif
+          End Select
+
+        Next
+
+      Endif
+    Next
+
+    If ShaBang = False Then
+      Block.Goto(0, 0)
+      Block.Insert("#!/usr/bin/env gbs3\n")
     Endif
-  Next
-  
-  If ShaBang = False Then 
-    Block.Goto(0, 0)
-    Block.Insert("#!/usr/bin/env gbs3\n")
-  Endif
-  
-  If .DebuggerFlag = True Then 
-       Print ("Builder ->") & "Variables:"
-       For Each Item As String In .VarSyms
-           Print "Builder ->                          " & Item
-       Next
-       Print ("Builder ->") & "Procedures:"
-       For Each Item As String In .ProcSyms
-           Print "Builder ->                          " & Item
-       Next
-       Print ("Builder ->") & "Classes:"
-       For Each Item As String In .ClassSyms
-           Print ("Builder ->") & "                          " & Item
-       Next
-  Endif
-    
-  Return True
-  
-Catch 
-  Print Error.text, Error.Where
-  Stop
-  
+
+    If .DebuggerFlag = True Then
+      Print ("Builder ->") & "Variables:"
+      For Each Item As String In .VarSyms
+        Print "Builder ->                          " & Item
+      Next
+      Print ("Builder ->") & "Procedures:"
+      For Each Item As String In .ProcSyms
+        Print "Builder ->                          " & Item
+      Next
+      Print ("Builder ->") & "Classes:"
+      For Each Item As String In .ClassSyms
+        Print ("Builder ->") & "                          " & Item
+      Next
+    Endif
+
+    Return True
+
+  Catch
+    Print Error.text, Error.Where
+    Stop
+
   End With
+
 End
 
