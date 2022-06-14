@@ -16,10 +16,13 @@ Static HelpBrowserShow As HelpBrowser
 Static ScriptBrowser As HelpBrowser
 
 Public ShellCommandProcessor As String = "/bin/bash"
-Static ScriptStub As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\n\n'Place Code Here\n\nQUIT 0\ncatch\nPrint error.text&\"\\n\" & error.where"
-Static ScriptGraphicStub As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\nUSE \"gb.gui\"\n\n'Place Code Here\n\nQUIT 0\ncatch\nmessage(error.text&\"\\n\" & error.where )"
-'Static ScriptSudoStub As String = "#!/usr/bin/gbs3\n\' Gambas Script File Created " & Now & "\nUSE \"gb.gui\"\n\n'Place Code Here\n\nQUIT 0\ncatch\nmessage(error.text&\"\\n\" & error.where )"
-Static ScriptExampleStub As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\n "
+
+Static ScriptHeader As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\n"
+
+Static ScriptStub As String = ScriptHeader & File.load("ScriptTemplate")
+Static ScriptGraphicStub As String = ScriptHeader & File.load("ScriptTemplateGui")
+Static ScriptExampleStub As String = ScriptHeader
+
 Public CodeRepository As String
 Public RepositoryUser As String
 Public RepositoryPassword As String
@@ -639,7 +642,9 @@ End
 
 Public Sub ProgStor_Click()
 
-  If Not IsNull(OutputText) Then OutputText.oStop_Click()
+  If Not IsNull(OutputText) Then
+    Try OutputText.oStop_Click()
+  Endif
 
 End
 

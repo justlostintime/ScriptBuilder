@@ -1,27 +1,27 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: scriptbuilder 3.16.90\n"
-"PO-Revision-Date: 2021-11-05 20:01 UTC\n"
-"Last-Translator: Gambas Team <g4mba5@gmail.com>\n"
+"Project-Id-Version: scriptbuilder 3.17.90\n"
+"PO-Revision-Date: 2022-06-14 19:14 UTC\n"
+"Last-Translator: brian <justlostintime@gmail.com>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: PlayGroundViewer.class:134
+#: PlayGroundViewer.class:148
 msgid "'Example By Charlie Ogier"
 msgstr "'Esempio scritto da Charlie Ogier"
 
-#: OnlineNibbleViewer.class:147
+#: OnlineNibbleViewer.class:146
 msgid "'Nibble Example"
 msgstr "'Esempio di Nibble"
 
-#: FMain.form:289
+#: FMain.form:290
 msgid "About"
 msgstr "Riguardo a"
 
-#: FMain.class:232
+#: FMain.class:246
 msgid "All Files"
 msgstr "Tutti i files"
 
@@ -29,19 +29,7 @@ msgstr "Tutti i files"
 msgid "Any Issues Or enhancement requests please send email To "
 msgstr "Eventuali problemi o richieste di miglioramento inviare un'e-mail"
 
-#: FMain.form:196
-msgid "Browse Examples From Playground"
-msgstr "Sfoglia gli esempi dal parco giochi"
-
-#: FMain.form:192
-msgid "Browse Local Nibbles"
-msgstr "Sfoglia locale Nibbles "
-
-#: FMain.form:200
-msgid "Browse Online Nibbles"
-msgstr "Sfoglia online Nibbles"
-
-#: ProcessScript.module:36
+#: ProcessScript.module:43
 msgid "Builder ->"
 msgstr "Costruttore ->"
 
@@ -49,11 +37,11 @@ msgstr "Costruttore ->"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: FMain.class:231
+#: FMain.class:245
 msgid "Choose a Script file"
 msgstr "Scegli un file di script"
 
-#: FMain.form:252
+#: FMain.form:253
 msgid "Clear All"
 msgstr "Cancellare tutto"
 
@@ -65,9 +53,13 @@ msgstr "Cancella spazio di lavoro"
 msgid "Close"
 msgstr "Chiudere"
 
-#: FMain.form:382
+#: FMain.form:394
 msgid "Command Line args->"
 msgstr "Argomenti della riga di comando->"
+
+#: FMain.form:88
+msgid "Console Script"
+msgstr ""
 
 #: FMain.form:149 NibbleBrowser.form:27 PlayGroundViewer.form:41
 msgid "Copy"
@@ -81,19 +73,23 @@ msgstr "Copia contenuto"
 msgid "Copy To Editor"
 msgstr "Copia nell'editor"
 
+#: FMain.form:309
+msgid "Create a new non graphic script"
+msgstr ""
+
 #: FMain.form:144
 msgid "Cut"
 msgstr "Tagliare"
 
-#: FMain.form:235
+#: FMain.form:236
 msgid "Debug"
 msgstr "Debug"
 
-#: FMain.form:243
+#: FMain.form:244
 msgid "DEBUG(Off)"
 msgstr "DEBUG (Disattivato)"
 
-#: FMain.form:238
+#: FMain.form:239
 msgid "DEBUG(On)"
 msgstr "DEBUG(Attivo)"
 
@@ -101,7 +97,7 @@ msgstr "DEBUG(Attivo)"
 msgid "Edit"
 msgstr "Modificare"
 
-#: PlayGroundViewer.class:108
+#: PlayGroundViewer.class:118
 msgid "Error Fetching Code"
 msgstr "Errore durante il recupero del codice"
 
@@ -121,6 +117,10 @@ msgstr "Esempi da PlayGround - di Charlie Ogier"
 msgid "Execute"
 msgstr "Eseguire"
 
+#: FMain.form:366
+msgid "Execute the script"
+msgstr ""
+
 #: FMain.form:136
 msgid "Exit"
 msgstr "Uscita"
@@ -129,15 +129,31 @@ msgstr "Uscita"
 msgid "File"
 msgstr "File"
 
-#: FMain.form:260
+#: FMain.form:261
 msgid "Gambas 3 Reference Guide"
 msgstr "Guida di riferimento di Gambas3"
 
-#: FMain.form:265
+#: FMain.form:266
 msgid "Gambas 3 Scripting Reference"
 msgstr "Riferimento script Gambas3"
 
-#: FMain.form:357
+#: FMain.form:197
+msgid "Gambas One Playground"
+msgstr "Gambas One Playground"
+
+#: FMain.form:344
+msgid "Gambas One Playground examples"
+msgstr "Gambas One Playground examples"
+
+#: FMain.form:201
+msgid "Gambas Script Online Resource"
+msgstr ""
+
+#: FMain.form:189
+msgid "Gambas Script Resources"
+msgstr ""
+
+#: FMain.form:367
 msgid "Go"
 msgstr "Inizio"
 
@@ -149,7 +165,7 @@ msgstr "Inizio->"
 msgid "Graphic Script"
 msgstr "Script Grafico"
 
-#: FMain.form:257
+#: FMain.form:258
 msgid "Help"
 msgstr "Aiuto"
 
@@ -169,15 +185,27 @@ msgstr "Inserisci nell'editor"
 msgid "It Is Very simple And light And Is Also useful For learing simple programming skills outside Of an IDE."
 msgstr "È molto semplice e leggero ed è anche utile per apprendere semplici abilità di programmazione al di fuori di un IDE."
 
-#: FMain.form:276
+#: FMain.form:277
 msgid "ldir - ls program with changes"
 msgstr "ldir - programma ls con modifiche"
 
-#: ProcessScript.module:36
+#: FMain.form:352
+msgid "Lib"
+msgstr ""
+
+#: FMain.form:193
+msgid "Local Resource Lib"
+msgstr ""
+
+#: FMain.form:351
+msgid "Local script library"
+msgstr ""
+
+#: ProcessScript.module:43
 msgid "Max Symbols"
 msgstr "Simboli massimi"
 
-#: FMain.form:280
+#: FMain.form:281
 msgid "mdir - ls different format"
 msgstr "mdir - ls formato diverso"
 
@@ -193,7 +221,7 @@ msgstr "Nuovo dall'esempio"
 msgid "New From Sample"
 msgstr "Nuovo da campione"
 
-#: NibbleBrowser.class:65
+#: NibbleBrowser.class:70
 msgid "Nibble bit"
 msgstr "Nibble bit"
 
@@ -205,15 +233,11 @@ msgstr "Browser della libreria Nibble"
 msgid "Nibble Library Directory"
 msgstr "Directory della libreria Nibble"
 
-#: FMain.form:344
-msgid "Nibbles"
-msgstr "Nibbles"
-
-#: FMain.class:279
+#: FMain.class:296
 msgid "No"
 msgstr "No"
 
-#: ProcessScript.module:14
+#: ProcessScript.module:20
 msgid "No Program to run!"
 msgstr "Nessun programma da eseguire!"
 
@@ -225,7 +249,7 @@ msgstr "Nessun repository fornito"
 msgid "Not Found"
 msgstr "Non trovato"
 
-#: NibbleBrowser.class:58
+#: NibbleBrowser.class:63
 msgid "Nothing Selected"
 msgstr "Niente selezionato"
 
@@ -233,7 +257,7 @@ msgstr "Niente selezionato"
 msgid "No Working Directory Specified for project"
 msgstr "Nessuna directory di lavoro specificata per il progetto"
 
-#: FMain.class:90
+#: FMain.class:100
 msgid "Off"
 msgstr "Spento"
 
@@ -241,15 +265,27 @@ msgstr "Spento"
 msgid "OK"
 msgstr "OK"
 
-#: FMain.class:90
+#: FMain.class:100
 msgid "On"
 msgstr "Sopra"
+
+#: FMain.form:358
+msgid "Online Gambas Script Library"
+msgstr ""
+
+#: FMain.form:359
+msgid "Online Lib"
+msgstr ""
 
 #: FMain.form:102
 msgid "Open"
 msgstr "Aprire"
 
-#: FMain.form:212
+#: FMain.form:316
+msgid "Open an existing script"
+msgstr ""
+
+#: FMain.form:213
 msgid "Open Shell"
 msgstr "Guscio Aperto"
 
@@ -265,11 +301,7 @@ msgstr "Password"
 msgid "Paste"
 msgstr "Colla"
 
-#: FMain.form:88
-msgid "Plain Script"
-msgstr "Script semplice"
-
-#: FMain.form:338
+#: FMain.form:345
 msgid "PlayGround"
 msgstr "Terreno di gioco"
 
@@ -277,11 +309,15 @@ msgstr "Terreno di gioco"
 msgid "Print"
 msgstr "Stampa"
 
+#: FMain.form:337
+msgid "Print the script"
+msgstr ""
+
 #: OutputArea.form:18
 msgid "Process Management"
 msgstr "Gestione dei processi"
 
-#: FMain.class:91
+#: FMain.class:101
 msgid "Result Page "
 msgstr "Pagina dei risultati"
 
@@ -289,7 +325,7 @@ msgstr "Pagina dei risultati"
 msgid "Result Window"
 msgstr "Finestra dei risultati"
 
-#: FMain.form:217
+#: FMain.form:218
 msgid "Run"
 msgstr "Correre"
 
@@ -297,11 +333,11 @@ msgstr "Correre"
 msgid "Run Selected"
 msgstr "Esegui selezionato"
 
-#: FMain.form:230
+#: FMain.form:231
 msgid "Run Selected Text"
 msgstr "Esegui testo selezionato"
 
-#: FMain.form:285
+#: FMain.form:286
 msgid "Sample Desktop file"
 msgstr "File desktop di esempio"
 
@@ -313,13 +349,21 @@ msgstr "Salva"
 msgid "Save As"
 msgstr "Salva come"
 
-#: FMain.class:293
+#: FMain.class:311
 msgid "Save as a Script file"
 msgstr "Salva come file di script"
 
 #: FMain.form:114
 msgid "Save Copy As"
 msgstr "Salva copia con nome"
+
+#: FMain.form:323
+msgid "Save the script"
+msgstr ""
+
+#: FMain.form:330
+msgid "Save the script to a new location"
+msgstr ""
 
 #: OnlineNibbleViewer.form:40
 msgid "Save to  ~/bin and  Make Executable"
@@ -330,14 +374,14 @@ msgid "ScriptBuilder"
 msgstr "ScriptBuilder"
 
 #: .project:2
-msgid "Script Builder\nA simple editor to produce as output executable Gambas3 scripts - .gbs \nRequires Gambas >= 3.12 .. Tested with version 12,13,14,15.16\n\nAdd Itialian Translation ... Sorry if it's not to good! \nRemoved wget and replaced with httpClient.download\nInsert #! as required\nWarn When saved file is not executable.\n\nAdd French Translation\nAdd German Translation\nFIX  Updated to always keep an editor page open when exiting Playground or Nibble pages\nNEW change wget call to no longer produce log files in user directory\nNEW Added double click on Playground and network Nibble examples to open in editor\n         for execution.\nNEW Add menu New sub menu for Simple and Graphic scripts\nNEW Tool button now creates new simple script, no longer graphic script.\nNEW Add tool bar, printing, fixed fonts, f5 for go\nFIX   Updated to fix issues with transfer to Editor, added Nibble online library\nFIX   Corrected Wget startup when app not started from terminal or gui\nFIX   Corrected Documentation content\nFIX   Updated to correctly Identify Charlie Ogier as Playground Example Authour\nFIX   Updated so running examples  without first saving to a  file  works correctly\nNEW Added Gambas playground example access from gambas one\nFIX   Updated New to put correct time and date in comment, gb.gui used now.\nFIX   Updated Shell defaulted to csh, now tests if installed , if not resorts to bash\nFIX   Updated to fix screen issues and include DEBUG \nFIX   Updated so that names with spaces work correctly and parameters are passed\n        correctly from the command line."
-msgstr "Script Builder\nUn semplice editor per produrre come eseguibili in output script Gambas3 - .gbs \nRichiede Gambas >= 3.12 .. Testato con la versione 12,13,14,15.16\n\nAggiungi traduzione italiana... Scusa se non va bene! \nRimosso wget e sostituito con httpClient.download\nInserire #! come richiesto\nAvvisa quando il file salvato non è eseguibile.\n\nAggiungi traduzione francese\nAggiungi traduzione tedesca\nFIX Aggiornato per mantenere sempre aperta una pagina dell'editor quando si esce dalle pagine Playground o Nibble\nNUOVA modifica wget call per non produrre più file di registro nell'utente directory\nNOVITÀ Aggiunto doppio clic su Playground e esempi di Nibble di rete da aprire nell'editor\n per l'esecuzione.\nNOVITÀ Aggiungi menu Nuovo sottomenu per script semplici e grafici\nNOVITÀ Il pulsante Strumento ora crea un nuovo script semplice, non più script grafico.\nNOVITÀ Aggiungi barra degli strumenti, stampa, font corretti, f5 per andare\nFIX Aggiornato per risolvere problemi con il trasferimento all'editor, aggiunta libreria online Nibble\nFIX Corretto avvio Wget quando l'app non viene avviata da terminale o gui\nFIX Corretto il contenuto della documentazione\nFIX Aggiornato correttamente Identifica Charlie Ogier come Autore di esempio di Playground\nFIX Aggiornato in modo che l'esecuzione di esempi senza prima salvare in un file funzioni correttamente\nNOVITÀ Aggiunto accesso all'esempio di playground di Gambas da gambas one\nFIX Aggiornato Nuovo da mettere data e ora corrette nel commento, gb.gui utilizzato ora.\nFIX Aggiornato Shell predefinito su csh, ora verifica se installato, in caso contrario ricorre a bash\nFIX Aggiornato per risolvere i problemi dello schermo e includere DEBUG \nFIX Aggiornato in modo che i nomi con spazi funzionino correttamente e i parametri vengono passati\n correttamente dalla riga di comando."
+msgid "Script Builder\nA simple editor to produce as output executable Gambas3 scripts - .gbs \nRequires Gambas >= 3.12 .. Tested with version 12,13,14,15.16\n\nBugfix Detection when script is executable as #!/usr/bin/env gbs3\nUpdated to use /usr/bin/env gbs3\nJapanese Translation\nAdd Itialian Translation ... Sorry if it's not to good! \nRemoved wget and replaced with httpClient.download\nInsert #! as required\nWarn When saved file is not executable.\n\nAdd French Translation\nAdd German Translation\nFIX  Updated to always keep an editor page open when exiting Playground or Nibble pages\nNEW change wget call to no longer produce log files in user directory\nNEW Added double click on Playground and network Nibble examples to open in editor\n         for execution.\nNEW Add menu New sub menu for Simple and Graphic scripts\nNEW Tool button now creates new simple script, no longer graphic script.\nNEW Add tool bar, printing, fixed fonts, f5 for go\nFIX   Updated to fix issues with transfer to Editor, added Nibble online library\nFIX   Corrected Wget startup when app not started from terminal or gui\nFIX   Corrected Documentation content\nFIX   Updated to correctly Identify Charlie Ogier as Playground Example Authour\nFIX   Updated so running examples  without first saving to a  file  works correctly\nNEW Added Gambas playground example access from gambas one\nFIX   Updated New to put correct time and date in comment, gb.gui used now.\nFIX   Updated Shell defaulted to csh, now tests if installed , if not resorts to bash\nFIX   Updated to fix screen issues and include DEBUG \nFIX   Updated so that names with spaces work correctly and parameters are passed\n        correctly from the command line."
+msgstr ""
 
 #: HelpBrowser.form:10
 msgid "Script Builder Help"
 msgstr "Script Builder Aiuto"
 
-#: FMain.class:232
+#: FMain.class:246
 msgid "Script Files"
 msgstr "File di script"
 
@@ -345,23 +389,27 @@ msgstr "File di script"
 msgid "Scripting Project Directory"
 msgstr "Directory del progetto di scripting"
 
-#: FMain.form:189
-msgid "Script Nibbles"
-msgstr "Nibbles di script"
-
 #: FMain.form:159 PlayGroundViewer.form:45
 msgid "Select All"
 msgstr "Seleziona tutto"
 
-#: FMain.form:204
-msgid "Set Local Nibble Location"
-msgstr "Imposta la posizione del Nibble locale"
+#: NibbleBrowser.form:65
+msgid "Select the file to be Included"
+msgstr ""
+
+#: FMain.form:205
+msgid "Set Local Resource Lib Location"
+msgstr ""
 
 #: FMain.form:125
 msgid "Set Printer"
 msgstr "Imposta stampante"
 
-#: FMain.form:209
+#: FMain.form:380
+msgid "Set the environmental options"
+msgstr ""
+
+#: FMain.form:210
 msgid "Shell"
 msgstr "Shell"
 
@@ -369,7 +417,7 @@ msgstr "Shell"
 msgid "Shell Command"
 msgstr "Comando Shell"
 
-#: FMain.form:273
+#: FMain.form:274
 msgid "Simple Script Examples"
 msgstr "Esempi di script semplici"
 
@@ -377,15 +425,19 @@ msgstr "Esempi di script semplici"
 msgid "Source Code repository"
 msgstr "Repository del codice sorgente"
 
-#: FMain.form:363 OutputArea.form:21
+#: FMain.form:374 OutputArea.form:21
 msgid "Stop"
 msgstr "Fermare"
 
-#: FMain.form:225
+#: FMain.form:226
 msgid "Stop ->"
 msgstr "Fermare ->"
 
-#: ProcessScript.module:129
+#: FMain.form:373
+msgid "Stop a running script"
+msgstr ""
+
+#: ProcessScript.module:146
 msgid "Sym not found "
 msgstr "Sym non trovato"
 
@@ -393,15 +445,15 @@ msgstr "Sym non trovato"
 msgid "The specified Working Directory"
 msgstr "La directory di lavoro specificata"
 
-#: FMain.class:279
-msgid "This file will not be executable\n#!/usr/bin/gbs3 - is required to make this file executable\nADD?"
-msgstr "Questo file non sarà eseguibile\n#!/Usr/bin/gbs3 - è necessario per rendere eseguibile questo file\nADD?"
+#: FMain.class:296
+msgid "This file will not be executable\n#!/usr/bin/env gbs3 - is required to make this file executable\nADD?"
+msgstr ""
 
 #: Aboutform.class:24
 msgid "This Gambas 3 Scripting tool Is Intended To be used To build small utility scripts For the linux environment using the Gambas language. "
 msgstr "Questo strumento di scripting Gambas3 è progettato per essere utilizzato per creare piccoli script di utilità per l'ambiente Linux utilizzando il linguaggio Gambas."
 
-#: FMain.class:346
+#: FMain.class:364
 msgid "Unable to read:"
 msgstr "Impossibile leggere:"
 
@@ -417,19 +469,19 @@ msgstr "Nome utente"
 msgid "Use This File"
 msgstr "Usa questo file"
 
-#: FMain.form:269
+#: FMain.form:270
 msgid "Using Script Builder"
 msgstr "Usando Script Builer"
 
-#: ProcessScript.module:130
+#: ProcessScript.module:147
 msgid "warning Symbol origin"
 msgstr "avviso Origine del simbolo"
 
-#: FMain.form:249
+#: FMain.form:250
 msgid "Window"
 msgstr "Finestra"
 
-#: FMain.class:279
+#: FMain.class:296
 msgid "Yes"
 msgstr "sì"
 

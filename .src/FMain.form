@@ -12,7 +12,7 @@
     { NewMenu Menu
       Text = ("New")
       { newmoduletype Menu
-        Text = ("Plain Script")
+        Text = ("Console Script")
       }
       { newgraphictype Menu
         Text = ("Graphic Script")
@@ -216,15 +216,15 @@
           Picture = Picture["icon:/32/directory"]
         }
         { ToolButton4 ToolButton
-          Move(588,0,77,28)
+          Move(588,0,54,27)
           ToolTip = ("Local script library")
           Text = ("Lib")
           Picture = Picture["icon:/32/directory"]
         }
         { ToolButton5 ToolButton
-          Move(679,0,77,28)
+          Move(648,0,108,27)
           ToolTip = ("Online Gambas Script Library")
-          Text = ("Lib")
+          Text = ("Online Lib")
           Picture = Picture["icon:/32/network"]
         }
         { ToolButton1 ToolButton

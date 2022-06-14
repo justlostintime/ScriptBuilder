@@ -1,0 +1,7 @@
+Use "gb.gui","gb.form"
+
+'place code here
+
+Quit 0
+Catch
+message(error.text & "\n" & error.where)
