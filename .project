@@ -1,7 +1,7 @@
 # Gambas Project File 3.0
 Title=ScriptBuilder
 Startup=FMain
-Version=2.0.3
+Version=2.0.4
 Component=gb.args
 Component=gb.image
 Component=gb.gui.qt
@@ -23,12 +23,13 @@ Component=gb.pcre
 Component=gb.report2
 Component=gb.signal
 Component=gb.util.web
-Description="Script Builder\nA simple editor to produce as output executable Gambas3 scripts - .gbs \nRequires Gambas >= 3.12 .. Tested with version 12,13,14,15.16\n\nUpdated Execution templates\nBugfix Detection when script is executable as #!/usr/bin/env gbs3\nUpdated to use /usr/bin/env gbs3\nJapanese Translation\nAdd Itialian Translation ... Sorry if it's not to good! \nRemoved wget and replaced with httpClient.download\nInsert #! as required\nWarn When saved file is not executable.\n\nAdd French Translation\nAdd German Translation\nFIX  Updated to always keep an editor page open when exiting Playground or Nibble pages\nNEW change wget call to no longer produce log files in user directory\nNEW Added double click on Playground and network Nibble examples to open in editor\n         for execution.\nNEW Add menu New sub menu for Simple and Graphic scripts\nNEW Tool button now creates new simple script, no longer graphic script.\nNEW Add tool bar, printing, fixed fonts, f5 for go\nFIX   Updated to fix issues with transfer to Editor, added Nibble online library\nFIX   Corrected Wget startup when app not started from terminal or gui\nFIX   Corrected Documentation content\nFIX   Updated to correctly Identify Charlie Ogier as Playground Example Authour\nFIX   Updated so running examples  without first saving to a  file  works correctly\nNEW Added Gambas playground example access from gambas one\nFIX   Updated New to put correct time and date in comment, gb.gui used now.\nFIX   Updated Shell defaulted to csh, now tests if installed , if not resorts to bash\nFIX   Updated to fix screen issues and include DEBUG \nFIX   Updated so that names with spaces work correctly and parameters are passed\n        correctly from the command line."
+Description="Script Builder\n\nA simple editor to produce as output executable Gambas3 scripts - .gbs \nRequires Gambas >= 3.12 .. Tested with version 12,13,14,15.16\n\nFIX Spanosh translations\nAdd HINDI translation\nGit support comming soon\n\nUpdated Execution templates\nBugfix Detection when script is executable as #!/usr/bin/env gbs3\nUpdated to use /usr/bin/env gbs3\nJapanese Translation\nAdd Itialian Translation ... Sorry if it's not to good! \nRemoved wget and replaced with httpClient.download\nInsert #! as required\nWarn When saved file is not executable.\n\nAdd French Translation\nAdd German Translation\nFIX  Updated to always keep an editor page open when exiting Playground or Nibble pages\nNEW change wget call to no longer produce log files in user directory\nNEW Added double click on Playground and network Nibble examples to open in editor\n         for execution.\nNEW Add menu New sub menu for Simple and Graphic scripts\nNEW Tool button now creates new simple script, no longer graphic script.\nNEW Add tool bar, printing, fixed fonts, f5 for go\nFIX   Updated to fix issues with transfer to Editor, added Nibble online library\nFIX   Corrected Wget startup when app not started from terminal or gui\nFIX   Corrected Documentation content\nFIX   Updated to correctly Identify Charlie Ogier as Playground Example Authour\nFIX   Updated so running examples  without first saving to a  file  works correctly\nNEW Added Gambas playground example access from gambas one\nFIX   Updated New to put correct time and date in comment, gb.gui used now.\nFIX   Updated Shell defaulted to csh, now tests if installed , if not resorts to bash\nFIX   Updated to fix screen issues and include DEBUG \nFIX   Updated so that names with spaces work correctly and parameters are passed\n        correctly from the command line."
 Authors="Brian G"
-TabSize=2
+TabSize=4
 Translate=1
 Language=en_US
 KeepDebugInfo=0
+ForceBytecodeVersion=3.15
 SourcePath=/home/brian/Desktop
 Maintainer=ScriptBuilder
 Vendor=Westwood
