@@ -17,7 +17,7 @@ Static ScriptBrowser As HelpBrowser
 
 Public ShellCommandProcessor As String = "/bin/bash"
 
-Static ScriptHeader As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Now & "\n"
+Static ScriptHeader As String = "#!/usr/bin/env gbs3\n\' Gambas Script File Created " & Str(Now) & "\n"
 
 Static ScriptStub As String = ScriptHeader & File.load("ScriptTemplate")
 Static ScriptGraphicStub As String = ScriptHeader & File.load("ScriptTemplateGui")
