@@ -5,7 +5,6 @@
   #Scaled = False
   Background = Color.ButtonBackground
   Arrangement = Arrange.Fill
-  AutoResize = True
   Padding = 5
   { FileMenu Menu
     Text = ("File")
