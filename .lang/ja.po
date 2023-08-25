@@ -1,8 +1,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: scriptbuilder 3.17.90\n"
-"PO-Revision-Date: 2022-10-30 19:52 UTC\n"
+"Project-Id-Version: scriptbuilder 3.18.90\n"
+"PO-Revision-Date: 2023-08-25 11:07 UTC\n"
 "Last-Translator: justlostintime <justlostintime@gmail.com>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,15 +13,15 @@ msgstr ""
 msgid "'Example By Charlie Ogier"
 msgstr "'チャーリーオジエによる例"
 
-#: OnlineNibbleViewer.class:146
+#: OnlineNibbleViewer.class:153
 msgid "'Nibble Example"
 msgstr "'ニブルの例"
 
-#: FMain.form:290
+#: FMain.form:292
 msgid "About"
 msgstr "だいたい"
 
-#: FMain.class:249
+#: FMain.class:251
 msgid "All Files"
 msgstr "すべてのファイル"
 
@@ -37,39 +37,39 @@ msgstr "ビルダー->"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: FMain.class:248
+#: FMain.class:250
 msgid "Choose a Script file"
 msgstr "スクリプトファイルを選択します"
 
-#: FMain.form:253
+#: FMain.form:251
 msgid "Clear All"
 msgstr "すべてクリア"
 
-#: FMain.form:98
+#: FMain.form:96
 msgid "Clear WorkSpace"
 msgstr "ワークスペースをクリアする"
 
-#: FMain.form:132
+#: FMain.form:130
 msgid "Close"
 msgstr "選ぶ"
 
 #: FMain.form:394
-msgid "Command Line args->"
-msgstr "コマンドライン引数->"
+msgid "       Command Line args->"
+msgstr "  コマンドライン引数->"
 
-#: FMain.form:88
+#: FMain.form:86
 msgid "Console Script"
 msgstr "コンソール スクリプト"
 
-#: FMain.form:149 NibbleBrowser.form:27 PlayGroundViewer.form:41
+#: FMain.form:147 NibbleBrowser.form:27 PlayGroundViewer.form:40
 msgid "Copy"
 msgstr "コピー"
 
-#: OutputArea.form:30
+#: OutputArea.form:29
 msgid "Copy Content"
 msgstr "コンテンツをコピーする"
 
-#: OnlineNibbleViewer.form:32 PlayGroundViewer.form:29
+#: OnlineNibbleViewer.form:32 PlayGroundViewer.form:28
 msgid "Copy To Editor"
 msgstr "エディターにコピー"
 
@@ -77,23 +77,23 @@ msgstr "エディターにコピー"
 msgid "Create a new non graphic script"
 msgstr "新しい非グラフィック スクリプトを作成する"
 
-#: FMain.form:144
+#: FMain.form:142
 msgid "Cut"
 msgstr "切る"
 
-#: FMain.form:236
+#: FMain.form:234
 msgid "Debug"
 msgstr "デバッグ"
 
-#: FMain.form:244
+#: FMain.form:242
 msgid "DEBUG(Off)"
 msgstr "デバッグ（オフ）"
 
-#: FMain.form:239
+#: FMain.form:237
 msgid "DEBUG(On)"
 msgstr "デバッグ（オン)"
 
-#: FMain.form:141 NibbleBrowser.form:24 OnlineNibbleViewer.form:29 OutputArea.form:27 PlayGroundViewer.form:38
+#: FMain.form:139 NibbleBrowser.form:24 OnlineNibbleViewer.form:29 OutputArea.form:26 PlayGroundViewer.form:37
 msgid "Edit"
 msgstr "編集"
 
@@ -105,7 +105,7 @@ msgstr "コードのフェッチ中にエラーが発生しました"
 msgid "Error fetching list of examples"
 msgstr "サンプルリストの取得中にエラーが発生しました"
 
-#: OnlineNibbleViewer.class:95
+#: OnlineNibbleViewer.class:98
 msgid "Error Fetching Nibble code example"
 msgstr "Nibbleコード例のフェッチ中にエラーが発生しました"
 
@@ -117,27 +117,27 @@ msgstr "PlayGroundの例-CharlieOgier著"
 msgid "Execute"
 msgstr "実行する"
 
-#: FMain.form:366
+#: FMain.form:367
 msgid "Execute the script"
 msgstr "スクリプトを実行する"
 
-#: FMain.form:136
+#: FMain.form:134
 msgid "Exit"
 msgstr "出口"
 
-#: FMain.form:82 OnlineNibbleViewer.form:21 PlayGroundViewer.form:22
+#: FMain.form:80 OnlineNibbleViewer.form:21 PlayGroundViewer.form:21
 msgid "File"
 msgstr "ファイル"
 
-#: FMain.form:261
+#: FMain.form:263
 msgid "Gambas 3 Reference Guide"
 msgstr "Gambas3リファレンスガイド"
 
-#: FMain.form:266
+#: FMain.form:268
 msgid "Gambas 3 Scripting Reference"
 msgstr "Gambas3スクリプトリファレンス"
 
-#: FMain.form:197
+#: FMain.form:195
 msgid "Gambas One Playground"
 msgstr "ガンバス ワン プレイグラウンド"
 
@@ -145,27 +145,27 @@ msgstr "ガンバス ワン プレイグラウンド"
 msgid "Gambas One Playground examples"
 msgstr "Gambas One Playground の例"
 
-#: FMain.form:201
+#: FMain.form:199
 msgid "Gambas Script Online Resource"
 msgstr "Gambas スクリプト オンライン リソース"
 
-#: FMain.form:189
+#: FMain.form:187
 msgid "Gambas Script Resources"
 msgstr "Gambas スクリプト リソース"
 
-#: FMain.form:367
+#: FMain.form:368
 msgid "Go"
 msgstr "行く"
 
-#: FMain.form:176 NibbleBrowser.form:39
+#: FMain.form:174 NibbleBrowser.form:39
 msgid "Go->"
 msgstr "行く->"
 
-#: FMain.form:92
+#: FMain.form:90
 msgid "Graphic Script"
 msgstr "グラフィックスクリプト"
 
-#: FMain.form:258
+#: FMain.form:260
 msgid "Help"
 msgstr "ヘルプ"
 
@@ -177,7 +177,7 @@ msgstr "エディターに挿入"
 msgid "Insert Selected To Editor"
 msgstr "選択内容をエディターに挿入します"
 
-#: NibbleBrowser.form:55 PlayGroundViewer.form:33
+#: NibbleBrowser.form:55 PlayGroundViewer.form:32
 msgid "Insert To Editor"
 msgstr "エディターに挿入"
 
@@ -185,7 +185,7 @@ msgstr "エディターに挿入"
 msgid "It Is Very simple And light And Is Also useful For learing simple programming skills outside Of an IDE."
 msgstr "非常にシンプルで軽量であり、IDEの外部で簡単なプログラミングスキルを学ぶのにも役立ちます。"
 
-#: FMain.form:277
+#: FMain.form:279
 msgid "ldir - ls program with changes"
 msgstr "ldir-変更されたlsプログラム"
 
@@ -193,7 +193,7 @@ msgstr "ldir-変更されたlsプログラム"
 msgid "Lib"
 msgstr "リブ"
 
-#: FMain.form:193
+#: FMain.form:191
 msgid "Local Resource Lib"
 msgstr "ローカル リソース ライブラリ"
 
@@ -205,15 +205,15 @@ msgstr "ローカル スクリプト ライブラリ"
 msgid "Max Symbols"
 msgstr "最大シンボル"
 
-#: FMain.form:281
+#: FMain.form:283
 msgid "mdir - ls different format"
 msgstr "mdir--ls異なる形式"
 
-#: FMain.form:85
+#: FMain.form:83
 msgid "New"
 msgstr "新しい"
 
-#: PlayGroundViewer.form:25
+#: PlayGroundViewer.form:24
 msgid "New From Example"
 msgstr "例からの新規"
 
@@ -233,7 +233,7 @@ msgstr "ニブルライブラリブラウザ"
 msgid "Nibble Library Directory"
 msgstr "ニブル図書館ディレクトリ"
 
-#: FMain.class:299
+#: FMain.class:301
 msgid "No"
 msgstr "番号"
 
@@ -257,7 +257,7 @@ msgstr "何も選択されていません"
 msgid "No Working Directory Specified for project"
 msgstr "プロジェクトの作業ディレクトリが提供されていません"
 
-#: FMain.class:103
+#: FMain.class:105
 msgid "Off"
 msgstr "オフ"
 
@@ -265,7 +265,7 @@ msgstr "オフ"
 msgid "OK"
 msgstr "OK"
 
-#: FMain.class:103
+#: FMain.class:105
 msgid "On"
 msgstr "オン"
 
@@ -277,7 +277,7 @@ msgstr "オンライン Gambas スクリプト ライブラリ"
 msgid "Online Lib"
 msgstr "オンライン図書館"
 
-#: FMain.form:102
+#: FMain.form:100
 msgid "Open"
 msgstr "開ける"
 
@@ -285,11 +285,11 @@ msgstr "開ける"
 msgid "Open an existing script"
 msgstr "既存のスクリプトを開く"
 
-#: FMain.form:213
+#: FMain.form:211
 msgid "Open Shell"
 msgstr "オープンシェル"
 
-#: FMain.form:184
+#: FMain.form:182
 msgid "Options"
 msgstr "オプション"
 
@@ -297,7 +297,7 @@ msgstr "オプション"
 msgid "Password"
 msgstr "パスワード"
 
-#: FMain.form:154
+#: FMain.form:152
 msgid "Paste"
 msgstr "ペースト"
 
@@ -305,7 +305,7 @@ msgstr "ペースト"
 msgid "PlayGround"
 msgstr "遊び場"
 
-#: FMain.form:121
+#: FMain.form:119
 msgid "Print"
 msgstr "印刷"
 
@@ -313,11 +313,15 @@ msgstr "印刷"
 msgid "Print the script"
 msgstr "スクリプトを印刷する"
 
-#: OutputArea.form:18
+#: OutputArea.form:17
 msgid "Process Management"
 msgstr "プロセス管理"
 
-#: FMain.class:104
+#: FMain.form:255
+msgid "Refresh"
+msgstr "リフレッシュ"
+
+#: FMain.class:106
 msgid "Result Page "
 msgstr "結果ページ"
 
@@ -325,35 +329,35 @@ msgstr "結果ページ"
 msgid "Result Window"
 msgstr "結果ウィンドウ"
 
-#: FMain.form:218
+#: FMain.form:216
 msgid "Run"
 msgstr "走る"
 
-#: FMain.form:171 NibbleBrowser.form:31
+#: FMain.form:169 NibbleBrowser.form:31
 msgid "Run Selected"
 msgstr "選択した実行"
 
-#: FMain.form:231
+#: FMain.form:229
 msgid "Run Selected Text"
 msgstr "選択したテキストを実行"
 
-#: FMain.form:286
+#: FMain.form:288
 msgid "Sample Desktop file"
 msgstr "サンプルデスクトップファイル"
 
-#: FMain.form:106
+#: FMain.form:104
 msgid "Save"
 msgstr "保存する"
 
-#: FMain.form:110
+#: FMain.form:108
 msgid "Save As"
 msgstr "名前を付けて保存"
 
-#: FMain.class:314
+#: FMain.class:316
 msgid "Save as a Script file"
 msgstr "スクリプトファイルとして保存"
 
-#: FMain.form:114
+#: FMain.form:112
 msgid "Save Copy As"
 msgstr "名前を付けてコピーを保存"
 
@@ -373,15 +377,19 @@ msgstr "〜/ binに保存し、実行可能ファイルにします"
 msgid "ScriptBuilder"
 msgstr "ScriptBuilder"
 
+#: OnlineNibbleViewer.form:17
+msgid "Script Builder - Online Library"
+msgstr "Script Builder - オンラインライブラリ"
+
 #: .project:2
-msgid "Script Builder\nA simple editor to produce as output executable Gambas3 scripts - .gbs \nRequires Gambas >= 3.12 .. Tested with version 12,13,14,15.16\n\nUpdated Execution templates\nBugfix Detection when script is executable as #!/usr/bin/env gbs3\nUpdated to use /usr/bin/env gbs3\nJapanese Translation\nAdd Itialian Translation ... Sorry if it's not to good! \nRemoved wget and replaced with httpClient.download\nInsert #! as required\nWarn When saved file is not executable.\n\nAdd French Translation\nAdd German Translation\nFIX  Updated to always keep an editor page open when exiting Playground or Nibble pages\nNEW change wget call to no longer produce log files in user directory\nNEW Added double click on Playground and network Nibble examples to open in editor\n         for execution.\nNEW Add menu New sub menu for Simple and Graphic scripts\nNEW Tool button now creates new simple script, no longer graphic script.\nNEW Add tool bar, printing, fixed fonts, f5 for go\nFIX   Updated to fix issues with transfer to Editor, added Nibble online library\nFIX   Corrected Wget startup when app not started from terminal or gui\nFIX   Corrected Documentation content\nFIX   Updated to correctly Identify Charlie Ogier as Playground Example Authour\nFIX   Updated so running examples  without first saving to a  file  works correctly\nNEW Added Gambas playground example access from gambas one\nFIX   Updated New to put correct time and date in comment, gb.gui used now.\nFIX   Updated Shell defaulted to csh, now tests if installed , if not resorts to bash\nFIX   Updated to fix screen issues and include DEBUG \nFIX   Updated so that names with spaces work correctly and parameters are passed\n        correctly from the command line."
-msgstr "スクリプト ビルダ\n実行可能な Gambas3 スクリプトを出力として生成するシンプルなエディタ - .gbs \nGambas >= 3.12 が必要..バージョン 12、13、14、15.16 でテスト済み\n\n実行テンプレートを更新\nスクリプトが #! として実行可能な場合のバグ修正検出/usr/bin/env gbs3\n/usr/bin/env gbs3 を使用するように更新\n日本語訳\nイタリア語訳を追加 ... うまくいかなかったらごめんなさい! \nwget を削除し、httpClient.download に置き換えました\n# を挿入してください!必要に応じて\n保存されたファイルが実行可能でない場合に警告\n\nフランス語の翻訳を追加\nドイツ語の翻訳を追加\n修正 Playground または Nibble ページを終了するときに常にエディタ ページを開いたままにするように更新\nNEW wget 呼び出しを変更して、ユーザーでログ ファイルを生成しなくなりましたディレクトリ\nNEW Playground とネットワーク Nibble の例をダブルクリックしてエディタで\n開き、実行できるようにしました。\nNEW メニューの追加 シンプルおよびグラフィック スクリプト用の新しいサブメニュー\nNEW ツール ボタンはグラフィック スクリプトではなく、新しいシンプル スクリプトを作成します。\nNEWツールバー、印刷、固定フォントの追加、f5 for go\nFIX Editor への転送に関する問題を修正するために更新、Nibble オンライン ライブラリを追加\nFIX アプリが端末または GUI から開始されない場合の Wget の起動を修正\nFIX 修正されたドキュメント コンテンツ\nFIX 正しく更新Charlie Ogier を Playground のサンプル作成者として特定\nFIX 更新して、最初にファイルに保存せずにサンプルを実行しても正しく機能する\nNEW Gambas one からの Gambas Playground のサンプル アクセスを追加\nFIX 更新された New to putコメントの正しい時刻と日付、gb.gui が使用されるようになりました。\nFIX 更新されたシェルはデフォルトで csh になり、インストールされているかどうかをテストし、インストールされていない場合は bash に頼ります\nFIX 画面の問題を修正し、DEBUG を含めるように更新しました\nFIX スペースを含む名前が機能するように更新しました正しく、パラメータは\nコマンド ラインから正しく渡されます。"
+msgid "Script Builder\n\nA simple editor to produce as output executable Gambas3 scripts - .gbs \nRequires Gambas >= 3.12 .. Tested with version 12,13,14,15.16,17,18\n\nUpdated to work correctly on Rpi OS 64 bit and raspbian 32 bit\n\nFIX Spanish translations\nAdd HINDI translation\nGit support comming soon\n\nUpdated Execution templates\nBugfix Detection when script is executable as #!/usr/bin/env gbs3\nUpdated to use /usr/bin/env gbs3\nJapanese Translation\nAdd Itialian Translation ... Sorry if it's not to good! \nRemoved wget and replaced with httpClient.download\nInsert #! as required\nWarn When saved file is not executable.\n\nAdd French Translation\nAdd German Translation\nFIX  Updated to always keep an editor page open when exiting Playground or Nibble pages\nNEW change wget call to no longer produce log files in user directory\nNEW Added double click on Playground and network Nibble examples to open in editor\n         for execution.\nNEW Add menu New sub menu for Simple and Graphic scripts\nNEW Tool button now creates new simple script, no longer graphic script.\nNEW Add tool bar, printing, fixed fonts, f5 for go\nFIX   Updated to fix issues with transfer to Editor, added Nibble online library\nFIX   Corrected Wget startup when app not started from terminal or gui\nFIX   Corrected Documentation content\nFIX   Updated to correctly Identify Charlie Ogier as Playground Example Authour\nFIX   Updated so running examples  without first saving to a  file  works correctly\nNEW Added Gambas playground example access from gambas one\nFIX   Updated New to put correct time and date in comment, gb.gui used now.\nFIX   Updated Shell defaulted to csh, now tests if installed , if not resorts to bash\nFIX   Updated to fix screen issues and include DEBUG \nFIX   Updated so that names with spaces work correctly and parameters are passed\n        correctly from the command line."
+msgstr ""
 
 #: HelpBrowser.form:10
 msgid "Script Builder Help"
 msgstr "Script Builder ヘルプ"
 
-#: FMain.class:249
+#: FMain.class:251
 msgid "Script Files"
 msgstr "スクリプトファイル"
 
@@ -389,7 +397,7 @@ msgstr "スクリプトファイル"
 msgid "Scripting Project Directory"
 msgstr "スクリプトプロジェクトディレクトリ"
 
-#: FMain.form:159 PlayGroundViewer.form:45
+#: FMain.form:157 PlayGroundViewer.form:44
 msgid "Select All"
 msgstr "すべて選択"
 
@@ -397,19 +405,19 @@ msgstr "すべて選択"
 msgid "Select the file to be Included"
 msgstr "含めるファイルを選択"
 
-#: FMain.form:205
+#: FMain.form:203
 msgid "Set Local Resource Lib Location"
 msgstr "ローカル リソース ライブラリの場所を設定する"
 
-#: FMain.form:125
+#: FMain.form:123
 msgid "Set Printer"
 msgstr "プリンターの設定"
 
-#: FMain.form:380
+#: FMain.form:381
 msgid "Set the environmental options"
 msgstr "環境オプションの設定"
 
-#: FMain.form:210
+#: FMain.form:208
 msgid "Shell"
 msgstr "シェル"
 
@@ -417,7 +425,7 @@ msgstr "シェル"
 msgid "Shell Command"
 msgstr "シェルコマンド"
 
-#: FMain.form:274
+#: FMain.form:276
 msgid "Simple Script Examples"
 msgstr "簡単なスクリプトの例"
 
@@ -425,15 +433,15 @@ msgstr "簡単なスクリプトの例"
 msgid "Source Code repository"
 msgstr "ソースコードリポジトリ"
 
-#: FMain.form:374 OutputArea.form:21
+#: FMain.form:375 OutputArea.form:20
 msgid "Stop"
 msgstr "やめる"
 
-#: FMain.form:226
+#: FMain.form:224
 msgid "Stop ->"
 msgstr "やめる ->"
 
-#: FMain.form:373
+#: FMain.form:374
 msgid "Stop a running script"
 msgstr "実行中のスクリプトを停止する"
 
@@ -445,7 +453,7 @@ msgstr "記号が見つかりません"
 msgid "The specified Working Directory"
 msgstr "指定された作業ディレクトリ"
 
-#: FMain.class:299
+#: FMain.class:301
 msgid "This file will not be executable\n#!/usr/bin/env gbs3 - is required to make this file executable\nADD?"
 msgstr "このファイルは実行可能ではありません\n#!/usr/bin/env gbs3 - このファイルを実行可能にするには\nADD?"
 
@@ -453,7 +461,7 @@ msgstr "このファイルは実行可能ではありません\n#!/usr/bin/env g
 msgid "This Gambas 3 Scripting tool Is Intended To be used To build small utility scripts For the linux environment using the Gambas language. "
 msgstr "このGambas3スクリプトツールは、Gambas言語を使用するLinux環境用の小さなユーティリティスクリプトを作成するために使用することを目的としています。"
 
-#: FMain.class:367
+#: FMain.class:369
 msgid "Unable to read:"
 msgstr "読むことができません："
 
@@ -469,7 +477,7 @@ msgstr "ユーザー名"
 msgid "Use This File"
 msgstr "このファイルを使用する"
 
-#: FMain.form:270
+#: FMain.form:272
 msgid "Using Script Builder"
 msgstr "使用する Script Builder"
 
@@ -477,11 +485,11 @@ msgstr "使用する Script Builder"
 msgid "warning Symbol origin"
 msgstr "警告シンボルの起源"
 
-#: FMain.form:250
+#: FMain.form:248
 msgid "Window"
 msgstr "窓"
 
-#: FMain.class:299
+#: FMain.class:301
 msgid "Yes"
 msgstr "はい"
 

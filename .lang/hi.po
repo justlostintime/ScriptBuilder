@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: scriptbuilder 3.17.90\n"
-"POT-Creation-Date: 2022-10-30 23:06 UTC\n"
-"PO-Revision-Date: 2022-10-30 22:42 UTC\n"
+"Project-Id-Version: scriptbuilder 3.18.90\n"
+"POT-Creation-Date: 2023-08-25 10:54 UTC\n"
+"PO-Revision-Date: 2023-08-25 10:59 UTC\n"
 "Last-Translator: justlostintime <justlostintime@gmail.com>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
@@ -15,14 +15,15 @@ msgid "ScriptBuilder"
 msgstr "ScriptBuilder"
 
 #: .project:2
-#, fuzzy
 msgid ""
 "Script Builder\n"
 "\n"
 "A simple editor to produce as output executable Gambas3 scripts - .gbs \n"
-"Requires Gambas >= 3.12 .. Tested with version 12,13,14,15.16\n"
+"Requires Gambas >= 3.12 .. Tested with version 12,13,14,15.16,17,18\n"
 "\n"
-"FIX Spanosh translations\n"
+"Updated to work correctly on Rpi OS 64 bit and raspbian 32 bit\n"
+"\n"
+"FIX Spanish translations\n"
 "Add HINDI translation\n"
 "Git support comming soon\n"
 "\n"
@@ -56,36 +57,6 @@ msgid ""
 "FIX   Updated so that names with spaces work correctly and parameters are passed\n"
 "        correctly from the command line."
 msgstr ""
-"स्क्रिप्ट बिल्डर\n"
-"आउटपुट निष्पादन योग्य Gambas3 स्क्रिप्ट के रूप में उत्पादन करने के लिए एक सरल संपादक - .gbs \n"
-"Gambas >= 3.12 .. संस्करण 12,13,14,15.16 के साथ परीक्षण किया गया\n"
-"\n"
-"अपडेट किए गए निष्पादन टेम्प्लेट\n"
-"बगफिक्स डिटेक्शन जब स्क्रिप्ट # के रूप में निष्पादन योग्य है! /usr/bin/env gbs3\n"
-"उपयोग करने के लिए अद्यतन /usr/bin/env gbs3\n"
-"जापानी अनुवाद\n"
-"इतालवी अनुवाद जोड़ें ... क्षमा करें यदि यह अच्छा नहीं है! \n"
-"wget हटा दिया और httpClient.download के साथ बदल दिया\n"
-"# डालें! आवश्यकतानुसार\n"
-"चेतावनी जब सहेजी गई फ़ाइल निष्पादन योग्य नहीं होती है।\n"
-"\n"
-"फ्रेंच अनुवाद जोड़ें\n"
-"जर्मन अनुवाद जोड़ें\n"
-"FIX खेल के मैदान या निबल पृष्ठों से बाहर निकलने पर एक संपादक पृष्ठ को हमेशा खुला रखने के लिए अपडेट किया गया\n"
-"उपयोगकर्ता में लॉग फ़ाइलों का उत्पादन नहीं करने के लिए नया परिवर्तन wget कॉल करें निर्देशिका\n"
-"नया जोड़ा गया खेल के मैदान और नेटवर्क निबल उदाहरणों पर डबल क्लिक को संपादक में खोलने के लिए\n"
-" निष्पादन के लिए।\n"
-"नया मेनू जोड़ें सरल और ग्राफिक स्क्रिप्ट के लिए नया उप मेनू\n"
-"नया टूल बटन अब नई सरल स्क्रिप्ट बनाता है, अब ग्राफिक स्क्रिप्ट नहीं।\n"
-"नया टूल बार, प्रिंटिंग, फिक्स्ड फोंट जोड़ें, f5 for go\n"
-"FIX संपादक को स्थानांतरण के साथ मुद्दों को ठीक करने के लिए अपडेट किया गया, Nibble ऑनलाइन लाइब्रेरी जोड़ा गया\n"
-"फिक्स Wget स्टार्टअप को ठीक किया गया जब ऐप टर्मिनल या gui से शुरू नहीं हुआ\n"
-"फिक्स सही दस्तावेज़ीकरण सामग्री\n"
-"फिक्स को सही ढंग से अपडेट किया गया चार्ली ओगियर को खेल के मैदान के रूप में पहचानें उदाहरण लेखक\n"
-"FIX अपडेट किया गया ताकि फ़ाइल में पहले सहेजे बिना चल रहे उदाहरण सही ढंग से काम करें\n"
-"नया जोड़ा गया gambas खेल का मैदान उदाहरण gambas one से एक्सेस\n"
-"फिक्स अपडेट किया गया नया डालने के लिए टिप्पणी में सही समय और तारीख, gb.gui अभी इस्तेमाल किया गया है। सही ढंग से और पैरामीटर \n"
-" कमांड लाइन से सही ढंग से पारित किए गए हैं।"
 
 #: Aboutform.class:24
 msgid "Any Issues Or enhancement requests please send email To "
@@ -119,35 +90,35 @@ msgstr "पता नहीं चला"
 msgid "The specified Working Directory"
 msgstr "निर्दिष्ट कार्य निर्देशिका"
 
-#: FMain.class:104
+#: FMain.class:105
 msgid "Off"
 msgstr "बंद"
 
-#: FMain.class:104
+#: FMain.class:105
 msgid "On"
 msgstr "पर"
 
-#: FMain.class:105
+#: FMain.class:106
 msgid "Result Page "
 msgstr "परिणाम पृष्ठ"
 
-#: FMain.class:249
+#: FMain.class:250
 msgid "Choose a Script file"
 msgstr "एक स्क्रिप्ट फ़ाइल चुनें"
 
-#: FMain.class:250
+#: FMain.class:251
 msgid "All Files"
 msgstr "सभी फाइलें"
 
-#: FMain.class:250
+#: FMain.class:251
 msgid "Script Files"
 msgstr "स्क्रिप्ट फ़ाइलें"
 
-#: FMain.class:300
+#: FMain.class:301
 msgid "No"
 msgstr "नहीं"
 
-#: FMain.class:300
+#: FMain.class:301
 msgid ""
 "This file will not be executable\n"
 "#!/usr/bin/env gbs3 - is required to make this file executable\n"
@@ -157,196 +128,200 @@ msgstr ""
 "#!/usr/bin/env gbs3 - इस फ़ाइल को निष्पादन योग्य बनाने के लिए आवश्यक है\n"
 " जोड़ें?"
 
-#: FMain.class:300
+#: FMain.class:301
 msgid "Yes"
 msgstr "हाँ"
 
-#: FMain.class:315
+#: FMain.class:316
 msgid "Save as a Script file"
 msgstr "स्क्रिप्ट फ़ाइल के रूप में सहेजें"
 
-#: FMain.class:368
+#: FMain.class:369
 msgid "Unable to read:"
 msgstr "पढ़ते नहीं बन रहा:"
 
-#: FMain.form:82 OnlineNibbleViewer.form:21 PlayGroundViewer.form:22
+#: FMain.form:80 OnlineNibbleViewer.form:21 PlayGroundViewer.form:21
 msgid "File"
 msgstr "फ़ाइल"
 
-#: FMain.form:85
+#: FMain.form:83
 msgid "New"
 msgstr "नया"
 
-#: FMain.form:88
+#: FMain.form:86
 msgid "Console Script"
 msgstr "कंसोल स्क्रिप्ट"
 
-#: FMain.form:92
+#: FMain.form:90
 msgid "Graphic Script"
 msgstr "ग्राफिक स्क्रिप्ट"
 
-#: FMain.form:98
+#: FMain.form:96
 msgid "Clear WorkSpace"
 msgstr "कार्यक्षेत्र साफ़ करें"
 
-#: FMain.form:102
+#: FMain.form:100
 msgid "Open"
 msgstr "खुला हुआ"
 
-#: FMain.form:106
+#: FMain.form:104
 msgid "Save"
 msgstr "बचाना"
 
-#: FMain.form:110
+#: FMain.form:108
 msgid "Save As"
 msgstr "इस प्रप में सहेजें"
 
-#: FMain.form:114
+#: FMain.form:112
 msgid "Save Copy As"
 msgstr "कॉपी को इस रूप में सहेजें"
 
-#: FMain.form:121
+#: FMain.form:119
 msgid "Print"
 msgstr "छाप"
 
-#: FMain.form:125
+#: FMain.form:123
 msgid "Set Printer"
 msgstr "प्रिंटर सेट करें"
 
-#: FMain.form:132
+#: FMain.form:130
 msgid "Close"
 msgstr "बंद करना"
 
-#: FMain.form:136
+#: FMain.form:134
 msgid "Exit"
 msgstr "बाहर निकलना"
 
-#: FMain.form:141 NibbleBrowser.form:24 OnlineNibbleViewer.form:29
-#: OutputArea.form:27 PlayGroundViewer.form:38
+#: FMain.form:139 NibbleBrowser.form:24 OnlineNibbleViewer.form:29
+#: OutputArea.form:26 PlayGroundViewer.form:37
 msgid "Edit"
 msgstr "संपादन करना"
 
-#: FMain.form:144
+#: FMain.form:142
 msgid "Cut"
 msgstr "कट गया"
 
-#: FMain.form:149 NibbleBrowser.form:27 PlayGroundViewer.form:41
+#: FMain.form:147 NibbleBrowser.form:27 PlayGroundViewer.form:40
 msgid "Copy"
 msgstr "प्रतिलिपि"
 
-#: FMain.form:154
+#: FMain.form:152
 msgid "Paste"
 msgstr "गूंधा हुआ आटा"
 
-#: FMain.form:159 PlayGroundViewer.form:45
+#: FMain.form:157 PlayGroundViewer.form:44
 msgid "Select All"
 msgstr "सभी का चयन करे"
 
-#: FMain.form:171 NibbleBrowser.form:31
+#: FMain.form:169 NibbleBrowser.form:31
 msgid "Run Selected"
 msgstr "चयनित भागो"
 
-#: FMain.form:176 NibbleBrowser.form:39
+#: FMain.form:174 NibbleBrowser.form:39
 msgid "Go->"
 msgstr "जाओ->"
 
-#: FMain.form:184
+#: FMain.form:182
 msgid "Options"
 msgstr "विकल्प"
 
-#: FMain.form:189
+#: FMain.form:187
 msgid "Gambas Script Resources"
 msgstr "गाम्बस स्क्रिप्ट संसाधन"
 
-#: FMain.form:193
+#: FMain.form:191
 msgid "Local Resource Lib"
 msgstr "स्थानीय संसाधन पुस्तकालय"
 
-#: FMain.form:197
+#: FMain.form:195
 msgid "Gambas One Playground"
 msgstr "गाम्बस वन खेल का मैदान"
 
-#: FMain.form:201
+#: FMain.form:199
 msgid "Gambas Script Online Resource"
 msgstr "गाम्बस स्क्रिप्ट ऑनलाइन संसाधन"
 
-#: FMain.form:205
+#: FMain.form:203
 msgid "Set Local Resource Lib Location"
 msgstr "स्थानीय संसाधन पुस्तकालय स्थान सेट करें"
 
-#: FMain.form:210
+#: FMain.form:208
 msgid "Shell"
 msgstr "सीप"
 
-#: FMain.form:213
+#: FMain.form:211
 msgid "Open Shell"
 msgstr "खुला खोल"
 
-#: FMain.form:218
+#: FMain.form:216
 msgid "Run"
 msgstr "दौड़ना"
 
-#: FMain.form:226
+#: FMain.form:224
 msgid "Stop ->"
 msgstr "विराम->"
 
-#: FMain.form:231
+#: FMain.form:229
 msgid "Run Selected Text"
 msgstr "चयनित पाठ चलाएँ"
 
-#: FMain.form:236
+#: FMain.form:234
 msgid "Debug"
 msgstr "डिबग"
 
-#: FMain.form:239
+#: FMain.form:237
 msgid "DEBUG(On)"
 msgstr "डीबग (चालू)"
 
-#: FMain.form:244
+#: FMain.form:242
 msgid "DEBUG(Off)"
 msgstr "डीबग (बंद)"
 
-#: FMain.form:250
+#: FMain.form:248
 msgid "Window"
 msgstr "खिड़की"
 
-#: FMain.form:253
+#: FMain.form:251
 msgid "Clear All"
 msgstr "सभी साफ करें"
 
-#: FMain.form:258
+#: FMain.form:255
+msgid "Refresh"
+msgstr "ताज़ा करना"
+
+#: FMain.form:260
 msgid "Help"
 msgstr "मदद करना"
 
-#: FMain.form:261
+#: FMain.form:263
 msgid "Gambas 3 Reference Guide"
 msgstr "गाम्बस 3 संदर्भ गाइड"
 
-#: FMain.form:266
+#: FMain.form:268
 msgid "Gambas 3 Scripting Reference"
 msgstr "गाम्बस 3 स्क्रिप्टिंग संदर्भ"
 
-#: FMain.form:270
+#: FMain.form:272
 msgid "Using Script Builder"
 msgstr "स्क्रिप्ट बिल्डर का उपयोग करना"
 
-#: FMain.form:274
+#: FMain.form:276
 msgid "Simple Script Examples"
 msgstr "सरल स्क्रिप्ट उदाहरण"
 
-#: FMain.form:277
+#: FMain.form:279
 msgid "ldir - ls program with changes"
 msgstr "ldir - ls प्रोग्राम परिवर्तन के साथ"
 
-#: FMain.form:281
+#: FMain.form:283
 msgid "mdir - ls different format"
 msgstr "mdir - ls अलग प्रारूप"
 
-#: FMain.form:286
+#: FMain.form:288
 msgid "Sample Desktop file"
 msgstr "नमूना डेस्कटॉप फ़ाइल"
 
-#: FMain.form:290
+#: FMain.form:292
 msgid "About"
 msgstr "के बारे में"
 
@@ -394,29 +369,29 @@ msgstr "ऑनलाइन गाम्बस स्क्रिप्ट ला
 msgid "Online Lib"
 msgstr "ऑनलाइन लाइब्रेरी"
 
-#: FMain.form:366
+#: FMain.form:367
 msgid "Execute the script"
 msgstr "स्क्रिप्ट निष्पादित करें"
 
-#: FMain.form:367
+#: FMain.form:368
 msgid "Go"
 msgstr "जाओ"
 
-#: FMain.form:373
+#: FMain.form:374
 msgid "Stop a running script"
 msgstr "एक चल रही स्क्रिप्ट बंद करो"
 
-#: FMain.form:374 OutputArea.form:21
+#: FMain.form:375 OutputArea.form:20
 msgid "Stop"
 msgstr "विराम"
 
-#: FMain.form:380
+#: FMain.form:381
 msgid "Set the environmental options"
 msgstr "पर्यावरण विकल्प सेट करें"
 
 #: FMain.form:394
-msgid "Command Line args->"
-msgstr "कमांड लाइन आर्ग्स->"
+msgid "       Command Line args->"
+msgstr "कमांड लाइन तर्क->"
 
 #: HelpBrowser.form:10
 msgid "Script Builder Help"
@@ -446,7 +421,7 @@ msgstr "निबल का प्रयोग करें"
 msgid "Use This File"
 msgstr "इस फ़ाइल का प्रयोग करें"
 
-#: NibbleBrowser.form:55 PlayGroundViewer.form:33
+#: NibbleBrowser.form:55 PlayGroundViewer.form:32
 msgid "Insert To Editor"
 msgstr "संपादक में डालें"
 
@@ -462,19 +437,23 @@ msgstr "शामिल करने के लिए फ़ाइल का च
 msgid "Error fetching list of examples"
 msgstr "उदाहरणों की सूची लाने में त्रुटि"
 
-#: OnlineNibbleViewer.class:95
+#: OnlineNibbleViewer.class:98
 msgid "Error Fetching Nibble code example"
 msgstr "निबल कोड उदाहरण लाने में त्रुटि"
 
-#: OnlineNibbleViewer.class:146
+#: OnlineNibbleViewer.class:153
 msgid "'Nibble Example"
 msgstr "'निबल उदाहरण'"
+
+#: OnlineNibbleViewer.form:17
+msgid "Script Builder - Online Library"
+msgstr "Script Builder - ऑनलाइन लाइब्रेरी"
 
 #: OnlineNibbleViewer.form:24
 msgid "New From Sample"
 msgstr "नमूना से नया"
 
-#: OnlineNibbleViewer.form:32 PlayGroundViewer.form:29
+#: OnlineNibbleViewer.form:32 PlayGroundViewer.form:28
 msgid "Copy To Editor"
 msgstr "संपादक को कॉपी करें"
 
@@ -518,11 +497,11 @@ msgstr "रद्द करना"
 msgid "Result Window"
 msgstr "परिणाम विंडो"
 
-#: OutputArea.form:18
+#: OutputArea.form:17
 msgid "Process Management"
 msgstr "प्रक्रिया प्रबंधन"
 
-#: OutputArea.form:30
+#: OutputArea.form:29
 msgid "Copy Content"
 msgstr "कॉपी सामग्री"
 
@@ -540,7 +519,7 @@ msgstr ""
 "खेल के मैदान से उदाहरण - चार्ली ओगियर द्वारा\n"
 "khel ke maidaan se udaaharan - chaarlee ogiyar dvaara"
 
-#: PlayGroundViewer.form:25
+#: PlayGroundViewer.form:24
 msgid "New From Example"
 msgstr "उदाहरण से नया"
 
