@@ -40,7 +40,6 @@
     #Public = True
     ToolTip = ("Select the file to be Included")
     Expand = True
-    ShowDetailed = True
     ReadOnly = True
   }
   { !NibbleSource TextEditor
