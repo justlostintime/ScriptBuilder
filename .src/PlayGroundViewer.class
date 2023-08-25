@@ -106,6 +106,7 @@ End
 Public Sub DExample_Click()
     ' here we will get the actual content maybe!!
 
+    If DExample.key = "" Then Return     ' nothing selected
     Dim MyUrl As String = "https://api.github.com/gists/" & Examples[DExample.key]
 
     If MyUrl = LastUrl Then Return

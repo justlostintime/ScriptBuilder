@@ -32,7 +32,7 @@ Public SourceDirectory As String = User.home &/ "bin"
 
 Static Public Sub _init()
 
-    'System.language = "fr_FR.utf-8"
+    System.language = "fr_FR.utf-8"
     'System.language = "ja_JP.utf-8"
     'System.language = "it_IT.utf-8"
     'System.language = "de_DE.utf-8"
