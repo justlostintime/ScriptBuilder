@@ -4,7 +4,6 @@
   MoveScaled(0,0,162,112)
   Text = ("Examples From PlayGround - By Charlie Ogier")
   Arrangement = Arrange.Fill
-  AutoResize = True
   { pgfile Menu
     Text = ("File")
     { pgnewfrom Menu
@@ -35,7 +34,10 @@
     { ProgEdit TextEditor
       MoveScaled(54,1,104,108)
       Font = Font["Monospace,+1"]
+      Background = Color.TextForeground
+      Foreground = Color.Background
       Highlight = "Gambas"
+      Mode = "Gambas"
       ReadOnly = True
       ShowLineNumber = True
     }

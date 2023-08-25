@@ -651,49 +651,49 @@ Public Sub ProgStor_Click()
 End
 
 
-Public Sub ToolButton1_Click()
+Public Sub ToolGo_Click()
 
     GoMenu_Click()
 
 End
 
-Public Sub ToolButton2_Click()
+Public Sub ToolStop_Click()
 
     ProgStor_Click()
 
 End
 
-Public Sub ToolButton3_Click()
+Public Sub ToolPlayground_Click()
 
     EXPlayGround_Click()
 
 End
 
-Public Sub ToolButton6_Click()
+Public Sub ToolNew_Click()
 
     newmoduletype_Click()
 
 End
 
-Public Sub ToolButton7_Click()
+Public Sub ToolSave_Click()
 
     SaveMenu_Click()
 
 End
 
-Public Sub ToolButton8_Click()
+Public Sub ToolSaveAs_Click()
 
     SaveasMenu_Click()
 
 End
 
-Public Sub ToolButton4_Click()
+Public Sub ToolLocalLib_Click()
 
     NibbleBrowser.Show()
 
 End
 
-Public Sub ToolButton5_Click()
+Public Sub ToolOnlineLib_Click()
 
     OnlineLib_Click()
 
@@ -701,13 +701,13 @@ End
 
 
 
-Public Sub ToolButton10_Click()
+Public Sub ToolOpen_Click()
 
     OpenMenu_Click()
 
 End
 
-Public Sub ToolButton11_Click()
+Public Sub ToolPrint_Click()
 
     PrintMenu_Click
 
@@ -760,10 +760,26 @@ Public Sub MyPrinter_Draw()
 End
 
 
-Public Sub ToolButton9_Click()
+Public Sub ToolOptions_Click()
 
     OptionMenu_Click()
 
 End
 
+
+
+Public Sub Refreshmenu5_Click()
+
+    Me.Refresh()
+
+End
+
+Public Sub Form_Resize()
+
+    VBox1.Width = FMain.Width - 1
+    VBox1.Height = Fmain.Height - VBox1.y
+    cmdlineargs.width = HBox1.w - cmdlineargs.x - 10
+    Me.refresh
+
+End
 

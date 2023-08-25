@@ -3,8 +3,8 @@
 { Form Form
   MoveScaled(0,0,164,121)
   Expand = True
+  Text = ("Script Builder - Online Library")
   Arrangement = Arrange.Fill
-  AutoResize = True
   { Menu2 Menu
     Text = ("File")
     { FileSample Menu
@@ -27,12 +27,16 @@
     MoveScaled(0,0,163,110)
     Expand = True
     { DExample ColumnView
-      MoveScaled(3,1,50,108)
+      MoveScaled(1,1,51,108)
       Font = Font["Noto Mono"]
+      Sorted = True
+      Header = False
     }
     { ProgEdit TextEditor
       MoveScaled(54,1,104,108)
       Font = Font["Monospace,+1"]
+      Background = Color.Foreground
+      Foreground = Color.Background
       Expand = True
       Highlight = "Gambas"
       ReadOnly = True

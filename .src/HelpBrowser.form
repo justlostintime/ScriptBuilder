@@ -7,7 +7,6 @@
   Text = ("Script Builder Help")
   Persistent = True
   Arrangement = Arrange.Fill
-  AutoResize = True
   { !helpwindow WebView
     MoveScaled(1,1,150,111)
     #Public = True
