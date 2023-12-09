@@ -4,6 +4,9 @@ Public DataTypes As String[] = ["Binary", "Boolean", "Byte", "Short", "Integer",
     "LongDate", "Pointer", "Variant", "Function", "Class", "NULL", "Object", "Not Array", "",
     "", "", "", "", ""]
 
+Public Styles As String[] = ["Background", "Normal", "Selection", "Alternate", "Highlight", "CurrentLine", "Added", "Removed", "Error", "Comment", "Documentation", "Keyword",
+    "Function", "Operator", "Symbol", "Number", "String", "Breakpoint", "Current", "Datatype", "Preprocessor", "Escape", "Label", "Constant", "Class", "Id", "Element",
+    "Property", "Pseudo", "Rule", "Important", "File", "Header", "Position", "Markup", "Attribute", "Value", "Entity", "WebMarkup", "WebComment", "WebArgument"]
 
 
 Public Sub _Call(ByRef Block As TextEditor) As Boolean
@@ -25,8 +28,8 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
 
             If Not Block[i].text Then Continue                  ' Skip if nothing there
             sLine = Trim(Block[i].text)
-            If sLine = "" Then Continue                         ' skip blank lines
-            If sLine Like "'*" Then Continue                    ' Skip Comment lines
+            If sLine = "" Then Continue                                ' skip blank lines
+            If sLine Like "'*" Then Continue                        ' Skip Comment lines
             If sLine Like "#!*" Then
                 ShaBang = True
                 Continue                   ' skip control headers
@@ -43,7 +46,7 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
                 Print ("Builder ->");; ("Max Symbols") & " = "; Syms.max
                 For si = 0 To syms.max
                     Dim ss As String = Trim(syms[si])
-                    Print ("Builder ->"); ss & Space(If(Len(ss) < 30, 30 - Len(ss), 1)); Highlight.styles[Types[si]]; "("; Types[si]; ")"
+                    Print ("Builder ->"); ss & Space(If(Len(ss) < 30, 30 - Len(ss), 1)); Styles[Types[si]]; "("; Types[si]; ")"
                 Next
 
             Endif

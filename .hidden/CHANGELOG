@@ -1,3 +1,8 @@
+* Sat Dec 09 2023 ScriptBuilder <scriptbuilder@westwoodsvcs.com> 2.1.1
+- Updated for bug caused by change to gb.highlight from gb.eval.highlight
+
+* Wed Nov 22 2023 ScriptBuilder <scriptbuilder@westwoodsvcs.com> 2.1.1
+
 * Mon Sep 04 2023 ScriptBuilder <scriptbuilder@westwoodsvcs.com> 2.0.5
 
 * Wed Apr 12 2023 ScriptBuilder <scriptbuilder@westwoodsvcs.com> 2.0.4
