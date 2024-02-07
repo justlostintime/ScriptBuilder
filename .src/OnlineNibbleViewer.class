@@ -11,7 +11,6 @@ Public Sub SetParent(iParent As Fmain)
 
 End
 
-
 Public Sub Form_Open()
 
     Dim a, b As Integer
@@ -79,7 +78,6 @@ Public Sub Form_Close()
 
 End
 
-
 Public Sub DExample_Click()
     ' here we will get the actual content maybe!!
 
@@ -132,7 +130,6 @@ Public Sub SaveToBin_Click()
     ProgEdit.Save(User.home & "/bin/" & DExample.text)
 
     Chmod iPath To "rwxr-xr-x"
-
 
 End
 

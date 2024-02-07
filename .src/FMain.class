@@ -41,7 +41,6 @@ Static Public Sub _init()
 
 End
 
-
 Public Sub read_Settings()
 
     Me.top = Settings["window/top", Me.Top]
@@ -177,9 +176,7 @@ Catch
 
     Message.Info(Error.Text & " at gomenu_click()")
 
-
 End
-
 
 Public Sub GoSelected_Click()
 
@@ -195,9 +192,6 @@ Catch
     Message.Info(Error.Text & " at goSelectedmenue_click()")
 
 End
-
-
-
 
 Public Sub Answers_Read()
 
@@ -255,7 +249,6 @@ Public Sub OpenMenu_Click()
     If Dialog.OpenFile() Then
         Return ' User pressed Cancel -
     Endif
-
 
     If CurrentFile <> "" Then
         Newwin = New Fmain
@@ -455,7 +448,6 @@ Public Sub SelAllMenu_Click()
 
 End
 
-
 Public Sub helpbrowser_Click()
 
     If HelpBrowserShow = Null Then HelpBrowserShow = New HelpBrowser
@@ -471,13 +463,9 @@ End
 
 Public Sub aboutmenu_Click()
 
-
     Aboutform.Show()
 
-
 End
-
-
 
 Public Sub CloseMenue_Click()
 
@@ -507,12 +495,10 @@ Public Sub ScriptBuilderHelpMenu_Click()
 
 End
 
-
 Public Sub lidirMenu_Click()
 
     Dim Newwin As Fmain
     Dim cwd As String
-
 
     Newwin = New Fmain
     cwd = File.Load("ldir")
@@ -524,14 +510,12 @@ Public Sub lidirMenu_Click()
 Catch
     Message.Info(Error.Text & "at ldir sample load")
 
-
 End
 
 Public Sub mdirmenu_Click()
 
     Dim Newwin As Fmain
     Dim cwd As String
-
 
     Newwin = New Fmain
     cwd = File.Load("ldir")
@@ -542,14 +526,12 @@ Public Sub mdirmenu_Click()
 Catch
     Message.Info(Error.Text & "at mdir sample load")
 
-
 End
 
 Public Sub DesktopFileHelp_Click()
 
     Dim Newwin As Fmain
     Dim cwd As String
-
 
     Newwin = New Fmain
     cwd = File.Load("Scriptbuilder.desktop")
@@ -560,7 +542,6 @@ Public Sub DesktopFileHelp_Click()
 
 Catch
     Message.Info(Error.Text & " at DesktopFileHelp_click()")
-
 
 End
 
@@ -588,7 +569,6 @@ Public Sub GoFromEdit_Click()
 
 End
 
-
 Public Sub EXPlayGround_Click()
 
     PlayGroundViewer.SetParent(Me)
@@ -605,7 +585,6 @@ Public Sub NewFromPlayView(prog As String)
         CurrentFile = ""
         WriteTitle(Me, System.FullVersion & " -" & application.Title & "(" & Application.Version & ") reused ", DebuggerFlag)
         newwin = Me
-
 
     Else
 
@@ -649,7 +628,6 @@ Public Sub ProgStor_Click()
     Endif
 
 End
-
 
 Public Sub ToolGo_Click()
 
@@ -698,8 +676,6 @@ Public Sub ToolOnlineLib_Click()
     OnlineLib_Click()
 
 End
-
-
 
 Public Sub ToolOpen_Click()
 
@@ -756,17 +732,13 @@ Public Sub MyPrinter_Draw()
     'Debug Paint.ResolutionY;; ":";; Paint.TextSize("toto").Height;; Paint.TextExtents("toto").Height;; "/";; Paint.RichTextSize(GetText(), Paint.Width - PRINT_MARGIN * 2).Height;; Paint.RichTextExtents(GetText(), Paint.Width - PRINT_MARGIN * 2).Height
     Paint.ResetClip
 
-
 End
-
 
 Public Sub ToolOptions_Click()
 
     OptionMenu_Click()
 
 End
-
-
 
 Public Sub Refreshmenu5_Click()
 
@@ -776,10 +748,11 @@ End
 
 Public Sub Form_Resize()
 
-    VBox1.Width = FMain.Width - 1
-    VBox1.Height = Fmain.Height - VBox1.y
-    cmdlineargs.width = HBox1.w - cmdlineargs.x - 10
+    BackGroundInfo.Width = FMain.Width - 10
+    BackGroundInfo.Height = FMain.height - 10
+    cmdlineargs.width = CmdInfo.w - cmdlineargs.x - 10
+    ProgramWorkSpace.height = BackGroundInfo.height - CmdInfo.height - ToolBar1.height - 20
+
     Me.refresh
 
 End
-

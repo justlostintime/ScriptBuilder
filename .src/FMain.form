@@ -1,9 +1,10 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,1141,749)
+  Move(0,0,1148,588)
   #Scaled = False
   Background = Color.Black
+  Expand = True
   Padding = 5
   { FileMenu Menu
     Text = ("File")
@@ -170,11 +171,11 @@
       Text = ("About")
     }
   }
-  { VBox1 VBox
-    Move(0,7,1141,700)
+  { BackGroundInfo VBox
+    Move(0,0,1085,518)
     Background = Color.TooltipBackground
     { ToolBar1 ToolBar
-      Move(14,14,1064,42)
+      Move(35,14,1036,42)
       Background = Color.TextBackground
       AutoResize = False
       Centered = True
@@ -252,14 +253,14 @@
         Picture = Picture["icon:/32/stop"]
       }
       { !ToolOptions ToolButton
-        Move(924,0,105,28)
+        Move(917,0,105,28)
         #Public = True
         ToolTip = ("Set the environmental options")
         Text = ("Options")
         Picture = Picture["icon:/32/options"]
       }
     }
-    { HBox1 HBox
+    { CmdInfo HBox
       Move(14,56,1064,42)
       Background = Color.LightGray
       { Label1 Label
@@ -274,11 +275,10 @@
       }
     }
     { !ProgramWorkSpace TextEditor
-      Move(14,98,714,511)
+      Move(14,98,616,273)
       #Public = True
       Font = Font["Monospace"]
       Background = Color.ButtonBackground
-      Expand = True
       PopupMenu = "EditMenu"
       Highlight = "Gambas"
       Mode = "Gambas"

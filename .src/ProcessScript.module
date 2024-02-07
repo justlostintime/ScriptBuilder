@@ -8,7 +8,6 @@ Public Styles As String[] = ["Background", "Normal", "Selection", "Alternate", "
     "Function", "Operator", "Symbol", "Number", "String", "Breakpoint", "Current", "Datatype", "Preprocessor", "Escape", "Label", "Constant", "Class", "Id", "Element",
     "Property", "Pseudo", "Rule", "Important", "File", "Header", "Position", "Markup", "Attribute", "Value", "Entity", "WebMarkup", "WebComment", "WebArgument"]
 
-
 Public Sub _Call(ByRef Block As TextEditor) As Boolean
 
     With Fmain
@@ -191,4 +190,3 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
     End With
 
 End
-

@@ -9,7 +9,6 @@ Public Sub SetParent(iparent As Fmain)
 
 End
 
-
 Public Sub Form_Open()
 
     If Not Exist(NibbleLibraryLocation) Then
