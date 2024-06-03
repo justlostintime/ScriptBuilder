@@ -5,10 +5,11 @@ Public ProgramCounter As Integer = 0
 Public ActiveProg As Process
 Public EResult As String
 Public OutputText As OutputArea
-Public VarSyms As New Collection
-Public ProcSyms As New Collection
-Public ClassSyms As New Collection
-Public ModuleSyms As New Collection
+Public VarSyms As New Collection(gb.ignorecase)
+Public ProcSyms As New Collection(gb.ignorecase)
+Public ClassSyms As New Collection(gb.ignorecase)
+Public ModuleSyms As New Collection(gb.ignorecase)
+Public PropSyms As New Collection(gb.ignorecase)
 Private MyPrinter As New Printer As "Myprinter"
 
 Public rasta As Integer
@@ -436,6 +437,69 @@ Public Sub CopyMenu_Click()
 
 End
 
+Public Sub Undo_Menu_Click()
+
+    ProgramWorkSpace.Undo()
+
+End
+
+Private SearchLine As Integer = 0
+Private SearchCol As Integer = 0
+
+Public Sub FindNext_menu_Click()
+
+    Findtext(True)
+
+End
+
+Sub findText(forward As Boolean)
+
+    SearchLine = ProgramWorkSpace.Line
+    SearchCol = ProgramWorkSpace.column
+
+    If forward = False And If SearchLine = 0 Then
+        searchLine = ProgramWorkSpace.max
+        searchCol = ProgramWorkSpace[SearchLine].Length - 1
+    Else If SearchLine = ProgramWorkSpace.max Then
+        SearchLine = 0
+        SearchCol = 0
+    Endif
+
+    Dim Position As Integer = 0
+
+    If Forward Then
+        Position = ProgramWorkSpace.FindNextString(SearchTerm.text, ByRef SearchLine, ByRef SearchCol)
+    Else
+        Position = ProgramWorkSpace.FindPreviousString(SearchTerm.text, ByRef SearchLine, ByRef SearchCol)
+    Endif
+    If position = -1 Then
+        Message.Info(("Not Found") & " : " & Quote(SearchTerm.text))
+    Else
+        SearchLine = Position
+        ProgramWorkSpace.GotoCenter(SearchCol - 1, SearchLine)
+        ProgramWorkSpace.SetFocus()
+    Endif
+
+End
+
+Public Sub FindPrevious_Menu_Click()
+
+    findText(False)
+
+End
+
+Public Sub Find_Menu_Click()
+
+    findText(True)
+
+End
+
+Public Sub Search_Button_Click()
+
+    Find_Menu_Click()
+
+End
+
 Public Sub PasteMenu_Click()
 
     ProgramWorkSpace.Paste()
@@ -750,7 +814,7 @@ Public Sub Form_Resize()
 
     BackGroundInfo.Width = FMain.Width - 10
     BackGroundInfo.Height = FMain.height - 10
-    cmdlineargs.width = CmdInfo.w - cmdlineargs.x - 10
+    cmdlineargs.width = CmdInfo.w - cmdlineargs.x - Search_Label.w - search_button.w - searchterm.w
     ProgramWorkSpace.height = BackGroundInfo.height - CmdInfo.height - ToolBar1.height - 20
 
     Me.refresh

@@ -8,6 +8,20 @@ Public Styles As String[] = ["Background", "Normal", "Selection", "Alternate", "
     "Function", "Operator", "Symbol", "Number", "String", "Breakpoint", "Current", "Datatype", "Preprocessor", "Escape", "Label", "Constant", "Class", "Id", "Element",
     "Property", "Pseudo", "Rule", "Important", "File", "Header", "Position", "Markup", "Attribute", "Value", "Entity", "WebMarkup", "WebComment", "WebArgument"]
 
+Private classStack As New String[]
+Private withStack As New String[]
+Private procStack As New String[]
+
+Sub GetPath() As String
+
+    Dim result As String = ""
+
+    If classStack.count > 0 Then result &= classStack.last & ":"
+    If procStack.count > 0 Then result &= procStack.last & ":"
+    Return result
+
+End
+
 Public Sub _Call(ByRef Block As TextEditor) As Boolean
 
     With Fmain
@@ -16,7 +30,10 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
         Dim i As Integer
         Dim j As Integer
         Dim sLine As String
-        Dim InClassDef As Boolean = True
+
+        classStack.clear()
+        withStack.clear()
+        procStack.clear()
 
         If (Block.Count = 1) And (Trim$(Block[i].text).len = 0) Then
             .OutputText.WriteTo("\r\n>>>" & ("No Program to run!"))
@@ -58,11 +75,11 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
                         Case Highlight.Operator
                             If j + 1 > Highlight.Types.max Then Continue
                             If Syms[j] = "." Then
-                                .VarSyms.Add(Syms[j + 1], Syms[j + 1])
+                                .VarSyms.Add(GetPath() & Syms[j + 1], Syms[j + 1])
                                 j += 1
                             Endif
 
-                        Case Highlight.Keyword, Highlight.Function
+                        Case Highlight.Keyword, Highlight.Function, Highlight.Preprocessor
                             Select Case Upper(Syms[j])
 
                                 Case "USE"
@@ -78,51 +95,93 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
                                             Inc j
                                         Endif
                                     Wend
+                                    Break
 
                                 Case "DIM"
                                     If j + 1 > Highlight.Types.max Then Continue
                                     If Highlight.Types[j + 1] = Highlight.Symbol Then
-                                        .VarSyms.Add(Syms[j + 1], Syms[j + 1])
+                                        .VarSyms.Add(GetPath() & Syms[j + 1], Syms[j + 1])
                                         Inc j
                                     Endif
+
                                     While j < Syms.count And Syms[j + 1] = ","
                                         Inc j
                                         If Highlight.Types[j + 1] = Highlight.Symbol Then
-                                            .VarSyms.Add(Syms[j + 1], Syms[j + 1])
+                                            .VarSyms.Add(GetPath() & Syms[j + 1], Syms[j + 1])
                                             Inc j
                                         Endif
                                     Wend
 
+                                    Break
+
                                 Case "FAST", "UNSAFE"
 
-                                Case "END"
-                                    If inClassDef And If syms.count = 2 And If syms[j + 1] == "class" Then
+                                Case "PROPERTY"
+                                    If j + 2 > Highlight.Types.max Then Continue
+                                    If Highlight.Types[j + 1] = Highlight.Symbol Or Highlight.Types[j + 1] = Highlight.Keyword Then
                                         Inc j
-                                        inclassdef = False
+                                        If Highlight.Types[j] = Highlight.Keyword Then Inc j
+                                        .PropSyms.Add(GetPath() & Syms[j], Syms[j])
                                     Endif
+                                    Break
+
+                                Case "WITH"
+                                    If j + 1 > Highlight.Types.max Then Continue
+                                    If Highlight.Types[j + 1] = Highlight.Symbol Or If Highlight.Types[j + 1] = Highlight.DataType Then
+                                        withStack.Push(Syms[j + 1])
+                                        Inc j
+                                    Endif
+
+                                Case "INCLUDE", "#INCLUDE"
+                                    If j + 1 > syms.max Then Continue
+                                    If .DebuggerFlag = True Then Print ("Builder ->") & "Include file " & Syms[j + 1]
+                                    Break
+
+                                Case "END"
+                                    If classStack.count > 0 Or withStack.count > 2 And If syms.count = 2 Then
+                                        Inc j
+                                        If syms[j] == "class" Then
+                                            classStack.Pop()
+                                        Else If syms[j] == "with" Then
+                                            withStack.Pop()
+                                        Endif
+                                    Else
+                                        If procStack.count > 0 Then
+                                            procStack.Pop()
+                                        Endif
+                                    Endif
+                                    Break
 
                                 Case "CLASS"
                                     If j + 1 > Highlight.Types.max Then Continue
-                                    If Highlight.Types.count < j + 1 Then
-                                        If Highlight.Types[j + 1] = Highlight.Symbol Or If Highlight.Types[j + 1] = Highlight.DataType Then
-                                            .ClassSyms.Add(Syms[j + 1], Syms[j + 1])
-                                            Inc j
-                                        Endif
+                                    If Highlight.Types[j + 1] = Highlight.Symbol Or If Highlight.Types[j + 1] = Highlight.DataType Then
+                                        .ClassSyms.Add(Syms[j + 1], Syms[j + 1])
+                                        classStack.Push(Syms[j + 1])
+                                        Inc j
                                     Endif
+                                    Break
 
                                 Case "SUB", "FUNCTION", "PROCEDURE"
                                     If j + 1 > Highlight.Types.max Then Continue
                                     If Highlight.Types[j + 1] = Highlight.Symbol Then
-                                        .ProcSyms.Add(Syms[j + 1], Syms[j + 1])
                                         Inc j
+                                        .ProcSyms.Add(GetPath() & Syms[j], Syms[j])
+                                        procStack.Push(Syms[j])
+                                    Endif
+                                    Break
+
+                                Case "STATIC", "FOR"
+
+                                Case "PUBLIC", "PRIVATE"
+                                    If j + 1 > Highlight.Types.max Then Continue
+                                    If Highlight.Types[j] = Highlight.Symbol Then
+                                        Inc j
+                                        .VarSyms.Add(GetPath() & Syms[j], Syms[j])
+                                        Break
                                     Endif
 
-                                Case "STATIC", "PUBLIC", "PRIVATE"
-                                    If j + 1 > Highlight.Types.max Then Continue
-                                    If Highlight.Types[j + 1] = Highlight.Symbol Then
-                                        .VarSyms.Add(Syms[j + 1], Syms[j + 1])
-                                        Inc j
-                                    Endif
+                                Default
+                                    Break
 
                             End Select
 
@@ -131,29 +190,30 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
                             If Not .VarSyms.Exist(Syms[j]) Then
 
                                 Select Case Upper(Syms[j])
-                                    Case "INCLUDE"
+                                    Case "INCLUDE", "#INCLUDE"
                                         If j + 1 > syms.max Then Continue
                                         If .DebuggerFlag = True Then Print ("Builder ->") & "Include file " & Syms[j + 1]
-                                        Inc j
+                                        Break
 
                                     Case Else
                                         If j + 1 > syms.max Then Continue
-                                        If (j + 1) < Syms.length Then
-                                            If (Syms[j + 1] = "AS" Or Upper(Syms[j]) = "INCLUDE") Then
-                                                .VarSyms.Add(Syms[j], Syms[j])
-                                                j += 1
-                                            Endif
-                                        Else
-                                            If .DebuggerFlag = True Then
-                                                Print ("Builder ->") & ("Sym not found ") & Syms[j]
-                                                .OutputText.WriteTo("\r\n>>> " & ("warning Symbol origin") & " [" & Syms[j] & "] Line:" & Str$(i + 1) & "\n\r")
-                                            Endif
-                                            .VarSyms.Add(Syms[j], Syms[j])
-                                            ' Return False
-                                        End If
-                                End Select
+                                        If (Syms[j + 1] == "AS") Then
+                                            .VarSyms.Add(GetPath() & Syms[j], Syms[j])
+                                            Break
+                                        Endif
 
+                                        If .DebuggerFlag = True Then
+                                            Print ("Builder ->") & ("Sym not found ") & Syms[j]
+                                            .OutputText.WriteTo("\r\n>>> " & ("warning Symbol Undefined - origin") & " [" & GetPath() & Syms[j] & "] Line:" & Str$(i + 1) & "\n\r")
+                                        Endif
+
+                                        Break
+                                        '.VarSyms.Add(GetPath() & Syms[j], Syms[j])
+                                End Select
+                            Else
+                                Break
                             Endif
+
                     End Select
 
                 Next
@@ -167,18 +227,26 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
         Endif
 
         If .DebuggerFlag = True Then
-            Print ("Builder ->") & "Variables:"
-            For Each Item As String In .VarSyms
-                Print "Builder ->                          " & Item
-            Next
-            Print ("Builder ->") & "Procedures:"
-            For Each Item As String In .ProcSyms
-                Print "Builder ->                          " & Item
-            Next
             Print ("Builder ->") & "Classes:"
             For Each Item As String In .ClassSyms
                 Print ("Builder ->") & "                          " & Item
             Next
+
+            Print ("Builder ->") & "Variables:"
+            For Each Item As String In .VarSyms
+                Print "Builder ->                          " & Item
+            Next
+
+            Print ("Builder ->") & "Procedures:"
+            For Each Item As String In .ProcSyms
+                Print "Builder ->                          " & Item
+            Next
+
+            Print ("Builder ->") & "Properties:"
+            For Each Item As String In .PropSyms
+                Print ("Builder ->") & "                          " & Item
+            Next
+
         Endif
 
         Return True

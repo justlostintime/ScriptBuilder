@@ -58,7 +58,11 @@
     }
     { CopyMenu Menu
       Text = ("Copy")
-      Shortcut = "Ctrl+O"
+      Shortcut = "Ctrl+C"
+    }
+    { Undo_menu Menu
+      Text = ("Undo")
+      Shortcut = "Ctrl+Z"
     }
     { PasteMenu Menu
       Text = ("Paste")
@@ -67,6 +71,18 @@
     { SelAllMenu Menu
       Text = ("Select All")
       Shortcut = "Ctrl+A"
+    }
+    { Find_menu Menu
+      Text = ("Find")
+      Shortcut = "Ctrl+F"
+    }
+    { FindNext_Menu Menu
+      Text = ("Find Next")
+      Shortcut = "Ctrl+N"
+    }
+    { FindPrevious_menu Menu
+      Text = ("Find Previous")
+      Shortcut = "Ctrl+P"
     }
     { EClear Menu
       Text = ("Clear WorkSpace")
@@ -261,17 +277,29 @@
       }
     }
     { CmdInfo HBox
-      Move(14,56,1064,42)
+      Move(7,56,1064,42)
       Background = Color.LightGray
       { Label1 Label
-        Move(14,7,224,28)
+        Move(7,7,224,28)
         Background = Color.LightGray
         Text = ("       Command Line args->")
       }
       { cmdlineargs TextBox
-        Move(252,7,763,28)
+        Move(161,7,476,28)
         Font = Font["Monospace,+1"]
         Background = Color.TextBackground
+      }
+      { search_label Label
+        Move(658,7,56,28)
+        Text = ("Search")
+      }
+      { !SearchTerm TextBox
+        Move(707,7,308,28)
+        #Public = True
+      }
+      { Search_Button Button
+        Move(1022,7,35,28)
+        Text = ("?")
       }
     }
     { !ProgramWorkSpace TextEditor

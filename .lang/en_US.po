@@ -1,18 +1,29 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: scriptbuilder 3.19.90\n"
+"Project-Id-Version: $(PACKAGE) $(VERSION)\n"
 "POT-Creation-Date: 2024-06-03 15:58 UTC\n"
-"PO-Revision-Date: 2024-06-03 16:55 UTC\n"
-"Last-Translator: brian <justlostintime@gmail.com>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  #project.pot (scriptbuilder 3.19.90)  #-#-#-#-#\n"
+"#-#-#-#-#  Aboutform.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  CodeControl.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  FMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  HelpBrowser.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  NibbleBrowser.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  OnlineNibbleViewer.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  OptionsForm.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  OutputArea.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  PlayGroundViewer.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  ProcessScript.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  ScriptBuilderHelp.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  SymTableEntry.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"#-#-#-#-#  testload.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 
 #: .project:1
 msgid "ScriptBuilder"
-msgstr "ScriptBuilder"
+msgstr ""
 
 #: .project:2
 msgid ""
@@ -68,63 +79,63 @@ msgstr ""
 
 #: Aboutform.class:23
 msgid "Any Issues Or enhancement requests please send email To "
-msgstr "Pour tout problème ou demande d'amélioration, veuillez envoyer un e-mail à"
+msgstr ""
 
 #: Aboutform.class:23
 msgid "It Is Very simple And light And Is Also useful For learing simple programming skills outside Of an IDE."
-msgstr "Il est très simple et léger et est également utile pour apprendre des compétences de programmation simples en dehors d'un IDE"
+msgstr ""
 
 #: Aboutform.class:23
 msgid "This Gambas 3 Scripting tool Is Intended To be used To build small utility scripts For the linux environment using the Gambas language. "
-msgstr "Cet outil de script Gambas 3 est destiné à être utilisé pour créer de petits scripts utilitaires pour l'environnement Linux en utilisant le langage Gambas."
+msgstr ""
 
 #: Aboutform.form:35 OptionsForm.form:94
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #: CodeControl.module:38
 msgid "No repository provided "
-msgstr "Aucun référentiel fourn"
+msgstr ""
 
 #: CodeControl.module:42
 msgid "No Working Directory Specified for project"
-msgstr "Aucun répertoire de travail spécifié pour le projet"
+msgstr ""
 
 #: CodeControl.module:46 FMain.class:476
 msgid "Not Found"
-msgstr "Pas trouvé"
+msgstr ""
 
 #: CodeControl.module:46
 msgid "The specified Working Directory"
-msgstr "Le répertoire de travail spécifié"
+msgstr ""
 
 #: FMain.class:105
 msgid "Off"
-msgstr "De"
+msgstr ""
 
 #: FMain.class:105
 msgid "On"
-msgstr "Sur"
+msgstr ""
 
 #: FMain.class:106
 msgid "Result Page "
-msgstr "Page de résultats"
+msgstr ""
 
 #: FMain.class:245
 msgid "Choose a Script file"
-msgstr "Choisissez un fichier de script"
+msgstr ""
 
 #: FMain.class:246
 msgid "All Files"
-msgstr "Tous les fichiers"
+msgstr ""
 
 #: FMain.class:246
 msgid "Script Files"
-msgstr "Fichiers de script"
+msgstr ""
 
 #: FMain.class:295
 msgid "No"
-msgstr "Non"
+msgstr ""
 
 #: FMain.class:295
 msgid ""
@@ -132,443 +143,440 @@ msgid ""
 "#!/usr/bin/env gbs3 - is required to make this file executable\n"
 "ADD?"
 msgstr ""
-"Ce fichier ne sera pas exécutable\n"
-"#!/usr/bin/env gbs3 - est nécessaire pour rendre ce fichier exécutable\n"
-"ADD ?"
 
 #: FMain.class:295
 msgid "Yes"
-msgstr "Oui"
+msgstr ""
 
 #: FMain.class:310
 msgid "Save as a Script file"
-msgstr "Enregistrer en tant que fichier de script"
+msgstr ""
 
 #: FMain.class:363
 msgid "Unable to read:"
-msgstr "Incapable de lire:"
+msgstr ""
 
 #: FMain.form:88 OnlineNibbleViewer.form:21 PlayGroundViewer.form:21
 msgid "File"
-msgstr "Fichier"
+msgstr ""
 
 #: FMain.form:91
 msgid "New"
-msgstr "Nouveau"
+msgstr ""
 
 #: FMain.form:94
 msgid "Console Script"
-msgstr "Script de console"
+msgstr ""
 
 #: FMain.form:98
 msgid "Graphic Script"
-msgstr "Script graphique"
+msgstr ""
 
 #: FMain.form:104
 msgid "Clear WorkSpace"
-msgstr "Effacer l'espace de travail"
+msgstr ""
 
 #: FMain.form:108
 msgid "Open"
-msgstr "Ouverte"
+msgstr ""
 
 #: FMain.form:112
 msgid "Save"
-msgstr "sauver"
+msgstr ""
 
 #: FMain.form:116
 msgid "Save As"
-msgstr "Enregistrer sous"
+msgstr ""
 
 #: FMain.form:120
 msgid "Save Copy As"
-msgstr "Enregistrer la copie sous"
+msgstr ""
 
 #: FMain.form:127
 msgid "Print"
-msgstr "Impression"
+msgstr ""
 
 #: FMain.form:131
 msgid "Set Printer"
-msgstr "Définir l'imprimante"
+msgstr ""
 
 #: FMain.form:138
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #: FMain.form:142
 msgid "Exit"
-msgstr "Sortie"
+msgstr ""
 
 #: FMain.form:147 NibbleBrowser.form:24 OnlineNibbleViewer.form:29
 #: OutputArea.form:26 PlayGroundViewer.form:37
 msgid "Edit"
-msgstr "Éditer"
+msgstr ""
 
 #: FMain.form:150
 msgid "Cut"
-msgstr "Couper"
+msgstr ""
 
 #: FMain.form:155 NibbleBrowser.form:27 PlayGroundViewer.form:40
 msgid "Copy"
-msgstr "Copie"
+msgstr ""
 
 #: FMain.form:160
 msgid "Undo"
-msgstr "Annuler"
+msgstr ""
 
 #: FMain.form:165
 msgid "Paste"
-msgstr "Pâte"
+msgstr ""
 
 #: FMain.form:170 PlayGroundViewer.form:44
 msgid "Select All"
-msgstr "Tout sélectionner"
+msgstr ""
 
 #: FMain.form:175
 msgid "Find"
-msgstr "Trouver"
+msgstr ""
 
 #: FMain.form:180
 msgid "Find Next"
-msgstr "Trouver ensuite"
+msgstr ""
 
 #: FMain.form:185
 msgid "Find Previous"
-msgstr "Rechercher le précédent"
+msgstr ""
 
 #: FMain.form:197 NibbleBrowser.form:31
 msgid "Run Selected"
-msgstr "Exécuter la sélection"
+msgstr ""
 
 #: FMain.form:202 NibbleBrowser.form:39
 msgid "Go->"
-msgstr "Aller->"
+msgstr ""
 
 #: FMain.form:210
 msgid "Options"
-msgstr "Possibilités"
+msgstr ""
 
 #: FMain.form:215
 msgid "Gambas Script Resources"
-msgstr "Ressources sur les scripts Gambas"
+msgstr ""
 
 #: FMain.form:219
 msgid "Local Resource Lib"
-msgstr "Bibliothèque de ressources locales"
+msgstr ""
 
 #: FMain.form:223
 msgid "Gambas One Playground"
-msgstr "Terrain de jeux Gambas One"
+msgstr ""
 
 #: FMain.form:227
 msgid "Gambas Script Online Resource"
-msgstr "Ressources en ligne Gambas Script"
+msgstr ""
 
 #: FMain.form:231
 msgid "Set Local Resource Lib Location"
-msgstr "Définir l'emplacement de la bibliothèque de ressources locales"
+msgstr ""
 
 #: FMain.form:236
 msgid "Shell"
-msgstr "Définir l'imprimante"
+msgstr ""
 
 #: FMain.form:239
 msgid "Open Shell"
-msgstr "Ouvrez Shell"
+msgstr ""
 
 #: FMain.form:244
 msgid "Run"
-msgstr "Courir"
+msgstr ""
 
 #: FMain.form:252
 msgid "Stop ->"
-msgstr "Arrêtez->"
+msgstr ""
 
 #: FMain.form:257
 msgid "Run Selected Text"
-msgstr "Exécuter le texte sélectionné"
+msgstr ""
 
 #: FMain.form:262
 msgid "Debug"
-msgstr "Déboguer"
+msgstr ""
 
 #: FMain.form:265
 msgid "DEBUG(On)"
-msgstr "DEBUG (activé)"
+msgstr ""
 
 #: FMain.form:270
 msgid "DEBUG(Off)"
-msgstr "DEBUG (désactivé)"
+msgstr ""
 
 #: FMain.form:276
 msgid "Window"
-msgstr "Vitre"
+msgstr ""
 
 #: FMain.form:279
 msgid "Clear All"
-msgstr "Tout effacer"
+msgstr ""
 
 #: FMain.form:283
 msgid "Refresh"
-msgstr "rafraîchir"
+msgstr ""
 
 #: FMain.form:288
 msgid "Help"
-msgstr "Aidez-moi"
+msgstr ""
 
 #: FMain.form:291
 msgid "Gambas 3 Reference Guide"
-msgstr "Guide de référence Gambas 3"
+msgstr ""
 
 #: FMain.form:296
 msgid "Gambas 3 Scripting Reference"
-msgstr "Référence de script Gambas 3"
+msgstr ""
 
 #: FMain.form:300
 msgid "Using Script Builder"
-msgstr "Using Script Builder"
+msgstr ""
 
 #: FMain.form:304
 msgid "Simple Script Examples"
-msgstr "Exemples de scripts simples"
+msgstr ""
 
 #: FMain.form:307
 msgid "ldir - ls program with changes"
-msgstr "ldir - programme ls avec modifications"
+msgstr ""
 
 #: FMain.form:311
 msgid "mdir - ls different format"
-msgstr "mdir - format différent"
+msgstr ""
 
 #: FMain.form:316
 msgid "Sample Desktop file"
-msgstr "Exemple de fichier de bureau"
+msgstr ""
 
 #: FMain.form:320
 msgid "About"
-msgstr "À propos"
+msgstr ""
 
 #: FMain.form:337
 msgid "Create a new non graphic script"
-msgstr "Créer un nouveau script non graphique"
+msgstr ""
 
 #: FMain.form:344
 msgid "Open an existing script"
-msgstr "Ouvrir un script existant"
+msgstr ""
 
 #: FMain.form:351
 msgid "Save the script"
-msgstr "Enregistrer le script"
+msgstr ""
 
 #: FMain.form:358
 msgid "Save the script to a new location"
-msgstr "Enregistrez le script dans un nouvel emplacement"
+msgstr ""
 
 #: FMain.form:365
 msgid "Print the script"
-msgstr "Imprimer le scénario"
+msgstr ""
 
 #: FMain.form:372
 msgid "Gambas One Playground examples"
-msgstr "Exemples de Gambas One Playground"
+msgstr ""
 
 #: FMain.form:373
 msgid "PlayGround"
-msgstr "Cour de récréation"
+msgstr ""
 
 #: FMain.form:379
 msgid "Local script library"
-msgstr "Bibliothèque de scripts locaux"
+msgstr ""
 
 #: FMain.form:380
 msgid "Lib"
-msgstr "Lib"
+msgstr ""
 
 #: FMain.form:386
 msgid "Online Gambas Script Library"
-msgstr "Bibliothèque de scripts Gambas en ligne"
+msgstr ""
 
 #: FMain.form:387
 msgid "Online Lib"
-msgstr "Bibliothèque en ligne"
+msgstr ""
 
 #: FMain.form:395
 msgid "Execute the script"
-msgstr "Exécuter le script"
+msgstr ""
 
 #: FMain.form:396
 msgid "Go"
-msgstr "Aller"
+msgstr ""
 
 #: FMain.form:402
 msgid "Stop a running script"
-msgstr "Arrêter un script en cours d'exécution"
+msgstr ""
 
 #: FMain.form:403 OutputArea.form:20
 msgid "Stop"
-msgstr "Arrêtez"
+msgstr ""
 
 #: FMain.form:409
 msgid "Set the environmental options"
-msgstr "Définir les options d'environnement"
+msgstr ""
 
 #: FMain.form:422
 msgid "       Command Line args->"
-msgstr "Arguments de commande ->"
+msgstr ""
 
 #: FMain.form:433
 msgid "Search"
-msgstr "Recherche"
+msgstr ""
 
 #: FMain.form:442
 msgid "?"
-msgstr "?"
+msgstr ""
 
 #: HelpBrowser.form:10
 msgid "Script Builder Help"
-msgstr "Aide de Script Builder"
+msgstr ""
 
 #: NibbleBrowser.class:62
 msgid "Nothing Selected"
-msgstr "Rien de sélectionné"
+msgstr ""
 
 #: NibbleBrowser.class:69
 msgid "Nibble bit"
-msgstr "Nibble bit"
+msgstr ""
 
 #: NibbleBrowser.form:20
 msgid "Nibble library browser"
-msgstr "Parcourir la bibliothèque Nibble"
+msgstr ""
 
 #: NibbleBrowser.form:36
 msgid "Execute"
-msgstr "Exécuter"
+msgstr ""
 
 #: NibbleBrowser.form:48
 msgid "Use Nibble"
-msgstr "Utiliser Nibble"
+msgstr ""
 
 #: NibbleBrowser.form:51
 msgid "Use This File"
-msgstr "Utilisez ce fichier"
+msgstr ""
 
 #: NibbleBrowser.form:55 PlayGroundViewer.form:32
 msgid "Insert To Editor"
-msgstr "Insérer dans l'éditeur"
+msgstr ""
 
 #: NibbleBrowser.form:59
 msgid "Insert Selected To Editor"
-msgstr "Insérer la sélection dans l'éditeur"
+msgstr ""
 
 #: NibbleBrowser.form:65
 msgid "Select the file to be Included"
-msgstr "Sélectionnez le fichier à inclure"
+msgstr ""
 
 #: OnlineNibbleViewer.class:48
 msgid "Error fetching list of examples"
-msgstr "Erreur lors de la récupération de la liste des exemples"
+msgstr ""
 
 #: OnlineNibbleViewer.class:98
 msgid "Error Fetching Nibble code example"
-msgstr "Erreur lors de la récupération de l'exemple de code Nibble"
+msgstr ""
 
 #: OnlineNibbleViewer.class:152
 msgid "'Nibble Example"
-msgstr "'Exemple de Nibble"
+msgstr ""
 
 #: OnlineNibbleViewer.form:17
 msgid "Script Builder - Online Library"
-msgstr "Script Builder - Bibliothèque en ligne"
+msgstr ""
 
 #: OnlineNibbleViewer.form:24
 msgid "New From Sample"
-msgstr "Nouveau à partir de l'échantillon"
+msgstr ""
 
 #: OnlineNibbleViewer.form:32 PlayGroundViewer.form:28
 msgid "Copy To Editor"
-msgstr "Copier dans l'éditeur"
+msgstr ""
 
 #: OnlineNibbleViewer.form:36
 msgid "Insert Into Editor"
-msgstr "Insérer dans l'éditeur"
+msgstr ""
 
 #: OnlineNibbleViewer.form:40
 msgid "Save to  ~/bin and  Make Executable"
-msgstr "Enregistrer dans ~ / bin et rendre exécutable"
+msgstr ""
 
 #: OptionsForm.form:30
 msgid "Scripting Project Directory"
-msgstr "Répertoire de projets de script"
+msgstr ""
 
 #: OptionsForm.form:39
 msgid "Shell Command"
-msgstr "Commande Shell"
+msgstr ""
 
 #: OptionsForm.form:48
 msgid "Nibble Library Directory"
-msgstr "Répertoire de la bibliothèque Nibble"
+msgstr ""
 
 #: OptionsForm.form:57
 msgid "Source Code repository"
-msgstr "Référentiel de code source"
+msgstr ""
 
 #: OptionsForm.form:66
 msgid "User Name"
-msgstr "Nom d'utilisateur"
+msgstr ""
 
 #: OptionsForm.form:75
 msgid "Password"
-msgstr "Mot de passe"
+msgstr ""
 
 #: OptionsForm.form:100
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #: OutputArea.form:13
 msgid "Result Window"
-msgstr "Fenêtre de résultat"
+msgstr ""
 
 #: OutputArea.form:17
 msgid "Process Management"
-msgstr "La gestion des processus"
+msgstr ""
 
 #: OutputArea.form:29
 msgid "Copy Content"
-msgstr "Copier le contenu"
+msgstr ""
 
 #: PlayGroundViewer.class:119
 msgid "Error Fetching Code"
-msgstr "Erreur de récupération du code"
+msgstr ""
 
 #: PlayGroundViewer.class:149
 msgid "'Example By Charlie Ogier"
-msgstr "'Exemple par Charlie Ogier"
+msgstr ""
 
 #: PlayGroundViewer.form:17
 msgid "Examples From PlayGround - By Charlie Ogier"
-msgstr "Exemples de PlayGround - Par Charlie Ogier"
+msgstr ""
 
 #: PlayGroundViewer.form:24
 msgid "New From Example"
-msgstr "Nouveau à partir de l'exemple"
+msgstr ""
 
 #: ProcessScript.module:39
 msgid "No Program to run!"
-msgstr "Aucun programme à exécuter !"
+msgstr ""
 
 #: ProcessScript.module:62
 msgid "Builder ->"
-msgstr "Constructeur ->"
+msgstr ""
 
 #: ProcessScript.module:62
 msgid "Max Symbols"
-msgstr "Nombre maximum de symboles"
+msgstr ""
 
 #: ProcessScript.module:206
 msgid "Sym not found "
-msgstr "Symbole introuvable"
+msgstr ""
 
 #: ProcessScript.module:207
 msgid "warning Symbol Undefined - origin"
-msgstr "symbole d'avertissement non défini - origine"
+msgstr ""
