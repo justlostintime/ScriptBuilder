@@ -4,7 +4,7 @@ Private hClient As New HttpClient As "Responses"
 Static Private Examples As New Collection
 Private STable As New String[]
 Public BaseUrl As String
-Public MyParent As FMain = FMain
+Public MyParent As FMain  '= FMain
 Private LastUrl As String = ""
 
 Public Sub SetParent(iParent As FMain)
@@ -102,70 +102,75 @@ Public Sub BuildExample()
         If f3 = "" Then Continue
         Examples.Add(f3, f2)
     Next
-    SaveAllExamplesLocally()
+    'SaveAllExamplesLocally()
 
 End
 
-Public Sub SaveAllExamplesLocally()
-
-    Dim BasePath As String = User.home &/ ".playground_examples"
-
-    If Not Exist(BasePath) Then
-        Mkdir BasePath
-    Endif
-
-    Dim aindex As File
-    If Not Exist(BasePath &/ "index")
-        aindex = Open BasePath &/ "index" For Write Create
-        Write #aindex, examples As Variant
-        Close aindex
-    Endif
-
-    Dim MyUrl As String
-    Dim strJson As String
-    Dim jsondb As Variant
-    Dim ProgFile As File
-
-    For Each ex As String In Examples
-
-        If Not Exist(BasePath &/ ex) Then
-            MyUrl = "https://api.github.com/gists/" & ex
-            Try strjson = HttpClient.Download(MyUrl)
-            If Error Or If strjson = "" Then
-                Message(("Error Fetching Code for " & Examples.key))
-                Continue
-            Endif
-
-            Print "Saving Program title :" & Examples.key & " as keyname " & BasePath &/ ex
-            Progfile = Open BasePath &/ ex For Write Create
-            Write #ProgFile, strjson As String
-            Close Progfile
-            Wait 5.00
-        Endif
-
-    Next
-
-End
+' Public Sub SaveAllExamplesLocally()
+'
+'     Dim BasePath As String = User.home &/ ".playground_examples"
+'
+'     If Not Exist(BasePath) Then
+'         Mkdir BasePath
+'     Endif
+'
+'     Dim aindex As File
+'     If Not Exist(BasePath &/ "index")
+'         aindex = Open BasePath &/ "index" For Write Create
+'         Write #aindex, examples As Variant
+'         Close aindex
+'     Endif
+'
+'     Dim MyUrl As String
+'     Dim strJson As String
+'     Dim jsondb As Variant
+'     Dim ProgFile As File
+'
+'     For Each ex As String In Examples
+'
+'         If Not Exist(BasePath &/ ex) Then
+'             MyUrl = "https://api.github.com/gists/" & ex
+'             Try strjson = HttpClient.Download(MyUrl)
+'             If Error Or If strjson = "" Then
+'                 Message(("Error Fetching Code for " & Examples.key))
+'                 Continue
+'             Endif
+'
+'             Print "Saving Program title :" & Examples.key & " as keyname " & BasePath &/ ex
+'             Progfile = Open BasePath &/ ex For Write Create
+'             Write #ProgFile, strjson As String
+'             Close Progfile
+'             Wait 5.00
+'         Endif
+'
+'     Next
+'
+' End
 
 Public Sub DExample_Click()
     ' here we will get the actual content maybe!!
 
     If DExample.key = "" Then Return     ' nothing selected
-    Dim MyUrl As String = "https://api.github.com/gists/" & Examples[DExample.key]
-
+    ' Dim MyUrl As String = "https://api.github.com/gists/" & Examples[DExample.key]
+    Dim MyUrl As String = "PlayGround" &/ Examples[DExample.key]
     If MyUrl = LastUrl Then Return
     LastUrl = MyUrl
 
     Dim strJson As String
     Dim jsondb As Variant
-    Try strjson = HttpClient.Download(MyUrl)
+    'Try strjson = HttpClient.Download(MyUrl)
+    Dim jsonfile As File
+    jsonfile = Open MyUrl For Read
+    Try strjson = Read #jsonfile As String
     If Error Or If strjson = "" Then
-        Message(("Error Fetching Code"))
+        Message(("Error Fetching Code") & ":" & Error.text)
         Return
+    Else
+        Close jsonfile
     Endif
     jsondb = json.Decode(strjson, True)
     ProgEdit.Clear()
-    For Each v As Variant In jsondb["files"] ''' trial change JsonCollection to collection
+    For Each v As Variant In jsondb["files"]
         Try ProgEdit.insert(v["content"])
         If Error Then
             ProgEdit.insert(Error.text & "\n" & Error.where)
@@ -182,11 +187,20 @@ Public Sub DExample_DblClick()
 
 End
 
+Public Sub pgnewfrom_Click_run()
+
+    pgnewfrom_Click()
+    MyParent.ToolGo_click()
+
+End
+
 Public Sub pgnewfrom_Click()
 
+    Static counter As Integer = 0
     If Not Object.IsValid(MyParent) Then
-        MyParent = New FMain
+        MyParent = New FMain As "playtext" & Str(counter)
         MyParent.Show()
+        MyParent.form_Resize()
     Endif
 
     MyParent.NewFromPlayView(("'Example By Charlie Ogier") & "\n" & ProgEdit.text)
@@ -223,5 +237,12 @@ End
 Public Sub pgselall_Click()
 
     ProgEdit.SelectAll()
+
+End
+
+Public Sub gonow_Click()
+
+    DExample_Click()
+    pgnewfrom_Click_run()
 
 End

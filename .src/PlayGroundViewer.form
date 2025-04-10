@@ -25,6 +25,12 @@
       Text = ("Select All")
     }
   }
+  { RunProgram Menu
+    Text = ("Run Program")
+    { gonow Menu
+      Text = ("Go ->")
+    }
+  }
   { HSplit1 HSplit
     MoveScaled(1,1,160,110)
     Expand = True
@@ -34,7 +40,7 @@
     { ProgEdit TextEditor
       MoveScaled(54,1,104,108)
       Font = Font["Monospace,+1"]
-      Background = Color.TextForeground
+      Background = Color.TextBackground
       Foreground = Color.Background
       Highlight = "Gambas"
       Mode = "Gambas"

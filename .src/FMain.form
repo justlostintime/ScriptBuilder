@@ -3,8 +3,9 @@
 { Form Form
   Move(0,0,1148,588)
   #Scaled = False
-  Background = Color.Black
+  Background = Color.TextBackground
   Expand = True
+  AutoResize = True
   Padding = 5
   { FileMenu Menu
     Text = ("File")
@@ -190,6 +191,7 @@
   { BackGroundInfo VBox
     Move(0,0,1085,518)
     Background = Color.TooltipBackground
+    Expand = True
     { ToolBar1 ToolBar
       Move(35,14,1036,42)
       Background = Color.TextBackground
@@ -307,6 +309,7 @@
       #Public = True
       Font = Font["Monospace"]
       Background = Color.ButtonBackground
+      Expand = True
       PopupMenu = "EditMenu"
       Highlight = "Gambas"
       Mode = "Gambas"
