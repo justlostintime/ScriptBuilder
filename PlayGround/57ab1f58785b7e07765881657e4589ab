@@ -1,0 +1,67 @@
+ç {
+  "url": "https://api.github.com/gists/57ab1f58785b7e07765881657e4589ab",
+  "forks_url": "https://api.github.com/gists/57ab1f58785b7e07765881657e4589ab/forks",
+  "commits_url": "https://api.github.com/gists/57ab1f58785b7e07765881657e4589ab/commits",
+  "id": "57ab1f58785b7e07765881657e4589ab",
+  "node_id": "MDQ6R2lzdDU3YWIxZjU4Nzg1YjdlMDc3NjU4ODE2NTdlNDU4OWFi",
+  "git_pull_url": "https://gist.github.com/57ab1f58785b7e07765881657e4589ab.git",
+  "git_push_url": "https://gist.github.com/57ab1f58785b7e07765881657e4589ab.git",
+  "html_url": "https://gist.github.com/anonymous/57ab1f58785b7e07765881657e4589ab",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/57ab1f58785b7e07765881657e4589ab/raw/3bf8e8a73c299fd198e9aade4c0b4443f9a8fab9/playground.gbs",
+      "size": 491,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim siCount, siNo, siCounter As Short\nDim siLine As Short = 1\nDim siInput As Short[] = [5, 14]\n \nFor siCount = 0 To siInput.Max\n  Print \"Floyd's triangle to \" & siInput[siCount] & \" lines\"\n  Do\n    Inc siNo\n    Inc siCounter\n    Print Format(siNo, \"####\");\n      If siLine = siCounter Then \n        Print \n        Inc siLine\n        siCounter = 0\n      End If\n    If siLine - 1 = siInput[siCount] Then Break\n  Loop\n  siLine = 1\n  siCounter = 0\n  siNo = 0\n  Print\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-31T15:09:00Z",
+  "updated_at": "2017-08-31T15:09:00Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/57ab1f58785b7e07765881657e4589ab/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "8d25e80539c13b7cdb956c68fa5c281fa9049d87",
+      "committed_at": "2017-08-31T15:09:00Z",
+      "change_status": {
+        "total": 25,
+        "additions": 25,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/57ab1f58785b7e07765881657e4589ab/8d25e80539c13b7cdb956c68fa5c281fa9049d87"
+    }
+  ],
+  "truncated": false
+}

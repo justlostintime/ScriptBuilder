@@ -1,0 +1,67 @@
+�B{
+  "url": "https://api.github.com/gists/fa06b7cc43166fb0ab48e878d86e3d1b",
+  "forks_url": "https://api.github.com/gists/fa06b7cc43166fb0ab48e878d86e3d1b/forks",
+  "commits_url": "https://api.github.com/gists/fa06b7cc43166fb0ab48e878d86e3d1b/commits",
+  "id": "fa06b7cc43166fb0ab48e878d86e3d1b",
+  "node_id": "MDQ6R2lzdGZhMDZiN2NjNDMxNjZmYjBhYjQ4ZTg3OGQ4NmUzZDFi",
+  "git_pull_url": "https://gist.github.com/fa06b7cc43166fb0ab48e878d86e3d1b.git",
+  "git_push_url": "https://gist.github.com/fa06b7cc43166fb0ab48e878d86e3d1b.git",
+  "html_url": "https://gist.github.com/anonymous/fa06b7cc43166fb0ab48e878d86e3d1b",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/fa06b7cc43166fb0ab48e878d86e3d1b/raw/0df153c05911d7d87d562b658873a39626e18875/playground.gbs",
+      "size": 605,
+      "truncated": false,
+      "content": "Public Sub Main()\n \nIf Exist(User.Home &/ \"input.txt\") Then Print \"'input.txt' does exist in the Home folder\"\nIf Not Exist(\"/input.txt\") Then Print \"'input.txt' does NOT exist in Root\"                'Not messing With my Root files\n \nIf Exist(User.home &/ \"docs/\") Then Print \"The folder '~/docs' does exist\"\nIf Not Exist(\"/docs/\") Then Print \"The folder '/docs' does NOT exist\"                     'Not messing With my Root files\n \nFile.Save(User.Home &/ \"`Abdu'l-Bahá.txt\", \"\")\nIf Exist(User.Home &/ \"`Abdu'l-Bahá.txt\") Then Print \"'`Abdu'l-Bahá.txt' does exist (zero length and unusual name)\"\n \nEnd\n",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:27:40Z",
+  "updated_at": "2017-08-29T15:27:40Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/fa06b7cc43166fb0ab48e878d86e3d1b/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "c2ebd68c718b67009bdd0ac48226dbc05db32f85",
+      "committed_at": "2017-08-29T15:27:39Z",
+      "change_status": {
+        "total": 12,
+        "additions": 12,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/fa06b7cc43166fb0ab48e878d86e3d1b/c2ebd68c718b67009bdd0ac48226dbc05db32f85"
+    }
+  ],
+  "truncated": false
+}

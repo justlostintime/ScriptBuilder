@@ -1,0 +1,67 @@
+�{
+  "url": "https://api.github.com/gists/19db658a6c44cfb1f6f887ff53e549bb",
+  "forks_url": "https://api.github.com/gists/19db658a6c44cfb1f6f887ff53e549bb/forks",
+  "commits_url": "https://api.github.com/gists/19db658a6c44cfb1f6f887ff53e549bb/commits",
+  "id": "19db658a6c44cfb1f6f887ff53e549bb",
+  "node_id": "MDQ6R2lzdDE5ZGI2NThhNmM0NGNmYjFmNmY4ODdmZjUzZTU0OWJi",
+  "git_pull_url": "https://gist.github.com/19db658a6c44cfb1f6f887ff53e549bb.git",
+  "git_push_url": "https://gist.github.com/19db658a6c44cfb1f6f887ff53e549bb.git",
+  "html_url": "https://gist.github.com/anonymous/19db658a6c44cfb1f6f887ff53e549bb",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/19db658a6c44cfb1f6f887ff53e549bb/raw/487a540cf3ca6947479eda7d712cb9794cba7727/playground.gbs",
+      "size": 809,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sString As String = \"The\\t \\equick\\n \\fbrownfox \\vcost £125.00 or €145.00 or $160.00 \\bto \\ncapture ©®\" \nDim sStd, sExtend As String\nDim siCount As Short\n \nFor siCount = 32 To 126\n  sStd &= Chr(siCount)\nNext\n \nFor siCount = 128 To 255\n  sExtend &= Chr(siCount)\nNext\n \nPrint \"Original string: -\\t\" & sString & gb.NewLine\nPrint \"No extended characters: -\\t\" & Check(sString, sStd)\nsStd &= sExtend\nPrint \"With extended characters: -\\t\" & Check(sString, sStd)\n \nEnd\n'________________________________________________________________\nPublic Sub Check(sString As String, sCheck As String) As String\nDim siCount As Short\nDim sResult As String\n \nFor siCount = 1 To Len(sString)\n  If InStr(sCheck, Mid(sString, siCount, 1)) Then sResult &= Mid(sString, siCount, 1)\nNext\n \nReturn sResult\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-07T15:08:21Z",
+  "updated_at": "2017-09-07T15:08:21Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/19db658a6c44cfb1f6f887ff53e549bb/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "a6691b9cd50cdf51ae188f56592c9dd2c5db0f49",
+      "committed_at": "2017-09-07T15:08:20Z",
+      "change_status": {
+        "total": 31,
+        "additions": 31,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/19db658a6c44cfb1f6f887ff53e549bb/a6691b9cd50cdf51ae188f56592c9dd2c5db0f49"
+    }
+  ],
+  "truncated": false
+}

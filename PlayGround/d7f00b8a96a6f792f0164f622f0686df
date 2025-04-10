@@ -1,0 +1,67 @@
+”û{
+  "url": "https://api.github.com/gists/d7f00b8a96a6f792f0164f622f0686df",
+  "forks_url": "https://api.github.com/gists/d7f00b8a96a6f792f0164f622f0686df/forks",
+  "commits_url": "https://api.github.com/gists/d7f00b8a96a6f792f0164f622f0686df/commits",
+  "id": "d7f00b8a96a6f792f0164f622f0686df",
+  "node_id": "MDQ6R2lzdGQ3ZjAwYjhhOTZhNmY3OTJmMDE2NGY2MjJmMDY4NmRm",
+  "git_pull_url": "https://gist.github.com/d7f00b8a96a6f792f0164f622f0686df.git",
+  "git_push_url": "https://gist.github.com/d7f00b8a96a6f792f0164f622f0686df.git",
+  "html_url": "https://gist.github.com/anonymous/d7f00b8a96a6f792f0164f622f0686df",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/d7f00b8a96a6f792f0164f622f0686df/raw/13fe07bcdde129f9102a0cb26ca9b7b38322da66/playground.gbs",
+      "size": 2309,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim iInput As Integer[] = [7259, 86400, 6000000]                                  'Input details\nDim iChecks As Integer[] = [604800, 86400, 3600, 60]                              'Weeks, days, hours, mins in seconds\nDim iTime As New Integer[5]                                                       'To store wk, d, hr, min & sec\nDim iOriginal, iSec, iLoop As Integer                                             'Various integers\nDim sOrd As String[] = [\" wk\", \" d\", \" hr\", \" min\", \" sec\"]                       'To add to the output string\nDim sOutput As String                                                             'Output string\n \nFor Each iSec In iInput                                                           'For each iInput\n  iOriginal = iSec                                                                'Store orginal value in seconds\n  iTime[4] = iSec                                                                 'Store seconds in iTime[4]\n \n  For iLoop = 0 To 3                                                              'Loop through wk, d, hr, min & sec\n    If iTime[4] >= iChecks[iLoop] Then                                            'Check if value is = to wk, d, hr, min\n      iTime[iLoop] = Int(iTime[4] / iChecks[iLoop])                               'Put the correct value for wk, d, hr, min in iTime\n      iTime[4] = iTime[4] - (iTime[iLoop] * iChecks[iLoop])                       'Remove the amount of seconds for wk, d, hr, min from iTime[4]\n    Endif\n  Next\n \n  For iLoop = 0 To 4                                                              'Loop through wk, d, hr, min & secs\n    If iTime[iLoop] > 0 Then sOutput &= \", \" & Str(iTime[iLoop]) & sOrd[iLoop]    'Add comma and ordinal as needed\n  Next\n \n  If Left(sOutput, 2) = \", \" Then sOutput = Mid(sOutput, 3)                       'Remove unnecessary \", \"\n  sOutput = Format(Str(iOriginal), \"#######\") & \" Seconds = \" & sOutput           'Add original seconds to the output string\n  Print sOutput                                                                   'Print sOutput string\n  sOutput = \"\"                                                                    'Clear the sOutput string\n  iTime = New Integer[5]                                                          'Reset iTime[]\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:31:41Z",
+  "updated_at": "2017-08-29T15:31:42Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/d7f00b8a96a6f792f0164f622f0686df/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "6e2960aaac1e139cd29dadd66096a1fe0cbcbaa5",
+      "committed_at": "2017-08-29T15:31:41Z",
+      "change_status": {
+        "total": 31,
+        "additions": 31,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/d7f00b8a96a6f792f0164f622f0686df/6e2960aaac1e139cd29dadd66096a1fe0cbcbaa5"
+    }
+  ],
+  "truncated": false
+}

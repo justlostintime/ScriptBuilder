@@ -1,0 +1,67 @@
+š{
+  "url": "https://api.github.com/gists/023b4c5144d45e047abe02ebf5c4525a",
+  "forks_url": "https://api.github.com/gists/023b4c5144d45e047abe02ebf5c4525a/forks",
+  "commits_url": "https://api.github.com/gists/023b4c5144d45e047abe02ebf5c4525a/commits",
+  "id": "023b4c5144d45e047abe02ebf5c4525a",
+  "node_id": "MDQ6R2lzdDAyM2I0YzUxNDRkNDVlMDQ3YWJlMDJlYmY1YzQ1MjVh",
+  "git_pull_url": "https://gist.github.com/023b4c5144d45e047abe02ebf5c4525a.git",
+  "git_push_url": "https://gist.github.com/023b4c5144d45e047abe02ebf5c4525a.git",
+  "html_url": "https://gist.github.com/anonymous/023b4c5144d45e047abe02ebf5c4525a",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/023b4c5144d45e047abe02ebf5c4525a/raw/98998ff01bd6f6898b4c4fbf41caf8cbfaa30c07/playground.gbs",
+      "size": 3565,
+      "truncated": false,
+      "content": "Public Sub Main()                                                             'Written in Gambas 3.9.2 as a Command line Application - 15/03/2017\nDim siCount, siCounter, siLength As Short                                     'Counters\nDim siLongest As Short = -1                                                   'To store the longest 'Word'\nDim sLine, sRows As New String[]                                              'Arrays\nDim sTemp, sAlign As String                                                   'Temp strings\nDim sInput As String = \"Given$a$text$file$of$many$lines, $where$fields$within$a$line$\" & \"\\n\"\n\"are$delineated$by$a$single$ 'dollar'$character,$write$a$program\" & \"\\n\"\n\"that$aligns$each$column$of$fields$by$ensuring$that$words$in$each$\" & \"\\n\"\n\"column$are$separated$by$at$least$one$space.\" & \"\\n\"\n\"Further, $allow$for$each$word$in$a$column$to$be$either$left$\" & \"\\n\"\n\"justified, $right$justified, $or$center$justified$within$its$column.\"        'Main string (with End Of Line characters added)\n \nFor Each sTemp In Split(sInput, \"\\n\")                                         'For each Line (split by End of Line character)..\n  sLine.add(sTemp)                                                            'Add the Line to sLine array\nNext\n \nFor siCount = 0 To sLine.Max                                                  'For each of Lines in the array..\n  For Each sTemp In Split(sLine[siCount], \"$\")                                'For each 'Word' in the Line (Split by the '$')\n    siLength = Len(sTemp)                                                     'Store the length of the current 'Word'\n    If siLength > siLongest Then siLongest = siLength                         'Make sure siLength has the length of the longest 'Word'\n    sRows.add(Trim(sTemp))                                                    'Create an array of the 'Words'\n  Next\n  sRows.add(\"\\n\")                                                             'Add a End Of Line character to the sRows array\nNext\n \nFor siCounter = 0 To 2                                                        'For each alignment (Left, Right and Centre)\n  For Each sTemp In sRows                                                     'For each 'Word' in the sRows array..\n    If sTemp = \"\\n\" Then                                                      'If it's a End Of Line character then..\n      Print                                                                   'Print\n      Continue                                                                'Jump to the next iteration of the For Next Loop\n    Endif\n    If siCounter = 0 Then Print sTemp & Space(siLongest - Len(sTemp));        'Print control for Left align\n    If siCounter = 1 Then Print Space(siLongest - Len(sTemp)) & sTemp;        'Print control for Right align\n    If siCounter = 2 Then                                                     'Print control for Centre align\n      siCount = (siLongest - Len(sTemp)) / 2                                  'Difference between the length of the longest 'Word' and the current 'Word' / 2\n      sAlign = Space(siCount) & sTemp & Space(siCount)                        'Put the string together for printing\n      If Len(sAlign) < siLongest Then sAlign &= \" \"                           'Check it's the correct length if not add a space on the end\n      Print sAlign;                                                           'Print the 'Word'\n    Endif\n  Next\n  Print                                                                       'Print an empty line between each alignment list\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-27T16:33:07Z",
+  "updated_at": "2017-08-27T16:33:07Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/023b4c5144d45e047abe02ebf5c4525a/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "71aefe27a9cce0c7f65d5e95e7ccc1a4c9035ae1",
+      "committed_at": "2017-08-27T16:33:07Z",
+      "change_status": {
+        "total": 44,
+        "additions": 44,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/023b4c5144d45e047abe02ebf5c4525a/71aefe27a9cce0c7f65d5e95e7ccc1a4c9035ae1"
+    }
+  ],
+  "truncated": false
+}

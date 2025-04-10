@@ -1,0 +1,67 @@
+­{
+  "url": "https://api.github.com/gists/ee5467e58f0ef649373eed5a2503b988",
+  "forks_url": "https://api.github.com/gists/ee5467e58f0ef649373eed5a2503b988/forks",
+  "commits_url": "https://api.github.com/gists/ee5467e58f0ef649373eed5a2503b988/commits",
+  "id": "ee5467e58f0ef649373eed5a2503b988",
+  "node_id": "MDQ6R2lzdGVlNTQ2N2U1OGYwZWY2NDkzNzNlZWQ1YTI1MDNiOTg4",
+  "git_pull_url": "https://gist.github.com/ee5467e58f0ef649373eed5a2503b988.git",
+  "git_push_url": "https://gist.github.com/ee5467e58f0ef649373eed5a2503b988.git",
+  "html_url": "https://gist.github.com/anonymous/ee5467e58f0ef649373eed5a2503b988",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/ee5467e58f0ef649373eed5a2503b988/raw/ef261b03c505956bfaae08fba546810245aa6030/playground.gbs",
+      "size": 954,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim siCount, siRev, siProcess As Short\nDim bSorting As Boolean\nDim byToSort As Byte[] = [249, 28, 111, 36, 171, 98, 29, 448, 44, 154, 147, 102, 46, 183, 24, \n                          120, 19, 123, 2, 17, 226, 11, 211, 25, 191, 205, 77]\n\nPrint \"To sort: -\"\nShowWorking(byToSort)\nPrint\n \nRepeat\n  bSorting = False\n  siRev = byToSort.Max - 1\n  For siCount = 0 To byToSort.Max - 1\n    siProcess = siCount\n    GoSub Check\n    siProcess = siRev\n    GoSub Check\n    Dec siRev\n  Next\n  If bSorting Then ShowWorking(byToSort)\nUntil bSorting = False\n\nReturn\n\nCheck:\n\nIf byToSort[siProcess] > byToSort[siProcess + 1] Then\n  Swap byToSort[siProcess], byToSort[siProcess + 1]\n  bSorting = True\nEndif\n\nReturn\n\nEnd\n'-----------------------------------------\nPublic Sub ShowWorking(byToSort As Byte[])\nDim siCount As Byte\n \nFor siCount = 0 To byToSort.Max\n  Print Str(byToSort[siCount]);\n  If siCount <> byToSort.Max Then Print \",\";\nNext\n \nPrint\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-11-20T16:52:18Z",
+  "updated_at": "2017-11-20T16:52:18Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/ee5467e58f0ef649373eed5a2503b988/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "3bb72644e4d39eb03e8dd18ca81ab22c9b605804",
+      "committed_at": "2017-11-20T16:52:17Z",
+      "change_status": {
+        "total": 47,
+        "additions": 47,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/ee5467e58f0ef649373eed5a2503b988/3bb72644e4d39eb03e8dd18ca81ab22c9b605804"
+    }
+  ],
+  "truncated": false
+}

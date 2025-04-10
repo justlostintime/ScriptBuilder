@@ -65,7 +65,7 @@ Public Sub WriteTitle(win As Variant, TheText As String, thedebug As Boolean)
     Dim boolprt As String
 
     If thedebug Then boolprt = "  DEBUG(On)" Else boolprt = "  DEBUG(Off)"
-    win.text = "Gambas - " & TheText & boolprt
+    win.text = FMain.ProgramWorkSpace.mode & " - " & TheText & boolprt
 
 End
 
@@ -99,6 +99,7 @@ Public Sub ExecuteScript(ByRef sCurrentfile As String, tProgramWorkSpace As Text
 
     Dim programtext, ProgramCommand, argsRun, oldcurrentfile, boolprt As String
     Dim tWorkSpace As TextEditor = New Texteditor(Me)
+    Dim tmpfile As String
 
     OutputText = New OutputArea
 
@@ -138,12 +139,28 @@ Public Sub ExecuteScript(ByRef sCurrentfile As String, tProgramWorkSpace As Text
             End If
             ActiveProg = OutputText.RunIt(ProgramCommand, aEnv)
         Endif
+    Else
+        If FromFile Then
+            If SaveFile(ByRef sCurrentFile, tWorkSpace) Then
+                tmpfile = sCurrentFile
+            Endif
+        Else
+            tmpfile = Temp("gshell")
+            File.Save(tmpfile, tWorkSpace.text)
+        Endif
+
+        ActiveProg = OutputText.runIt(tmpfile, aEnv)
+
+        ' If Not fromfile Then
+        '     Kill tmpfile
+        ' Endif
 
     Endif
 
     If DebugIt Then
         sCurrentFile = oldcurrentfile
     Endif
+
     ' OutputText.WriteTo("\r\nEnding process\r\n")
 
 Catch
@@ -347,13 +364,13 @@ End
 
 Public Sub Form_Open()
 
-    If CurrentFile = "" Then
-        WriteTitle(Me, System.FullVersion & " -" & application.Title & "(" & Application.Version & ")", DebuggerFlag)
-    Endif
-
     OptionsForm.LoadOptions()
 
     Read_Settings()
+
+    If CurrentFile = "" Then
+        WriteTitle(Me, System.FullVersion & " -" & application.Title & "(" & Application.Version & ")", DebuggerFlag)
+    Endif
 
     ProgramWorkSpace.SetFocus()
 
@@ -522,6 +539,11 @@ End
 Public Sub OptionMenu_Click()
 
     OptionsForm.Show()
+    If CurrentFile = "" Then
+        WriteTitle(Me, System.FullVersion & " -" & application.Title & "(" & Application.Version & ")", DebuggerFlag)
+    Else
+        WriteTitle(Me, File.Name(CurrentFile), DebuggerFlag)
+    Endif
 
 End
 

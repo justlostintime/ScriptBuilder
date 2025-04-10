@@ -1,0 +1,67 @@
+•{
+  "url": "https://api.github.com/gists/4268c779c36def03ea10764630cdc401",
+  "forks_url": "https://api.github.com/gists/4268c779c36def03ea10764630cdc401/forks",
+  "commits_url": "https://api.github.com/gists/4268c779c36def03ea10764630cdc401/commits",
+  "id": "4268c779c36def03ea10764630cdc401",
+  "node_id": "MDQ6R2lzdDQyNjhjNzc5YzM2ZGVmMDNlYTEwNzY0NjMwY2RjNDAx",
+  "git_pull_url": "https://gist.github.com/4268c779c36def03ea10764630cdc401.git",
+  "git_push_url": "https://gist.github.com/4268c779c36def03ea10764630cdc401.git",
+  "html_url": "https://gist.github.com/anonymous/4268c779c36def03ea10764630cdc401",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/4268c779c36def03ea10764630cdc401/raw/df62707a8667b0453b394c34f9233310db9455d6/playground.gbs",
+      "size": 2319,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sToCode As String[] = [\"broood\", \"bananaaa\", \"hiphophiphop\"]  'Samples to process\nDim sHold As New String[]                                         'To store results\nDim siCount, siCounter, siPos As Short                            'Various variables\nDim sOutput, sCode, sWork, sEach As String                        'Various variables\n \nFor siCounter = 0 To sToCode.Max                                  'To loop through each 'Sample' \n  sCode = \"abcdefghijklmnopqrstuvwxyz\"                            'Set sCode to default setting\n  For siCount = 1 To Len(sToCode[siCounter])                      'Loop through each letter in 'Sample'\n    sWork = Mid(sToCode[siCounter], siCount, 1)                   'sWork to store the Letter\n    siPos = InStr(scode, sWork) - 1                               'Find the position of the letter in sCode, -1 for '0' based array\n    sOutput &= Str(siPos) & \" \"                                   'Add the postion to sOutput\n    sCode = Mid(sCode, siPos + 1, 1) & Replace(sCode, sWork, \"\")  'sCode = the letter + the rest of sCode except the letter\n  Next\n  Print sToCode[siCounter] & \" = \" & sOutput                      'Print the 'Sample' and the coded version\n  sHold.Add(Trim(sOutput))                                        'Add the code to the sHold array\n  sOutput = \"\"                                                    'Clear sOutput\nNext\n \nPrint                                                             'Print a blank line\n \nFor siCounter = 0 To sHold.Max                                    'To loop through each coded 'Sample' \n  sCode = \"abcdefghijklmnopqrstuvwxyz\"                            'Set sCode to default setting\n  For Each sEach In Split(sHold[siCounter], \" \")                  'For each 'code' in coded 'Sample'\n    sWork = Mid(sCode, Val(sEach) + 1, 1)                         'sWork = the decoded letter\n    sOutput &= sWork                                              'Add the decoded letter to sOutput\n    sCode = sWork & Replace(sCode, sWork, \"\")                     'sCode = the decoded letter + the rest of sCode except the letter\n  Next\n  Print sHold[siCounter] & \" = \" & sOutput                        'Print the coded and decoded result\n  sOutput = \"\"                                                    'Clear sOutput\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-04T17:32:03Z",
+  "updated_at": "2017-09-04T17:32:03Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/4268c779c36def03ea10764630cdc401/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "d42ea09728af209f99cfd2fe6825c28580552c6a",
+      "committed_at": "2017-09-04T17:32:03Z",
+      "change_status": {
+        "total": 33,
+        "additions": 33,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/4268c779c36def03ea10764630cdc401/d42ea09728af209f99cfd2fe6825c28580552c6a"
+    }
+  ],
+  "truncated": false
+}

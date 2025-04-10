@@ -1,0 +1,67 @@
+ê0{
+  "url": "https://api.github.com/gists/e73bc5db1e3bb56c598f89aa669a0825",
+  "forks_url": "https://api.github.com/gists/e73bc5db1e3bb56c598f89aa669a0825/forks",
+  "commits_url": "https://api.github.com/gists/e73bc5db1e3bb56c598f89aa669a0825/commits",
+  "id": "e73bc5db1e3bb56c598f89aa669a0825",
+  "node_id": "MDQ6R2lzdGU3M2JjNWRiMWUzYmI1NmM1OThmODlhYTY2OWEwODI1",
+  "git_pull_url": "https://gist.github.com/e73bc5db1e3bb56c598f89aa669a0825.git",
+  "git_push_url": "https://gist.github.com/e73bc5db1e3bb56c598f89aa669a0825.git",
+  "html_url": "https://gist.github.com/anonymous/e73bc5db1e3bb56c598f89aa669a0825",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/e73bc5db1e3bb56c598f89aa669a0825/raw/b743d0b194593ed2b13e0d5f9d9b285ef3aac41a/playground.gbs",
+      "size": 1086,
+      "truncated": false,
+      "content": "sRandom As New String[]\n'______________________________________________________________________________________________________\nPublic Sub Main()\nDim siCount As Short\n \nFor siCount = 0 To 19\n  sRandom.Add(Rand(1, 100))\nNext\n \nPrint sRandom.join(\",\")\n \nNewArray\nDestructive\n \nEnd\n'______________________________________________________________________________________________________\nPublic Sub NewArray() 'Select certain elements from an array into a new array in a generic way\nDim sEven As New String[]\nDim siCount As Short\n \nFor siCount = 0 To sRandom.Max\n  If Even(sRandom[siCount]) Then sEven.Add(sRandom[siCount])\nNext\n \nPrint sEven.join(\",\")\n \nEnd\n'______________________________________________________________________________________________________\nPublic Sub Destructive() 'Give a second solution which filters destructively\nDim siIndex As New Short[]\nDim siCount As Short\n \nFor siCount = 0 To sRandom.Max\n  If Odd(sRandom[siCount]) Then siIndex.Add(siCount)\nNext\n \nFor siCount = siIndex.max DownTo 0\n  sRandom.Extract(siIndex[siCount], 1)\nNext\n \nPrint sRandom.join(\",\")\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-31T14:59:42Z",
+  "updated_at": "2017-08-31T14:59:42Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/e73bc5db1e3bb56c598f89aa669a0825/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "96aadfd1fe3f31ac33cc428c23f8608734613378",
+      "committed_at": "2017-08-31T14:59:41Z",
+      "change_status": {
+        "total": 43,
+        "additions": 43,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/e73bc5db1e3bb56c598f89aa669a0825/96aadfd1fe3f31ac33cc428c23f8608734613378"
+    }
+  ],
+  "truncated": false
+}

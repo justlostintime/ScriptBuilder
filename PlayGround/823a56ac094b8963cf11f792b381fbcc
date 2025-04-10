@@ -1,0 +1,67 @@
+êZ{
+  "url": "https://api.github.com/gists/823a56ac094b8963cf11f792b381fbcc",
+  "forks_url": "https://api.github.com/gists/823a56ac094b8963cf11f792b381fbcc/forks",
+  "commits_url": "https://api.github.com/gists/823a56ac094b8963cf11f792b381fbcc/commits",
+  "id": "823a56ac094b8963cf11f792b381fbcc",
+  "node_id": "MDQ6R2lzdDgyM2E1NmFjMDk0Yjg5NjNjZjExZjc5MmIzODFmYmNj",
+  "git_pull_url": "https://gist.github.com/823a56ac094b8963cf11f792b381fbcc.git",
+  "git_push_url": "https://gist.github.com/823a56ac094b8963cf11f792b381fbcc.git",
+  "html_url": "https://gist.github.com/anonymous/823a56ac094b8963cf11f792b381fbcc",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/823a56ac094b8963cf11f792b381fbcc/raw/a8d80cfffa4a5b6c46493144f92d2d23b1cb907e/playground.gbs",
+      "size": 1060,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim fDeg As Float[] = [0.0, 16.87, 16.88, 33.75, 50.62, 50.63, 67.5, 84.37, 84.38, 101.25, 118.12, 118.13, 135.0, 151.87, 151.88, 168.75, 185.62, 185.63, 202.5, 219.37, 219.38, 236.25, 253.12, 253.13, 270.0, 286.87, 286.88, 303.75, 320.62, 320.63, 337.5, 354.37, 354.38]\nDim cHeading As Collection = [\"N\": \"North\", \"S\": \"South\", \"W\": \"West\", \"E\": \"East\", \"b\": \"by\"]\nDim sHeading As String[] = [\"N\", \"NbE\", \"NNE\", \"NEbE\", \"NE\", \"NEbE\", \"ENE\", \"EbN\", \"E\", \"EbS\", \"ESE\", \"SEbE\", \"SE\", \"SEbS\", \"SSE\", \"SbE\", \"S\", \"SbW\", \"SSW\", \"SWbS\", \"SW\", \"SWbW\", \"WSW\", \"WbS\", \"W\", \"WbN\", \"WNW\", \"NWbW\", \"NW\", \"NWbN\", \"NNW\", \"NbW\"]\nDim siLoop As Short\nDim sDirection As String \nDim fCount, fTemp As Float\n \nFor Each fCount In fDeg\n   fTemp = Round(fCount / 11.25)\n   If fTemp = 32 Then fTemp = 0\n    For siLoop = 0 To Len(sHeading[fTemp])\n      sDirection &= cHeading[Mid(sHeading[fTemp], siLoop + 1, 1)] & \" \"\n    Next\n  Print \"Index=\" & Format(fTemp + 1, \"#0\") & \"  \" & Format(Str(fCount), \"##0.00\") & \" degrees = \" & sDirection \n  sDirection = \"\"\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:13:02Z",
+  "updated_at": "2017-08-29T15:13:02Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/823a56ac094b8963cf11f792b381fbcc/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "f93956f073b0bcdf7bb93f8cce1f8b6fba6ea95d",
+      "committed_at": "2017-08-29T15:13:01Z",
+      "change_status": {
+        "total": 19,
+        "additions": 19,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/823a56ac094b8963cf11f792b381fbcc/f93956f073b0bcdf7bb93f8cce1f8b6fba6ea95d"
+    }
+  ],
+  "truncated": false
+}

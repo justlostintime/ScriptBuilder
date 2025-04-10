@@ -1,0 +1,67 @@
+’¹{
+  "url": "https://api.github.com/gists/77cb8b3386a0f57524bdbff6634387cd",
+  "forks_url": "https://api.github.com/gists/77cb8b3386a0f57524bdbff6634387cd/forks",
+  "commits_url": "https://api.github.com/gists/77cb8b3386a0f57524bdbff6634387cd/commits",
+  "id": "77cb8b3386a0f57524bdbff6634387cd",
+  "node_id": "MDQ6R2lzdDc3Y2I4YjMzODZhMGY1NzUyNGJkYmZmNjYzNDM4N2Nk",
+  "git_pull_url": "https://gist.github.com/77cb8b3386a0f57524bdbff6634387cd.git",
+  "git_push_url": "https://gist.github.com/77cb8b3386a0f57524bdbff6634387cd.git",
+  "html_url": "https://gist.github.com/anonymous/77cb8b3386a0f57524bdbff6634387cd",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/77cb8b3386a0f57524bdbff6634387cd/raw/061fbb0b927f6be2b0664245e40f119ebfc6d803/playground.gbs",
+      "size": 1721,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sString As String = \"rosetta code phrase reversal\"  'The string\nDim sNewString, sTemp As String                         'String variables\nDim siCount As Short                                    'Counter\nDim sWord As New String[]                               'Word store\n \nFor siCount = Len(sString) DownTo 1                     'Loop backwards through the string\n  sNewString &= Mid(sString, sicount, 1)                'Add each character to the new string\nNext\n \nPrint \"Original string = \\t\" & sString & \"\\n\" &         'Print the original string\n  \"Reversed string = \\t\" & sNewString                   'Print the reversed string\n \nsNewString = \"\"                                         'Reset sNewString\n \nFor Each sTemp In Split(sString, \" \")                   'Split the original string by the spaces\n  sWord.Add(sTemp)                                      'Add each word to sWord array\nNext\n \nFor siCount = sWord.max DownTo 0                        'Loop backward through each word in sWord\n  sNewString &= sWord[siCount] & \" \"                    'Add each word to to sNewString\nNext\n \nPrint \"Reversed word order = \\t\" & sNewString           'Print reversed word order\n \nsNewString = \"\"                                         'Reset sNewString\nFor Each sTemp In sWord                                 'For each word in sWord\n  For siCount = Len(sTemp) DownTo 1                     'Loop backward through the word\n    sNewString &= Mid(sTemp, siCount, 1)                'Add the characters to sNewString\n  Next\n  sNewString &= \" \"                                     'Add a space at the end of each word\nNext\n \nPrint \"Words reversed = \\t\" & sNewString                'Print words reversed\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-05T14:29:05Z",
+  "updated_at": "2017-09-05T14:29:05Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/77cb8b3386a0f57524bdbff6634387cd/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "226f56cd86ab57375113e33a5420784c58d4881b",
+      "committed_at": "2017-09-05T14:29:04Z",
+      "change_status": {
+        "total": 36,
+        "additions": 36,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/77cb8b3386a0f57524bdbff6634387cd/226f56cd86ab57375113e33a5420784c58d4881b"
+    }
+  ],
+  "truncated": false
+}

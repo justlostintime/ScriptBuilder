@@ -8,9 +8,20 @@ Public Styles As String[] = ["Background", "Normal", "Selection", "Alternate", "
     "Function", "Operator", "Symbol", "Number", "String", "Breakpoint", "Current", "Datatype", "Preprocessor", "Escape", "Label", "Constant", "Class", "Id", "Element",
     "Property", "Pseudo", "Rule", "Important", "File", "Header", "Position", "Markup", "Attribute", "Value", "Entity", "WebMarkup", "WebComment", "WebArgument"]
 
+Public OtherScriptTypes As String[]
+
 Private classStack As New String[]
 Private withStack As New String[]
 Private procStack As New String[]
+
+Public Sub _init()
+
+    Try OtherScriptTypes = Split(File.load("/etc/shells"), "\n", "\"", True, False)
+    If Error Then
+        OtherScriptTypes = ["bash", "tcsh", "csh", "dash", "zsh", "gsh", "fish", "rbash", "sh"]
+    Endif
+
+End
 
 Sub GetPath() As String
 
@@ -19,6 +30,19 @@ Sub GetPath() As String
     If classStack.count > 0 Then result &= classStack.last & ":"
     If procStack.count > 0 Then result &= procStack.last & ":"
     Return result
+
+End
+
+'' check if the script is some other type, or no type specified
+Sub OtherScript(firstLine As String) As Boolean
+
+    If OtherScriptTypes = Null Then _init()
+
+    For Each s As String In OtherScriptTypes
+        If Left(firstline, 2) = "#!" And If Right(firstline, -2) Like s Then Return True
+    Next
+
+    Return False
 
 End
 
@@ -39,6 +63,9 @@ Public Sub _Call(ByRef Block As TextEditor) As Boolean
             .OutputText.WriteTo("\r\n>>>" & ("No Program to run!"))
             Return False
         Endif
+
+        If OtherScript(Block[0].text) Then Return False
+
         Dim ShaBang As Boolean = False
         For i = 0 To Block.View.Max
 

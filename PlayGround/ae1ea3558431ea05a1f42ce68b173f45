@@ -1,0 +1,88 @@
+”{
+  "url": "https://api.github.com/gists/ae1ea3558431ea05a1f42ce68b173f45",
+  "forks_url": "https://api.github.com/gists/ae1ea3558431ea05a1f42ce68b173f45/forks",
+  "commits_url": "https://api.github.com/gists/ae1ea3558431ea05a1f42ce68b173f45/commits",
+  "id": "ae1ea3558431ea05a1f42ce68b173f45",
+  "node_id": "MDQ6R2lzdGFlMWVhMzU1ODQzMWVhMDVhMWY0MmNlNjhiMTczZjQ1",
+  "git_pull_url": "https://gist.github.com/ae1ea3558431ea05a1f42ce68b173f45.git",
+  "git_push_url": "https://gist.github.com/ae1ea3558431ea05a1f42ce68b173f45.git",
+  "html_url": "https://gist.github.com/charlie-ogier/ae1ea3558431ea05a1f42ce68b173f45",
+  "files": {
+    "bogsort.txt": {
+      "filename": "bogsort.txt",
+      "type": "text/plain",
+      "language": "Text",
+      "raw_url": "https://gist.githubusercontent.com/charlie-ogier/ae1ea3558431ea05a1f42ce68b173f45/raw/18467e89b25049da54e74410e84808397051489a/bogsort.txt",
+      "size": 1106,
+      "truncated": false,
+      "content": "'How many times do you need to loop through randomly generated numbers before you randomly get '123456789'?\n\nPublic Sub Main()\nDim sSorted As String = \"123456789\"                       'The desired outcome\nDim sTest, sChr As String                                 'Various strings\nDim iCounter As Integer                                   'Loop counter\n\nDo\n  Inc iCounter                                            'Increase counter value\n  Repeat                                                  'Repeat \n    sChr = Chr(Rand(49, 57))                              'Get a random number and convert it to a character e.g. 49=\"1\"\n    If Not InStr(sTest, sChr) Then sTest &= sChr          'If the random character is not in sTest then add it\n  Until Len(sTest) = 9                                    'Loop until sTest has 9 characters\n  If sTest = sSorted Then Break                           'If sTest = sSorted then get out of the loop\n  sTest = \"\"                                              'Empty sTest and try again\nLoop\n\nPrint \"Solved in \" & Str(iCounter) & \" loops\"             'Print the result\n\nEnd ",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2019-01-27T12:35:40Z",
+  "updated_at": "2019-01-27T12:35:40Z",
+  "description": "",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/ae1ea3558431ea05a1f42ce68b173f45/comments",
+  "owner": {
+    "login": "charlie-ogier",
+    "id": 18631108,
+    "node_id": "MDQ6VXNlcjE4NjMxMTA4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/18631108?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/charlie-ogier",
+    "html_url": "https://github.com/charlie-ogier",
+    "followers_url": "https://api.github.com/users/charlie-ogier/followers",
+    "following_url": "https://api.github.com/users/charlie-ogier/following{/other_user}",
+    "gists_url": "https://api.github.com/users/charlie-ogier/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/charlie-ogier/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/charlie-ogier/subscriptions",
+    "organizations_url": "https://api.github.com/users/charlie-ogier/orgs",
+    "repos_url": "https://api.github.com/users/charlie-ogier/repos",
+    "events_url": "https://api.github.com/users/charlie-ogier/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/charlie-ogier/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "charlie-ogier",
+        "id": 18631108,
+        "node_id": "MDQ6VXNlcjE4NjMxMTA4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18631108?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/charlie-ogier",
+        "html_url": "https://github.com/charlie-ogier",
+        "followers_url": "https://api.github.com/users/charlie-ogier/followers",
+        "following_url": "https://api.github.com/users/charlie-ogier/following{/other_user}",
+        "gists_url": "https://api.github.com/users/charlie-ogier/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/charlie-ogier/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/charlie-ogier/subscriptions",
+        "organizations_url": "https://api.github.com/users/charlie-ogier/orgs",
+        "repos_url": "https://api.github.com/users/charlie-ogier/repos",
+        "events_url": "https://api.github.com/users/charlie-ogier/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/charlie-ogier/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "251f70efc5390544ec8e15951bdb80e608420678",
+      "committed_at": "2019-01-27T12:35:39Z",
+      "change_status": {
+        "total": 20,
+        "additions": 20,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/ae1ea3558431ea05a1f42ce68b173f45/251f70efc5390544ec8e15951bdb80e608420678"
+    }
+  ],
+  "truncated": false
+}

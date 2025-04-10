@@ -1,0 +1,67 @@
+c{
+  "url": "https://api.github.com/gists/8edc63b206a1de50dd104cd12486ac03",
+  "forks_url": "https://api.github.com/gists/8edc63b206a1de50dd104cd12486ac03/forks",
+  "commits_url": "https://api.github.com/gists/8edc63b206a1de50dd104cd12486ac03/commits",
+  "id": "8edc63b206a1de50dd104cd12486ac03",
+  "node_id": "MDQ6R2lzdDhlZGM2M2IyMDZhMWRlNTBkZDEwNGNkMTI0ODZhYzAz",
+  "git_pull_url": "https://gist.github.com/8edc63b206a1de50dd104cd12486ac03.git",
+  "git_push_url": "https://gist.github.com/8edc63b206a1de50dd104cd12486ac03.git",
+  "html_url": "https://gist.github.com/anonymous/8edc63b206a1de50dd104cd12486ac03",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/8edc63b206a1de50dd104cd12486ac03/raw/520bcec13edd4ba90950e3025f5dab60542697bc/playground.gbs",
+      "size": 378,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sInput As String[] = [\"\", \"ABC\", \"ABC DEF\", \"ABC DEF G H\"]\nDim sTemp As String\n \nFor Each sTemp In sInput\n  Print sTemp & \" = \";\n  sTemp = Replace(sTemp, \" \", \",\")\n  If RInStr(sTemp, \",\") > 0 Then \n    sTemp = Mid(sTemp, 1, RInStr(sTemp, \",\") - 1) & \" and \" & Mid(sTemp, RInStr(sTemp, \",\") + 1)\n  End If\n  sTemp = \"{\" & sTemp & \"}\"\n  Print sTemp\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:29:38Z",
+  "updated_at": "2017-08-29T15:29:38Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/8edc63b206a1de50dd104cd12486ac03/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "aec9089c6eaa4785ecd9f42088f8072e51bae01a",
+      "committed_at": "2017-08-29T15:29:37Z",
+      "change_status": {
+        "total": 15,
+        "additions": 15,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/8edc63b206a1de50dd104cd12486ac03/aec9089c6eaa4785ecd9f42088f8072e51bae01a"
+    }
+  ],
+  "truncated": false
+}

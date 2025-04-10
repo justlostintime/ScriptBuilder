@@ -1,0 +1,67 @@
+Ž{
+  "url": "https://api.github.com/gists/cdfeadc26aaeb0e23f4523626b6fe7c9",
+  "forks_url": "https://api.github.com/gists/cdfeadc26aaeb0e23f4523626b6fe7c9/forks",
+  "commits_url": "https://api.github.com/gists/cdfeadc26aaeb0e23f4523626b6fe7c9/commits",
+  "id": "cdfeadc26aaeb0e23f4523626b6fe7c9",
+  "node_id": "MDQ6R2lzdGNkZmVhZGMyNmFhZWIwZTIzZjQ1MjM2MjZiNmZlN2M5",
+  "git_pull_url": "https://gist.github.com/cdfeadc26aaeb0e23f4523626b6fe7c9.git",
+  "git_push_url": "https://gist.github.com/cdfeadc26aaeb0e23f4523626b6fe7c9.git",
+  "html_url": "https://gist.github.com/anonymous/cdfeadc26aaeb0e23f4523626b6fe7c9",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/cdfeadc26aaeb0e23f4523626b6fe7c9/raw/e35c630aec1fd5b96171ef1338e5ee4281b0326b/playground.gbs",
+      "size": 547,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim siC0, siC1, siC2 As Short\nDim sOut As New String[]\nDim sTemp As String\n \nFor siC0 = 2 To 6 Step 2\n  For siC1 = 1 To 7\n    For siC2 = 1 To 7\n      If sic0 + siC1 + siC2 = 12 Then\n        If siC0 <> siC1 And siC1 <> siC2 And siC0 <> siC2 Then sOut.Add(Str(siC0) & Str(siC1) & Str(siC2))\n      End If\n    Next\n  Next\nNext\n \nPrint \"\\tPolice\\tFire\\tSanitation\"\nsiC0 = 0\n \nFor Each sTemp In sOut\n  Inc sic0\n  Print \"[\" & Format(Str(siC0), \"00\") & \"]\\t\" & Left(sTemp, 1) & \"\\t\" & Mid(sTemp, 2, 1) & \"\\t\" & Right(sTemp, 1)\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:36:28Z",
+  "updated_at": "2017-08-29T15:36:28Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/cdfeadc26aaeb0e23f4523626b6fe7c9/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "1e9d982f5777c08efa4227d3e2dd2c3f458806ec",
+      "committed_at": "2017-08-29T15:36:27Z",
+      "change_status": {
+        "total": 24,
+        "additions": 24,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/cdfeadc26aaeb0e23f4523626b6fe7c9/1e9d982f5777c08efa4227d3e2dd2c3f458806ec"
+    }
+  ],
+  "truncated": false
+}

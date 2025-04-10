@@ -1,0 +1,67 @@
+çI{
+  "url": "https://api.github.com/gists/1e2bb524d2278cd88bccdc21a1683296",
+  "forks_url": "https://api.github.com/gists/1e2bb524d2278cd88bccdc21a1683296/forks",
+  "commits_url": "https://api.github.com/gists/1e2bb524d2278cd88bccdc21a1683296/commits",
+  "id": "1e2bb524d2278cd88bccdc21a1683296",
+  "node_id": "MDQ6R2lzdDFlMmJiNTI0ZDIyNzhjZDg4YmNjZGMyMWExNjgzMjk2",
+  "git_pull_url": "https://gist.github.com/1e2bb524d2278cd88bccdc21a1683296.git",
+  "git_push_url": "https://gist.github.com/1e2bb524d2278cd88bccdc21a1683296.git",
+  "html_url": "https://gist.github.com/anonymous/1e2bb524d2278cd88bccdc21a1683296",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/1e2bb524d2278cd88bccdc21a1683296/raw/dca770e71fb6e62899f6a7fcb53a85684d39b12e/playground.gbs",
+      "size": 367,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sString As String[] = Split(\"Now is the time for all the good men to come to the aid of the good party 1 2 1 3 3 3 2 1 1 2 3 4 33 2 5 4 333 5\", \" \")\nDim sFix As New String[]\nDim sTemp As String\n\nFor Each sTemp In sString\n  sTemp &= \" \"\n  If InStr(sFix.Join(\" \") & \" \", sTemp) Then Continue\n  sFix.Add(Trim(sTemp))\nNext\n\nPrint sFix.Join(\" \")\n\nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2018-02-11T16:19:20Z",
+  "updated_at": "2018-02-11T16:19:20Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/1e2bb524d2278cd88bccdc21a1683296/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "7fead9a9de79ec6a7bfe66cbc9f0819a160c51ea",
+      "committed_at": "2018-02-11T16:19:19Z",
+      "change_status": {
+        "total": 14,
+        "additions": 14,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/1e2bb524d2278cd88bccdc21a1683296/7fead9a9de79ec6a7bfe66cbc9f0819a160c51ea"
+    }
+  ],
+  "truncated": false
+}

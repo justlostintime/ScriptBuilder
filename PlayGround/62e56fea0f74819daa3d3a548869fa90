@@ -1,0 +1,67 @@
+ç÷{
+  "url": "https://api.github.com/gists/62e56fea0f74819daa3d3a548869fa90",
+  "forks_url": "https://api.github.com/gists/62e56fea0f74819daa3d3a548869fa90/forks",
+  "commits_url": "https://api.github.com/gists/62e56fea0f74819daa3d3a548869fa90/commits",
+  "id": "62e56fea0f74819daa3d3a548869fa90",
+  "node_id": "MDQ6R2lzdDYyZTU2ZmVhMGY3NDgxOWRhYTNkM2E1NDg4NjlmYTkw",
+  "git_pull_url": "https://gist.github.com/62e56fea0f74819daa3d3a548869fa90.git",
+  "git_push_url": "https://gist.github.com/62e56fea0f74819daa3d3a548869fa90.git",
+  "html_url": "https://gist.github.com/anonymous/62e56fea0f74819daa3d3a548869fa90",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/62e56fea0f74819daa3d3a548869fa90/raw/702930a0e0f1f46f6f1da6cd938934483c5f8105/playground.gbs",
+      "size": 503,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sString As String = \"    Hello world!    \"\n \nPrint sString & \"\\tString length = \" & Len(sString) & \" - Original string\"\nPrint LTrim(sString) & \"\\tString length = \" & Len(LTrim(sString)) & \" - String with leading whitespace removed\"\nPrint RTrim(sString) & \"\\tString length = \" & Len(RTrim(sString)) & \" - String with trailing whitespace removed\"\nPrint Trim(sString) & \"\\t\\tString length = \" & Len(Trim(sString)) & \" - String with both leading and trailing whitespace removed\"\n \nEnd\n",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-07T15:10:03Z",
+  "updated_at": "2017-09-07T15:10:03Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/62e56fea0f74819daa3d3a548869fa90/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "23866a3205f69899b3ed4d5041a184de66414ed1",
+      "committed_at": "2017-09-07T15:10:02Z",
+      "change_status": {
+        "total": 9,
+        "additions": 9,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/62e56fea0f74819daa3d3a548869fa90/23866a3205f69899b3ed4d5041a184de66414ed1"
+    }
+  ],
+  "truncated": false
+}

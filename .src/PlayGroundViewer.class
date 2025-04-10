@@ -7,7 +7,6 @@ Public BaseUrl As String
 Public MyParent As FMain = FMain
 Private LastUrl As String = ""
 
-
 Public Sub SetParent(iParent As FMain)
 
     MyParent = iParent
@@ -18,7 +17,7 @@ Public Sub Form_Open()
 
     Dim a, b As Integer
 
-    BaseUrl = "https://gambas.one/playground/examplesmobile.html"
+    '  BaseUrl = "https://gambas.one/playground/examplesmobile.html"
     Me.Top = Settings["pgview/Window/Top", Me.Top]
     Me.Left = Settings["pgview/Window/Left", Me.Left]
     Me.Height = Settings["pgview/Window/Height", Me.Height]
@@ -28,6 +27,10 @@ Public Sub Form_Open()
     HSplit1.layout = [a, b]
 
     Me.Refresh()
+    Dim pindex As File
+    pindex = Open "Examples/PlayGroundIndex" For Read
+    examples = Read #pindex As Collection
+    Close pindex
 
     If Examples.count > 0 Then
 
@@ -40,8 +43,8 @@ Public Sub Form_Open()
 
     Endif
 
-    hClient.URL = BaseUrl
-    hClient.Get()
+    '   hClient.URL = BaseUrl
+    '    hClient.Get()
 
 End
 
@@ -69,7 +72,6 @@ Public Sub Responses_Finished()
     Next
 
 End
-
 
 Public Sub ScrapeTextLines()
 
@@ -100,6 +102,48 @@ Public Sub BuildExample()
         If f3 = "" Then Continue
         Examples.Add(f3, f2)
     Next
+    SaveAllExamplesLocally()
+
+End
+
+Public Sub SaveAllExamplesLocally()
+
+    Dim BasePath As String = User.home &/ ".playground_examples"
+
+    If Not Exist(BasePath) Then
+        Mkdir BasePath
+    Endif
+
+    Dim aindex As File
+    If Not Exist(BasePath &/ "index")
+        aindex = Open BasePath &/ "index" For Write Create
+        Write #aindex, examples As Variant
+        Close aindex
+    Endif
+
+    Dim MyUrl As String
+    Dim strJson As String
+    Dim jsondb As Variant
+    Dim ProgFile As File
+
+    For Each ex As String In Examples
+
+        If Not Exist(BasePath &/ ex) Then
+            MyUrl = "https://api.github.com/gists/" & ex
+            Try strjson = HttpClient.Download(MyUrl)
+            If Error Or If strjson = "" Then
+                Message(("Error Fetching Code for " & Examples.key))
+                Continue
+            Endif
+
+            Print "Saving Program title :" & Examples.key & " as keyname " & BasePath &/ ex
+            Progfile = Open BasePath &/ ex For Write Create
+            Write #ProgFile, strjson As String
+            Close Progfile
+            Wait 5.00
+        Endif
+
+    Next
 
 End
 
@@ -121,7 +165,7 @@ Public Sub DExample_Click()
     Endif
     jsondb = json.Decode(strjson, True)
     ProgEdit.Clear()
-    For Each v As JsonCollection In jsondb["files"]
+    For Each v As Variant In jsondb["files"] ''' trial change JsonCollection to collection
         Try ProgEdit.insert(v["content"])
         If Error Then
             ProgEdit.insert(Error.text & "\n" & Error.where)
@@ -137,7 +181,6 @@ Public Sub DExample_DblClick()
     pgnewfrom_Click()
 
 End
-
 
 Public Sub pgnewfrom_Click()
 
@@ -177,10 +220,8 @@ Public Sub pgecopy_Click()
 
 End
 
-
 Public Sub pgselall_Click()
 
     ProgEdit.SelectAll()
 
 End
-

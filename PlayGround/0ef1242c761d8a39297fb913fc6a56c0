@@ -1,0 +1,67 @@
+ù≤{
+  "url": "https://api.github.com/gists/0ef1242c761d8a39297fb913fc6a56c0",
+  "forks_url": "https://api.github.com/gists/0ef1242c761d8a39297fb913fc6a56c0/forks",
+  "commits_url": "https://api.github.com/gists/0ef1242c761d8a39297fb913fc6a56c0/commits",
+  "id": "0ef1242c761d8a39297fb913fc6a56c0",
+  "node_id": "MDQ6R2lzdDBlZjEyNDJjNzYxZDhhMzkyOTdmYjkxM2ZjNmE1NmMw",
+  "git_pull_url": "https://gist.github.com/0ef1242c761d8a39297fb913fc6a56c0.git",
+  "git_push_url": "https://gist.github.com/0ef1242c761d8a39297fb913fc6a56c0.git",
+  "html_url": "https://gist.github.com/anonymous/0ef1242c761d8a39297fb913fc6a56c0",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/0ef1242c761d8a39297fb913fc6a56c0/raw/41d86f814440df7f144972d88642a11b95f26851/playground.gbs",
+      "size": 4485,
+      "truncated": false,
+      "content": "' Gambas module file\n\n' INSTRUCTIONS\n' I have not used a GUI as you could not run this in the 'Gambas Playground'\n' Click on the link above to run this program\n' The user can specify the password length and the number of passwords\n' to generate by altering the values of the 2 lines below.\n\nPublic Sub Main()\nDim siPasswordLength As Short = 20                                      'Password length\nDim siPasswordQuantity As Short = 20                                    'Password quantity\nDim sLower As String = \"abcdefghijklmnopqrstuvwxyz\"                     'Lower case characters\nDim sUpper As String = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"                     'Upper case characters\nDim sNumber As String = \"1234567890\"                                    'Numbers\nDim sOther As String = \"'!#$%&'()*+,-./:;<=>?@[]^_{|}~\" & Chr(34)       'Other characters + quote\nDim sNoGo As String[] = [\"I1\", \"1I\", \"l1\", \"1l\", \"Il\", \n                        \"lI\", \"O0\", \"0O\", \"S5\", \"5S\", \"Z2\", \"2Z\"]       'Undesirable string combinations (can be added to if required)\nDim sData As String = sLower & sUpper & sNumber & sOther                'Create 1 string to pick the password characters from\nDim sToCheck, sPassword As String                                       'To hold a possible password for checking, to hold the passwords\nDim siCount, siLoop, siCounter As Short                                 'Various counters\nDim bPass As Boolean                                                    'To Pass or not to Pass!\n\nFor siCount = 1 To siPasswordQuantity                                   'Loop the amount of passwords required\n  For siLoop = 1 To siPasswordLength                                    'Loop for each charater of the required length\n    sToCheck &= Mid(sData, Rand(1, Len(sData)), 1)                      'Get a random character from sData\n  Next\n\n  bPass = False                                                         'Set bPass to False\n  For siCounter = 1 To Len(sToCheck)                                    'Loop through each character in the generated password\n    If InStr(sLower, Mid(sToCheck, siCounter, 1)) Then bPass = True     'If a LOWER CASE letter is included set bPass to True\n  Next\n\n  If bPass Then                                                         'If bPass is True then\n    bPass = False                                                       'bPass is False\n    For siCounter = 1 To Len(sToCheck)                                  'Loop through each character in the generated password\n      If InStr(sUpper, Mid(sToCheck, siCounter, 1)) Then bPass = True   'If an UPPER CASE letter is included set bPass to True\n    Next\n  End If\n  \n  If bPass Then                                                         'If bPass is True then\n    bPass = False                                                       'bPass is False\n    For siCounter = 1 To Len(sToCheck)                                  'Loop through each character in the generated password\n      If InStr(sNumber, Mid(sToCheck, siCounter, 1)) Then bPass = True  'If a NUMBER is included set bPass to True\n    Next\n  End If\n\n  If bPass Then                                                         'If bPass is True then\n    bPass = False                                                       'bPass is False\n    For siCounter = 1 To Len(sToCheck)                                  'Loop through each character in the generated password\n      If InStr(sOther, Mid(sToCheck, siCounter, 1)) Then bPass = True   'If an 'OTHER CHARACTER' is included set bPass to True\n    Next\n  End If\n\n  If bPass Then\n    For siCounter = 1 To sNoGo.Max                                      'Loop through each undesirable strings e.g. \"0O\"\n      If InStr(sToCheck, sNoGo[siCounter]) Then bPass = False           'If an undesirable combination is located then set bPass to False\n    Next\n  Endif\n\n  If bPass = True Then                                                  'If bPass is True (all checks have been passed) then\n    sPassword &= sToCheck & gb.NewLine                                  'Add the new password to sPassword with a newline\n  Else                                                                  'Else\n    Dec siCount                                                         'Decrease the loop counter by one\n  Endif\n  sToCheck = \"\"                                                         'Clear sToCheck\nNext\n\nPrint sPassword                                                         'Print the password list\n\nEnd\n\n",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-11-06T18:55:08Z",
+  "updated_at": "2017-11-06T18:55:08Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/0ef1242c761d8a39297fb913fc6a56c0/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "9abd0f84ef67f4080b16018c4caa409160fc6ac2",
+      "committed_at": "2017-11-06T18:55:08Z",
+      "change_status": {
+        "total": 71,
+        "additions": 71,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/0ef1242c761d8a39297fb913fc6a56c0/9abd0f84ef67f4080b16018c4caa409160fc6ac2"
+    }
+  ],
+  "truncated": false
+}

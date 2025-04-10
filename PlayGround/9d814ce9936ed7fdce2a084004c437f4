@@ -1,0 +1,67 @@
+Ž[{
+  "url": "https://api.github.com/gists/9d814ce9936ed7fdce2a084004c437f4",
+  "forks_url": "https://api.github.com/gists/9d814ce9936ed7fdce2a084004c437f4/forks",
+  "commits_url": "https://api.github.com/gists/9d814ce9936ed7fdce2a084004c437f4/commits",
+  "id": "9d814ce9936ed7fdce2a084004c437f4",
+  "node_id": "MDQ6R2lzdDlkODE0Y2U5OTM2ZWQ3ZmRjZTJhMDg0MDA0YzQzN2Y0",
+  "git_pull_url": "https://gist.github.com/9d814ce9936ed7fdce2a084004c437f4.git",
+  "git_push_url": "https://gist.github.com/9d814ce9936ed7fdce2a084004c437f4.git",
+  "html_url": "https://gist.github.com/anonymous/9d814ce9936ed7fdce2a084004c437f4",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/9d814ce9936ed7fdce2a084004c437f4/raw/0a8dec51cca81fac1de4226893d127a46fbbb583/playground.gbs",
+      "size": 634,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim siCount, siLoop, siTotal, siCounter As Short\nDim sNo, sTemp As String\nDim sHold, sNiven As New String[]\n \nFor siCount = 1 To 1500\n  sNo = Str(siCount)\n  For siLoop = 1 To Len(sNo)\n    sHold.Add(Mid(sNo, siLoop, 1))\n  Next\n  For Each sTemp In sHold\n    siTotal += Val(sTemp)\n  Next\n  If siCount Mod siTotal = 0 Then \n    Inc siCounter\n    If siCounter < 21 Or siCount > 1000 Then\n      sNiven.Add(Str(siCount))\n      If siCount > 1000 Then Break\n    Endif\n  Endif\n  siTotal = 0\n  sHold.Clear\nNext\n \nPrint \"First twenty Harshad numbers and the first Harshad number greater than 1000\"\nPrint sNiven.Join(\", \")\n \nEnd\n",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-31T15:25:09Z",
+  "updated_at": "2017-08-31T15:25:09Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/9d814ce9936ed7fdce2a084004c437f4/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "9a9e18d80fb69b72fa4199829e838c65f6d998e5",
+      "committed_at": "2017-08-31T15:25:09Z",
+      "change_status": {
+        "total": 28,
+        "additions": 28,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/9d814ce9936ed7fdce2a084004c437f4/9a9e18d80fb69b72fa4199829e838c65f6d998e5"
+    }
+  ],
+  "truncated": false
+}

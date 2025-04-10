@@ -1,0 +1,67 @@
+ç{
+  "url": "https://api.github.com/gists/85fbc7936b17b3009af282752aa29df7",
+  "forks_url": "https://api.github.com/gists/85fbc7936b17b3009af282752aa29df7/forks",
+  "commits_url": "https://api.github.com/gists/85fbc7936b17b3009af282752aa29df7/commits",
+  "id": "85fbc7936b17b3009af282752aa29df7",
+  "node_id": "MDQ6R2lzdDg1ZmJjNzkzNmIxN2IzMDA5YWYyODI3NTJhYTI5ZGY3",
+  "git_pull_url": "https://gist.github.com/85fbc7936b17b3009af282752aa29df7.git",
+  "git_push_url": "https://gist.github.com/85fbc7936b17b3009af282752aa29df7.git",
+  "html_url": "https://gist.github.com/anonymous/85fbc7936b17b3009af282752aa29df7",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/85fbc7936b17b3009af282752aa29df7/raw/59a6c091dfdc2d9ad46e12035380c034f7d828cd/playground.gbs",
+      "size": 532,
+      "truncated": false,
+      "content": "'Reworked from the BBC Basic example\n \nPublic Sub Main()\nDim iNum As Integer\n \nFor iNum = 1 To 100\n  If FNisprime(iNum) Then Print iNum & \" is prime\"\nNext\n \nEnd\n'___________________________________________________\nPublic Sub FNisprime(iNum As Integer) As Boolean\nDim iLoop As Integer\nDim bReturn As Boolean = True\n \nIf iNum <= 1 Then bReturn = False\nIf iNum <= 3 Then bReturn = True\nIf (iNum And 1) = 0 Then bReturn = False\n \nFor iLoop = 3 To Sqr(iNum) Step 2\n  If iNum Mod iLoop = 0 Then bReturn = False\nNext\n \nReturn bReturn\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-05T14:32:55Z",
+  "updated_at": "2017-09-05T14:32:55Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/85fbc7936b17b3009af282752aa29df7/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "65ec1ff5e3471fb877bdbc8d880552aabc2d1177",
+      "committed_at": "2017-09-05T14:32:54Z",
+      "change_status": {
+        "total": 26,
+        "additions": 26,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/85fbc7936b17b3009af282752aa29df7/65ec1ff5e3471fb877bdbc8d880552aabc2d1177"
+    }
+  ],
+  "truncated": false
+}

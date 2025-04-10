@@ -6,47 +6,62 @@
   Arrangement = Arrange.Vertical
   Spacing = True
   Margin = True
+  { Label7 Label
+    MoveScaled(4,1,23,2)
+    Text = ("Script Format")
+  }
+  { EditMode ComboBox
+    MoveScaled(3,4,55,4)
+    List = [("None"), ("Custom"), ("Gambas"), ("JavaScript"), ("C")]
+    Text = ("Gambas")
+  }
   { Label1 Label
-    MoveScaled(2,1,24,3)
+    MoveScaled(2,9,24,3)
     Text = ("Scripting Project Directory")
   }
-  { TextBox1 TextBox
-    MoveScaled(3,5,55,4)
+  { !ProjectDirectory TextBox
+    MoveScaled(3,13,55,4)
+    #Public = True
   }
   { Label2 Label
-    MoveScaled(2,12,25,3)
+    MoveScaled(2,18,25,3)
     Text = ("Shell Command")
   }
-  { TextBox2 TextBox
-    MoveScaled(3,16,55,4)
+  { !Shell_Type TextBox
+    MoveScaled(3,21,55,4)
+    #Public = True
   }
   { Label3 Label
-    MoveScaled(2,22,26,3)
+    MoveScaled(2,26,26,3)
     Text = ("Nibble Library Directory")
   }
-  { TextBox3 TextBox
-    MoveScaled(3,28,55,4)
+  { !Nibble_Location TextBox
+    MoveScaled(3,30,55,4)
+    #Public = True
   }
   { Label4 Label
-    MoveScaled(2,34,24,3)
+    MoveScaled(2,35,24,3)
     Text = ("Source Code repository")
   }
-  { TextBox4 TextBox
+  { !SourceCode_Repository TextBox
     MoveScaled(3,38,55,4)
+    #Public = True
   }
   { Label5 Label
     MoveScaled(2,43,21,2)
     Text = ("User Name")
   }
-  { TextBox5 TextBox
+  { !Repo_User TextBox
     MoveScaled(3,46,55,4)
+    #Public = True
   }
   { Label6 Label
     MoveScaled(2,51,55,3)
     Text = ("Password")
   }
-  { TextBox6 TextBox
+  { !repo_password TextBox
     MoveScaled(3,55,55,4)
+    #Public = True
     Password = True
   }
   { HBox1 HBox

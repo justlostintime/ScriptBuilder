@@ -1,0 +1,67 @@
+š9{
+  "url": "https://api.github.com/gists/8960fb267af43f0549d2cfe04288a2d4",
+  "forks_url": "https://api.github.com/gists/8960fb267af43f0549d2cfe04288a2d4/forks",
+  "commits_url": "https://api.github.com/gists/8960fb267af43f0549d2cfe04288a2d4/commits",
+  "id": "8960fb267af43f0549d2cfe04288a2d4",
+  "node_id": "MDQ6R2lzdDg5NjBmYjI2N2FmNDNmMDU0OWQyY2ZlMDQyODhhMmQ0",
+  "git_pull_url": "https://gist.github.com/8960fb267af43f0549d2cfe04288a2d4.git",
+  "git_push_url": "https://gist.github.com/8960fb267af43f0549d2cfe04288a2d4.git",
+  "html_url": "https://gist.github.com/anonymous/8960fb267af43f0549d2cfe04288a2d4",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/8960fb267af43f0549d2cfe04288a2d4/raw/e0bf18d01fa23c2c9bf9ac2d72f4e926cb9ee468/playground.gbs",
+      "size": 3599,
+      "truncated": false,
+      "content": "'Altered to prevent lines starting with ']' or ending with '[' being generated as they can't work\n \nsiNumberOfBrackets As Short = 20              'Maximum amount of brackets in a line\nsiNumberOfLines As Short = 20                 'Amount of lines to test\n \n'----\n \nPublic Sub Main()\nDim sBrks As String[] = GenerateBrackets()    'Get random array to check\nDim sTemp, sHold, sWork As String             'Working variables\nDim siCount As Short                          'Counter\n \nFor Each sTemp In sBrks                       'For each line in the sBrk array (e.g. '[][][][[[[]][]]]')\n  sWork = sTemp                               'Make sWork = sTemp\n  Repeat                                      'Repeat\n    sHold = sWork                             'Make sHold = sWork\n    sWork = Replace(sWork, \"[]\", \"\")          'Remove all brackets that match '[]'\n  Until sHold = sWork                         'If sHold = sWork then there are no more '[]' matches\n \n  If sWork = \"\" Then                          'So if all the brackets 'Nested' correctly sWork will be empty\n      Print \"    OK \";                        'Print 'OK'\n  Else                                        'Else they did not all match\n    Print \"NOT OK \";                          'So print 'NOT OK'\n  Endif\n \n  For siCount = 1 To Len(sTemp)               'Loop through the line of brackets\n    Print Mid(sTemp, siCount, 1) & \" \";       'Print each bracket + a space to make it easier to read\n  Next\n  Print                                       'Print a new line\nNext\n \nEnd\n \n'----\n \nPublic Sub GenerateBrackets() As String[]     'Generates an array of random quantities of '[' and ']'\nDim siQty As New Short[]                      'To store the random number (of brackets) to put in a line\nDim sBrk As New String[]                      'To store the lines of brackets\nDim siNum, siEnd, siLoop As Short             'Various counters \nDim sTemp As String                           'Temp string\n \nRepeat                                        'Repeat\n  siNum = Rand(0, siNumberOfBrackets)         'Pick a number between 0 and the total number of brackets requested\n  If Even(siNum) Then siQty.Add(siNum)        'If the number is even then add the number to siQty\nUntil siQty.Count = siNumberOfLines           'Keep going until we have the number of lines requested\n \nFor Each siNum In siQty                       'For each number in siQty..(e.g. 6)\n  Do\n    siEnd = Rand(0, 1)                        'Generate a 0 or a 1\n    If siEnd = 0 Then sTemp &= \"[\"            'If '0' then add a '[' bracket\n    If siEnd = 1 Then sTemp &= \"]\"            'If '1' then add a ']' bracket\n \n    If siNum = 0 Then                         'If siNum = 0 then..\n      sBrk.Add(\"\")                            'Add '0' to the array\n        sTemp = \"\"                            'Clear sTemp\n        Break                                 'Exit the Do Loop\n    Endif\n \n    If Len(sTemp) = siNum Then                'If the length of sTemp = the required amount then..\n      If sTemp Not Begins \"]\" And sTemp Not Ends \"[\" Then  'Check to see that sTemp does not start with \"]\" and does not end with a \"[\"\n        sBrk.Add(sTemp)                       'Add it to the array\n        sTemp = \"\"                            'Clear sTemp\n        Break                                 'Exit the Do Loop\n      Else                                    'Else\n        sTemp = \"\"                            'Clear sTemp\n      End If                                  'Try again!\n    Endif\n  Loop\nNext\n \nReturn sBrk                                   'Return the sBrk array\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:03:38Z",
+  "updated_at": "2017-08-29T15:03:38Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/8960fb267af43f0549d2cfe04288a2d4/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "0eb8315ebb274efe735661c7fe975a905f669d5f",
+      "committed_at": "2017-08-29T15:03:37Z",
+      "change_status": {
+        "total": 73,
+        "additions": 73,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/8960fb267af43f0549d2cfe04288a2d4/0eb8315ebb274efe735661c7fe975a905f669d5f"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,67 @@
+‘ä{
+  "url": "https://api.github.com/gists/538335b7b71f5ea7b59c0c82fbb0ea3e",
+  "forks_url": "https://api.github.com/gists/538335b7b71f5ea7b59c0c82fbb0ea3e/forks",
+  "commits_url": "https://api.github.com/gists/538335b7b71f5ea7b59c0c82fbb0ea3e/commits",
+  "id": "538335b7b71f5ea7b59c0c82fbb0ea3e",
+  "node_id": "MDQ6R2lzdDUzODMzNWI3YjcxZjVlYTdiNTljMGM4MmZiYjBlYTNl",
+  "git_pull_url": "https://gist.github.com/538335b7b71f5ea7b59c0c82fbb0ea3e.git",
+  "git_push_url": "https://gist.github.com/538335b7b71f5ea7b59c0c82fbb0ea3e.git",
+  "html_url": "https://gist.github.com/anonymous/538335b7b71f5ea7b59c0c82fbb0ea3e",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/538335b7b71f5ea7b59c0c82fbb0ea3e/raw/27e7c5542d0e4c95e5ee9ca3d586b9045a683dc4/playground.gbs",
+      "size": 1517,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sEvil, sOdious As String                         'To store the output for printing Evil and Odious \nDim iCount, iEvil, iOdious As Integer                'Counters\n \nPrint \"First 30 numbers ^3\\t\";                       'Print title\n \nFor iCount = 0 To 29                                 'Count 30 times\n  Print Len(Replace(Bin(3 ^ iCount), \"0\", \"\"));;     'Get the Bin of the number, take out the '0's and the remaining\nNext                                                 'length is the Population count e.g. 3^2=9, Bin=1001, remove '0's='11', length=2\n \niCount = 0                                           'Reset iCount\n \nRepeat                                               'Repeat/Until loop\n  If Even(Len(Replace(Bin(iCount), \"0\", \"\"))) Then   'If (as above) the result is Even then\n    sEvil &= Str(icount) & \" \"                       'Add it to sEvil\n    Inc iEvil                                        'Increase iEvil\n  End If\n  If Odd(Len(Replace(Bin(iCount), \"0\", \"\"))) Then    'If (as above) the result is Odd then\n    sOdious &= Str(icount) & \" \"                     'Add it to sOdious\n    Inc iOdious                                      'Increase iOdious\n  End If\n  Inc iCount                                         'Increase iCount\nUntil iEvil = 30 And iOdious = 30                    'Until both iEvil and iOdious = 30 then exit the loop\n \nPrint \"\\n1st 30 Evil numbers =\\t\" & sEvil            'Print Evil\nPrint \"1st 30 Odious numbers =\\t\" & sOdious          'Print Odious\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-05T14:30:40Z",
+  "updated_at": "2017-09-05T14:30:41Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/538335b7b71f5ea7b59c0c82fbb0ea3e/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "79d3e6fdcd7f6c407cf1a90d0126d0a06ede6a96",
+      "committed_at": "2017-09-05T14:30:40Z",
+      "change_status": {
+        "total": 28,
+        "additions": 28,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/538335b7b71f5ea7b59c0c82fbb0ea3e/79d3e6fdcd7f6c407cf1a90d0126d0a06ede6a96"
+    }
+  ],
+  "truncated": false
+}

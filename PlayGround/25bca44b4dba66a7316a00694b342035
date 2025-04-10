@@ -1,0 +1,67 @@
+Ž÷{
+  "url": "https://api.github.com/gists/25bca44b4dba66a7316a00694b342035",
+  "forks_url": "https://api.github.com/gists/25bca44b4dba66a7316a00694b342035/forks",
+  "commits_url": "https://api.github.com/gists/25bca44b4dba66a7316a00694b342035/commits",
+  "id": "25bca44b4dba66a7316a00694b342035",
+  "node_id": "MDQ6R2lzdDI1YmNhNDRiNGRiYTY2YTczMTZhMDA2OTRiMzQyMDM1",
+  "git_pull_url": "https://gist.github.com/25bca44b4dba66a7316a00694b342035.git",
+  "git_push_url": "https://gist.github.com/25bca44b4dba66a7316a00694b342035.git",
+  "html_url": "https://gist.github.com/anonymous/25bca44b4dba66a7316a00694b342035",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/25bca44b4dba66a7316a00694b342035/raw/324422f5507250720509412fdea5e99bfa7bb874/playground.gbs",
+      "size": 773,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim nums As New Integer[10]\nDim L0, L1, n As Integer\n \n'initial values\nFor L0 = 0 To 9\n    nums[L0] = L0\nNext\n'scramble\nFor L0 = 9 To 1 Step -1\n    n = Int(Rnd * (L0)) + 1\n    If n <> L0 Then Swap nums[n], nums[L0]\nNext\n'display initial condition\nFor L0 = 0 To 9\n    Print nums[L0];\nNext\nPrint\n \nFor L1 = 9 To 1 Step -1\n  n = 0\n  For L0 = 1 To L1\n    If nums[n] < nums[L0] Then n = L0\n  Next\n \n  If (n < L1) Then\n    If (n > 0) Then\n      For L0 = 0 To (n \\ 2)\n        Swap nums[L0], nums[n - L0]\n      Next\n      For L0 = 0 To 9\n        Print nums[L0];\n      Next\n      Print\n    End If\n      For L0 = 0 To (L1 \\ 2)\n        Swap nums[L0], nums[L1 - L0]\n      Next\n \n      For L0 = 0 To 9\n        Print nums[L0];\n      Next\n      Print\n  End If\nNext\n\nEnd\n",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2018-03-15T21:36:55Z",
+  "updated_at": "2018-03-15T21:36:55Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/25bca44b4dba66a7316a00694b342035/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "78fdf5d07144ac8ca72ba541fdbc0cd80371918e",
+      "committed_at": "2018-03-15T21:36:54Z",
+      "change_status": {
+        "total": 47,
+        "additions": 47,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/25bca44b4dba66a7316a00694b342035/78fdf5d07144ac8ca72ba541fdbc0cd80371918e"
+    }
+  ],
+  "truncated": false
+}

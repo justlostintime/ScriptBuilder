@@ -15,6 +15,13 @@ Public Sub RunIt(TheCommand As String, aEnv As String[]) As Process
 
 End
 
+Public Sub execIt(TheCommand As String[], aEnv As String[]) As Process
+
+    Proc = infopage.exec(TheCommand, aEnv)
+    Return Proc
+
+End
+
 Public Sub Form_Open()
 
     Me.Top = Settings["result/Window/Top", Me.Top]

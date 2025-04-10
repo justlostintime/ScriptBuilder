@@ -1,0 +1,67 @@
+è{
+  "url": "https://api.github.com/gists/ae860292d4588b3627d77c85bcc634ee",
+  "forks_url": "https://api.github.com/gists/ae860292d4588b3627d77c85bcc634ee/forks",
+  "commits_url": "https://api.github.com/gists/ae860292d4588b3627d77c85bcc634ee/commits",
+  "id": "ae860292d4588b3627d77c85bcc634ee",
+  "node_id": "MDQ6R2lzdGFlODYwMjkyZDQ1ODhiMzYyN2Q3N2M4NWJjYzYzNGVl",
+  "git_pull_url": "https://gist.github.com/ae860292d4588b3627d77c85bcc634ee.git",
+  "git_push_url": "https://gist.github.com/ae860292d4588b3627d77c85bcc634ee.git",
+  "html_url": "https://gist.github.com/anonymous/ae860292d4588b3627d77c85bcc634ee",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/ae860292d4588b3627d77c85bcc634ee/raw/745395297b5c2d12d87a75558b937766e1ae9def/playground.gbs",
+      "size": 747,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sCheck As String[] = [\"A\", \"BARK\", \"BOOK\", \"TREAT\", \"COMMON\", \"SQUAD\", \"CONFUSE\"]\nDim sBlock As String[] = [\"BO\", \"XK\", \"DQ\", \"CP\", \"NA\", \"GT\", \"RE\", \"TG\", \"QD\", \"FS\", \"JW\", \"HU\", \"VI\", \"AN\", \"OB\", \"ER\", \"FS\", \"LY\", \"PC\", \"ZM\"]\nDim sList As New String[]\nDim siCount, siLoop As Short\nDim sTemp, sAnswer As String\n \nFor Each sTemp In sCheck\n  sAnswer = \"\"\n  sList = sBlock.Copy()\n  For siCount = 1 To Len(sTemp)\n    For siLoop = 0 To sList.Max\n      If InStr(sList[siLoop], Mid(sTemp, siCount, 1)) Then\n        sList.Extract(siLoop, 1)\n        sAnswer &= Mid(sTemp, siCount, 1)\n        Break\n      Endif\n    Next\n  Next\n \n If sAnswer = sTemp Then \n   Print sTemp & \" - True\"\n Else\n   Print sTemp & \" - False\"\n End If\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-27T16:24:59Z",
+  "updated_at": "2017-08-27T16:24:59Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/ae860292d4588b3627d77c85bcc634ee/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "af57b43e243b20145cab193a403c1c6171642604",
+      "committed_at": "2017-08-27T16:24:59Z",
+      "change_status": {
+        "total": 28,
+        "additions": 28,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/ae860292d4588b3627d77c85bcc634ee/af57b43e243b20145cab193a403c1c6171642604"
+    }
+  ],
+  "truncated": false
+}

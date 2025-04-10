@@ -1,0 +1,67 @@
+çT{
+  "url": "https://api.github.com/gists/e48bd6ed7e6b583106b8178bca536eea",
+  "forks_url": "https://api.github.com/gists/e48bd6ed7e6b583106b8178bca536eea/forks",
+  "commits_url": "https://api.github.com/gists/e48bd6ed7e6b583106b8178bca536eea/commits",
+  "id": "e48bd6ed7e6b583106b8178bca536eea",
+  "node_id": "MDQ6R2lzdGU0OGJkNmVkN2U2YjU4MzEwNmI4MTc4YmNhNTM2ZWVh",
+  "git_pull_url": "https://gist.github.com/e48bd6ed7e6b583106b8178bca536eea.git",
+  "git_push_url": "https://gist.github.com/e48bd6ed7e6b583106b8178bca536eea.git",
+  "html_url": "https://gist.github.com/anonymous/e48bd6ed7e6b583106b8178bca536eea",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/e48bd6ed7e6b583106b8178bca536eea/raw/45cc880c4b84a1d12f68e906a9e3e9ccd0c69c9a/playground.gbs",
+      "size": 350,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim cList As Collection = [\"2\": \"quick\", \"4\": \"fox\", \"1\": \"The\", \"9\": \"dog\", \"7\": \"the\", \"5\": \"jumped\", \"3\": \"brown\", \"6\": \"over\", \"8\": \"lazy\"]\nDim siCount As Short\nDim sTemp As String \n \nFor Each sTemp In cList\n  Print cList.key & \"=\" & sTemp;;\nNext\n \nPrint\n \nFor siCount = 1 To cList.Count\n  Print cList[Str(siCount)];;\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-27T16:45:35Z",
+  "updated_at": "2017-08-27T16:45:35Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/e48bd6ed7e6b583106b8178bca536eea/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "373e743c0257301bb4d226cb16cd4547d687d79c",
+      "committed_at": "2017-08-27T16:45:35Z",
+      "change_status": {
+        "total": 16,
+        "additions": 16,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/e48bd6ed7e6b583106b8178bca536eea/373e743c0257301bb4d226cb16cd4547d687d79c"
+    }
+  ],
+  "truncated": false
+}

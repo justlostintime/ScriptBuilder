@@ -1,0 +1,67 @@
+“©{
+  "url": "https://api.github.com/gists/c81c1bbf94e856035fd382015d208272",
+  "forks_url": "https://api.github.com/gists/c81c1bbf94e856035fd382015d208272/forks",
+  "commits_url": "https://api.github.com/gists/c81c1bbf94e856035fd382015d208272/commits",
+  "id": "c81c1bbf94e856035fd382015d208272",
+  "node_id": "MDQ6R2lzdGM4MWMxYmJmOTRlODU2MDM1ZmQzODIwMTVkMjA4Mjcy",
+  "git_pull_url": "https://gist.github.com/c81c1bbf94e856035fd382015d208272.git",
+  "git_push_url": "https://gist.github.com/c81c1bbf94e856035fd382015d208272.git",
+  "html_url": "https://gist.github.com/anonymous/c81c1bbf94e856035fd382015d208272",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/c81c1bbf94e856035fd382015d208272/raw/49acc879d24c503de80c505c1dbd262f3fc55a99/playground.gbs",
+      "size": 1958,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sString As New String[10]                                     'Array for the input text\nDim sLine As New String[]                                         'Array of each word in a line\nDim siCount0, siCount1 As Short                                   'Counters\nDim sOutput, sReverse, sTemp As String                            'Strings\n \nsString[0] = \"---------- Ice And Fire ------------\"               'Input text\nsString[1] = \"                                    \"\nsString[2] = \"fire, in end will world the say Some\"\nsString[3] = \"ice. in say Some                    \"\nsString[4] = \"desire of tasted I've what From     \"\nsString[5] = \"fire. favor who those with hold I   \" \nsString[6] = \"                                    \"\nsString[7] = \"... elided paragraph last ...       \"\nsString[8] = \"                                    \"\nsString[9] = \"Frost Robert -----------------------\"\n \nFor siCount0 = 0 To 9                                             'To work through each line of input text\n  If Trim(sString[siCount0]) = \"\" Then sString[siCount0] = \" \"    'If the line is all spaces then make it 1 space\n \n  For Each sTemp In Split(Trim(sString[siCount0]), \" \")           'Split the trimmed line by spaces\n    sLine.Add(sTemp)                                              'Add each word to the sLine array\n  Next\n \n  For siCount1 = sLine.max DownTo 0                               'Loop from the last in the sLine array to 0\n    sReverse &= sLine[siCount1] & \" \"                             'Fill sReverse with words reversed, adding a space\n  Next\n \n  sOutput &= Trim(sReverse) & gb.NewLine                          'Add the reversed words to sOutput and add a newline\n  sReverse = \"\"                                                   'Clear sReverse\n  sLine.Clear                                                     'Clear sLine array\nNext\n \nPrint sOutput                                                     'Print the output\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-06T16:22:42Z",
+  "updated_at": "2017-09-06T16:22:42Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/c81c1bbf94e856035fd382015d208272/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "d8215d1353ef751e413ccb350a0e08be57258c23",
+      "committed_at": "2017-09-06T16:22:41Z",
+      "change_status": {
+        "total": 36,
+        "additions": 36,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/c81c1bbf94e856035fd382015d208272/d8215d1353ef751e413ccb350a0e08be57258c23"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,67 @@
+Ž){
+  "url": "https://api.github.com/gists/d4baf4adccd2220f63a1019695e072b0",
+  "forks_url": "https://api.github.com/gists/d4baf4adccd2220f63a1019695e072b0/forks",
+  "commits_url": "https://api.github.com/gists/d4baf4adccd2220f63a1019695e072b0/commits",
+  "id": "d4baf4adccd2220f63a1019695e072b0",
+  "node_id": "MDQ6R2lzdGQ0YmFmNGFkY2NkMjIyMGY2M2ExMDE5Njk1ZTA3MmIw",
+  "git_pull_url": "https://gist.github.com/d4baf4adccd2220f63a1019695e072b0.git",
+  "git_push_url": "https://gist.github.com/d4baf4adccd2220f63a1019695e072b0.git",
+  "html_url": "https://gist.github.com/anonymous/d4baf4adccd2220f63a1019695e072b0",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/d4baf4adccd2220f63a1019695e072b0/raw/ce619f45a94c77e0e14d7eb12c90247949bf7d4f/playground.gbs",
+      "size": 601,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sString As String = \"THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\"\n \nPrint Mid(sString, 11, 5)                     'Starting from n characters in and of m length\nPrint Mid(sString, 17)                        'Starting from n characters in, up to the end of the string\nPrint Left(sString, -1)                       'Whole string minus last character\nPrint Mid(sString, InStr(sString, \"B\"), 9)    'Starting from a known character within the string and of m length\nPrint Mid(sString, InStr(sString, \"OVER\"), 8) 'Starting from a known substring within the string and of m length\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-09-07T15:11:31Z",
+  "updated_at": "2017-09-07T15:11:31Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/d4baf4adccd2220f63a1019695e072b0/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "0123268cbf87d55ee97a9b571641aff6d60d108b",
+      "committed_at": "2017-09-07T15:11:30Z",
+      "change_status": {
+        "total": 10,
+        "additions": 10,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/d4baf4adccd2220f63a1019695e072b0/0123268cbf87d55ee97a9b571641aff6d60d108b"
+    }
+  ],
+  "truncated": false
+}

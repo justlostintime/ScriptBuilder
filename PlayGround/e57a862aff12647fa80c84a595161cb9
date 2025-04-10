@@ -1,0 +1,67 @@
+çﬂ{
+  "url": "https://api.github.com/gists/e57a862aff12647fa80c84a595161cb9",
+  "forks_url": "https://api.github.com/gists/e57a862aff12647fa80c84a595161cb9/forks",
+  "commits_url": "https://api.github.com/gists/e57a862aff12647fa80c84a595161cb9/commits",
+  "id": "e57a862aff12647fa80c84a595161cb9",
+  "node_id": "MDQ6R2lzdGU1N2E4NjJhZmYxMjY0N2ZhODBjODRhNTk1MTYxY2I5",
+  "git_pull_url": "https://gist.github.com/e57a862aff12647fa80c84a595161cb9.git",
+  "git_push_url": "https://gist.github.com/e57a862aff12647fa80c84a595161cb9.git",
+  "html_url": "https://gist.github.com/anonymous/e57a862aff12647fa80c84a595161cb9",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/e57a862aff12647fa80c84a595161cb9/raw/1237bbca377578cb226d4441945c0a5e722465b9/playground.gbs",
+      "size": 501,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim Red As String = \"0\"\nDim White As String = \"1\"\nDim Blue As String = \"2\"\nDim siCount As Short\nDim sColours As New String[]\nDim sTemp As String\n \nFor siCount = 1 To 20\n  sColours.Add(Rand(Red, Blue))\nNext\n \nPrint \"Random: - \";\n \nFor siCount = 1 To 2\n  For Each sTemp In sColours\n    If sTemp = Red Then Print \"Red \";\n    If sTemp = White Then Print \"White \";\n    If sTemp = Blue Then Print \"Blue \";\n  Next\n  sColours.Sort\n  Print\n  If siCount = 1 Then Print \"Sorted: - \";\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-29T15:40:27Z",
+  "updated_at": "2017-08-29T15:40:27Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/e57a862aff12647fa80c84a595161cb9/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "ca66931953cf4f89c3c77d632708091ffe47cc21",
+      "committed_at": "2017-08-29T15:40:26Z",
+      "change_status": {
+        "total": 26,
+        "additions": 26,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/e57a862aff12647fa80c84a595161cb9/ca66931953cf4f89c3c77d632708091ffe47cc21"
+    }
+  ],
+  "truncated": false
+}

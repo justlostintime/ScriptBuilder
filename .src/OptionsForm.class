@@ -24,10 +24,11 @@ Public Sub Form_Open()
 
     LoadOptions()
 
-    TextBox1.text = FMain.SourceDirectory
-    TextBox2.text = FMain.ShellCommandProcessor
-    TextBox3.text = NibbleBrowser.NibbleLibraryLocation
-    TextBox4.text = FMain.CodeRepository
+    ProjectDirectory.text = FMain.SourceDirectory
+    Shell_Type.text = FMain.ShellCommandProcessor
+    Nibble_Location.text = NibbleBrowser.NibbleLibraryLocation
+    SourceCode_Repository.text = FMain.CodeRepository
+    EditMode.text = FMain.ProgramWorkSpace.Mode
 
     Me.Top = Settings["option/Window/Top", Me.Top]
     Me.Left = Settings["option/Window/Left", Me.Left]
@@ -38,10 +39,12 @@ End
 
 Public Sub Form_Close()
 
-    FMain.SourceDirectory = TextBox1.text
-    FMain.ShellCommandProcessor = TextBox2.text
-    NibbleBrowser.NibbleLibraryLocation = TextBox3.Text
-    FMain.CodeRepository = TextBox4.text
+    FMain.SourceDirectory = ProjectDirectory.text
+    FMain.ShellCommandProcessor = Shell_Type.text
+    NibbleBrowser.NibbleLibraryLocation = Nibble_Location.Text
+    FMain.CodeRepository = SourceCode_Repository.text
+    FMain.ProgramWorkSpace.Mode = EditMode.text
+    FMain.ProgramWorkSpace.Highlight = EditMode.text
 
     SaveOptions()
 
@@ -62,6 +65,7 @@ Public Sub SaveOptions()
     Settings["options/Shell"] = FMain.ShellCommandProcessor
     Settings["nibble/library"] = NibbleBrowser.NibbleLibraryLocation
     Settings["options/RepositoryDir"] = FMain.CodeRepository
+    Settings["options/EditMode"] = FMain.ProgramWorkSpace.Mode
 
     ' add check for Source Dir copy of Repository directory
     x = New Settings("." & FMain.SourceDirectory, "Repository for project")
@@ -80,6 +84,7 @@ Public Sub LoadOptions()
     FMain.ShellCommandProcessor = Settings["options/Shell", "/bin/bash"]
     NibbleBrowser.NibbleLibraryLocation = Settings["nibble/library", userroot & "/lib"]
     FMain.CodeRepository = Settings["options/RepositoryDir", FMain.CodeRepository]
+    FMain.ProgramWorkSpace.Mode = Settings["options/EditMode", "Gambas"]
 
     x = New Settings("." & FMain.SourceDirectory, "Repository for project")
     FMain.CodeRepository = x["options/RepositoryDir", FMain.CodeRepository]
@@ -92,5 +97,18 @@ Public Sub LoadOptions()
         'FMain.ShellCommandProcessor = "/bin/bash"
 
     Endif
+
+End
+
+Public Sub EditMode_Change()
+
+    FMain.ProgramWorkSpace.Mode = EditMode.text
+    FMain.ProgramWorkSpace.Highlight = EditMode.text
+
+End
+
+Public Sub Shell_Type_Change()
+
+    FMain.ShellCommandProcessor = Shell_Type.text
 
 End

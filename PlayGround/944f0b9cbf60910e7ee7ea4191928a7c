@@ -1,0 +1,67 @@
+ç5{
+  "url": "https://api.github.com/gists/944f0b9cbf60910e7ee7ea4191928a7c",
+  "forks_url": "https://api.github.com/gists/944f0b9cbf60910e7ee7ea4191928a7c/forks",
+  "commits_url": "https://api.github.com/gists/944f0b9cbf60910e7ee7ea4191928a7c/commits",
+  "id": "944f0b9cbf60910e7ee7ea4191928a7c",
+  "node_id": "MDQ6R2lzdDk0NGYwYjljYmY2MDkxMGU3ZWU3ZWE0MTkxOTI4YTdj",
+  "git_pull_url": "https://gist.github.com/944f0b9cbf60910e7ee7ea4191928a7c.git",
+  "git_push_url": "https://gist.github.com/944f0b9cbf60910e7ee7ea4191928a7c.git",
+  "html_url": "https://gist.github.com/anonymous/944f0b9cbf60910e7ee7ea4191928a7c",
+  "files": {
+    "playground.gbs": {
+      "filename": "playground.gbs",
+      "type": "text/plain",
+      "language": "Gerber Image",
+      "raw_url": "https://gist.githubusercontent.com/anonymous/944f0b9cbf60910e7ee7ea4191928a7c/raw/6c74b0b7cbd6164827879cd5fac5b4516d0a8d39/playground.gbs",
+      "size": 344,
+      "truncated": false,
+      "content": "Public Sub Main()\nDim sValue As String[] = [\"Zero\", \"One\", \"Two\", \"Three\", \"Four\", \"Five\"]\nDim sKey As String[] = [0, 1, 2, 3, 4, 5]\nDim sCol As New Collection\nDim siCount As Short\n \nFor siCount = 0 To sKey.max\n  sCol.Add(sValue[siCount], sKey[siCount])\nNext\n \nFor siCount = 0 To sKey.max\n  Print Str(sicount) & \" = \" & sCol[siCount]\nNext\n \nEnd",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2017-08-31T15:26:56Z",
+  "updated_at": "2017-08-31T15:26:56Z",
+  "description": "Shared via Gambas Playground",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/944f0b9cbf60910e7ee7ea4191928a7c/comments",
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "invalid-email-address",
+        "id": 148100,
+        "node_id": "MDQ6VXNlcjE0ODEwMA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/invalid-email-address",
+        "html_url": "https://github.com/invalid-email-address",
+        "followers_url": "https://api.github.com/users/invalid-email-address/followers",
+        "following_url": "https://api.github.com/users/invalid-email-address/following{/other_user}",
+        "gists_url": "https://api.github.com/users/invalid-email-address/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/invalid-email-address/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/invalid-email-address/subscriptions",
+        "organizations_url": "https://api.github.com/users/invalid-email-address/orgs",
+        "repos_url": "https://api.github.com/users/invalid-email-address/repos",
+        "events_url": "https://api.github.com/users/invalid-email-address/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/invalid-email-address/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "44e9d09c57e9fe49a44f310425ac84cc0e35ad22",
+      "committed_at": "2017-08-31T15:26:55Z",
+      "change_status": {
+        "total": 15,
+        "additions": 15,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/944f0b9cbf60910e7ee7ea4191928a7c/44e9d09c57e9fe49a44f310425ac84cc0e35ad22"
+    }
+  ],
+  "truncated": false
+}
